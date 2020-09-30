@@ -42,8 +42,9 @@ describe('#productDetails', () => {
     /* https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/typeof */
     assert.strictEqual(typeof productDetails(), 'object');
     // Teste que os dois objetos são diferentes entre si.
-    assert.notStrictEqual();
+    assert.notDeepStrictEqual(productDetails()[0], productDetails()[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
-
+    assert.strictEqual(productDetails()[0].details.productId.endsWith('123'));
+    assert.strictEqual(productDetails()[1].details.productId.endsWith('123'));
   });
 });
