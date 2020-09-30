@@ -13,9 +13,9 @@
 */
 
 const average = (array) => {
-  if (array.length === 0) {
+  if (array === undefined) {
     return undefined;
-  } else if (array === undefined) {
+  } else if (array.length === 0) {
     return undefined;
   }
   for (let index = 0; index <= array.length; i += 1) {
