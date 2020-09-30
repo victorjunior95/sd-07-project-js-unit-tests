@@ -15,15 +15,14 @@
 const average = (arrayAverage) => {
   let sumArray = 0;
   let averageNumber = 0;
-  if (arrayAverage.length == 0) {
+  if (arrayAverage.length === 0) {
     return undefined;
   }
   for (let index = 0; index < arrayAverage.length; index += 1) {
     if (typeof arrayAverage[index] !== 'number') {
       return undefined;
-    } else {
-      sumArray += arrayAverage[index];
     }
+    sumArray += arrayAverage[index];
   }
   averageNumber = Math.round(sumArray / arrayAverage.length);
   return averageNumber;
