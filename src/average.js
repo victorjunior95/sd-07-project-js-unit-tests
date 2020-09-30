@@ -20,7 +20,7 @@ const average = (array) => {
       sum += array[index];
       mediaInFunction = Math.floor(sum / array.length);
     } else {
-      mediaInFunction = 'undefined';
+      mediaInFunction = undefined;
     }
   }
   return mediaInFunction;
