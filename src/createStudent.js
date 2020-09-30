@@ -16,11 +16,10 @@
 */
 
 const createStudent = (name) => {
+  const feedback = () => 'Eita pessoa boa!';
   return {
     name,
-    'feedback': ()  => {
-      return 'Eita pessoa boa!'
-    }
+    feedback,
   };
 };
 
