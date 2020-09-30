@@ -15,12 +15,12 @@
 const average = (arr) => {
   let sum = 0;
   let answer;
-  for(let i = 0; i < arr.length; i += 1) {
-    if(arr !== [] && typeof(arr[i]) === 'number') {
+  for (let i = 0; i < arr.length; i += 1) {
+    if (arr !== [] && typeof arr[i] === 'number') {
       sum += arr[i];
       answer = Math.round(sum / arr.length);
     } else {
-      return undefined;
+      return answer;
     }
   }
   return resposta;
