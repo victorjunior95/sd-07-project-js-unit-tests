@@ -20,13 +20,13 @@ const average = (arr) => {
 
   }
   let media = 0;
-  const result;
+  const resultado;
 
   for (let i = 0; i < arr.length; i += 1){
     media = media + arr[i];
   }
   result = Math.round(media / arr.length);
-  return result;
+  return resultado;
 }
 module.exports = average;
 
