@@ -79,23 +79,25 @@ const createMenu = (Obj) => ({
   fetchMenu: function () {
     return this.menu;
   },
-  order: function (ordered) {
-    if (this.freeMenu[ordered] != undefined) {
+  order(ordered) {
+    if (this.freeMenu[ordered] !== undefined) {
       this.cost += this.freeMenu[ordered];
     }
     this.consumed.push(ordered);
   },
-  consumption: function () {
+  consumption() {
     return this.consumed;
   },
-  pay: function () {
+  pay() {
     return this.cost;
   },
 });
 
+/*
 const meuRestaurante = createMenu({
   food: { coxinha: 3.9, sopa: 9.9 },
   drink: { agua: 3.9, cerveja: 6.9 },
 });
+*/
 
 module.exports = createMenu;
