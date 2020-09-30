@@ -56,13 +56,13 @@ describe('#productDetails', () => {
     let string1 = '';
     let string2 = '';
     let output2;
-    for (let i = id1.length - 1; i >= id1.length - 3; i -= 1) {
+    for (let i = id1.length - 3; i < id1.length; i += 1) {
       string1 = `${string1}${id1[i]}`;
     }
-    for (let i = id2.length - 1; i >= id2.length - 3; i -= 1) {
+    for (let i = id2.length - 3; i < id2.length; i += 1) {
       string2 = `${string2}${id2[i]}`;
     }
-    if (string1 === string2) {
+    if (string1 === '123' && string2 === '123') {
       output2 = true;
     }
     assert.deepStrictEqual(output2, true);
