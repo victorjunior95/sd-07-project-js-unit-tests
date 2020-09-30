@@ -20,7 +20,7 @@ const average = (arr) => {
     }
   }
   sum += arr[index];
-  return sum / arr.length;
+  return Math.round(sum / arr.length);
 };
 
 module.exports = average;
