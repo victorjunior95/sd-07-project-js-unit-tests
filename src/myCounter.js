@@ -16,14 +16,17 @@
 */
 
 const myCounter = () => {
-  var myArray = [];
-  for (var counter = 0; counter <= 3; counter += 1) {
+  const myArray = [];
+  for (let counter = 0; counter <= 3; counter += 1) {
+    // primeiro loop pega o 0 e vai para o segundo onde é adicionado o 2 e o 3 e depois retorna para o 1 
+    // o primeiro loop começa denovo so que agora do valor de 1 e insere o 1 e vai para o segundo loop onde é inserido o 2 e o 3
+    // o processo se repete ...
+    // foi colocado o consto porque o array tem que ser imutavel e o let não vai permitir o escopo se quebrar e a variavel ser substituida ao inves de adicioanda
     myArray.push(counter);
-    for (var counter = 2; counter <= 3; counter += 1) {
+    for (let counter = 2; counter <= 3; counter += 1) {
       myArray.push(counter);
     }
   }
   return myArray;
 };
-
 module.exports = myCounter;
