@@ -12,8 +12,17 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {
+const average = (array) => {
   // add your implementation here
+  let sum;
+  for (let i = 0; i < array.lenght; i += 1) {
+    if (!isNAN(array[i])) {
+      sum += array[i];
+    } else {
+      return undefined;
+    }
+  }
+  return sum / array.lenght;
 };
 
 module.exports = average;
