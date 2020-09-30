@@ -29,7 +29,7 @@ const average = (arr) => {
     resultado = 0;
     return resultado;
   }
-  resultado = Math.round(soma / tamanho)
+  resultado = Math.round(soma / tamanho);
   return resultado;
 };
 
