@@ -13,7 +13,13 @@
 */
 
 const average = (array) => {
-  
+  let sum = 0;
+  let mediaInFunction = 0; 
+  for (let index = 0; index < array.length; index += 1) {
+    sum += array[index];
+  }
+  mediaInFunction = Math.floor(sum / array.length);
+  return mediaInFunction;
 };
 
 module.exports = average;
