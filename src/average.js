@@ -15,7 +15,7 @@
 const average = (numbers) => {
   if (numbers.length === 0) return undefined;
 
-  let average = 0;
+  let averageM = 0;
   let sum = 0;
 
   for (let index = 0; index < numbers.length; index += 1) {
@@ -23,9 +23,9 @@ const average = (numbers) => {
     sum += numbers[index];
   }
 
-  average = Math.round(sum / numbers.length);
+  averageM = Math.round(sum / numbers.length);
 
-  return average;
+  return averageM;
 };
 
 module.exports = average;
