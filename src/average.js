@@ -12,7 +12,7 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const runArray = () => {
+const runArray = (input) => {
   for (index = 0; index < input.length; index += 1) {
     if (typeof (input[index]) === 'number') {
       total += (input[index]);
