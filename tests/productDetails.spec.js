@@ -36,10 +36,19 @@ describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     // assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
-    // Teste que o retorno da função é um array.
-    assert.strictEqual(productDetails('Celular', 'Controle').length, 2); // Teste que o array retornado pela função contém dois itens dentro.
-    // Teste que os dois itens dentro do array retornado pela função são objetos.
-    // Teste que os dois objetos são diferentes entre si.
+    assert.strictEqual(Array.isArray(productDetails('Celular', 'Controle')), true);  // Teste que o retorno da função é um array. (Fonte: https://stackoverflow.com/questions/4775722/how-to-check-if-an-object-is-an-array)
+    assert.strictEqual(productDetails('Celular', 'Controle').length, 2);             // Teste que o array retornado pela função contém dois itens dentro.
+    assert.strictEqual(typeof productDetails('Celular', 'Controle')[0,1], 'object')  // Teste que os dois itens dentro do array retornado pela função são objetos.   
+
+    const comparaObjetos = () => {
+      const produto1 = productDetails('Celular', 'Controle')[0];
+      const produto2 = productDetails('Celular', 'Controle')[1];
+      if (produto1 != produto2) {
+        return true;
+      }
+    }
+    assert.strictEqual(comparaObjetos(), true); // Teste que os dois objetos são diferentes entre si.
+
     // (Difícil) Teste que os dois productIds terminam com 123.
   });
 });
