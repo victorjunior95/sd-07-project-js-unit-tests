@@ -28,7 +28,9 @@ describe('#circle', () => {
     assert.deepStrictEqual(typeof circle(1), 'object', 'Não é um Objeto');
     assert.deepStrictEqual(circle(7), { radius: 7, area: 153.86, circumference: 43.96 }, 'Não retorna 3 parametros');
     assert.strictEqual(circle(), undefined, 'Não foi informado nenhum parametro');
-    assert.strictEqual(circle(2), { radius: 2, area: 12.56, circumference: 12.56 }, 'Circumference incorreta');
+    assert.deepStrictEqual(circle(2), { radius: 2, area: 12.56, circumference: 12.56 }, 'Circumference incorreta');
+    assert.deepStrictEqual(circle(3), { radius: 3, area: 28.259999999999998, circumference: 18.84 }, 'Circumference incorreta');
+   
     /* ESCREVA SEUS TESTES ABAIXO:
      Teste se circle retorna um objeto.
      Teste se o objeto retornado tem 3 entradas.
