@@ -16,7 +16,7 @@ const arrayOnlyOfNumbers = (array) => {
   let isNumber = true;
   for (let index = 0; index < array.length; index += 1) {
     if (typeof array[index] !== 'number') {
-      isNumber =  false;
+      isNumber = false;
     }
   }
   return isNumber;
