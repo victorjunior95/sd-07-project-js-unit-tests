@@ -16,10 +16,8 @@ const average = (array) => {
   if (array.length === 0 || array === undefined) {
     return undefined;
   }
-  let isAnArrayofNumbers = true;
   for (index in array) {
     if (typeof array[index] !== "number") {
-      isAnArrayofNumbers = false;
       return undefined;
     }
   }
