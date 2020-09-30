@@ -12,8 +12,20 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {
-  // add your implementation here
-}
+const average = (array) => {
+  if (array.length === null) {
+    return undefined;
+  }
 
-module.exports = average
+  let sumArray = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    if (typeof (array[index]) === 'string') { // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/typeof
+      return undefined;
+    }
+    sumArray += array[index];
+  }
+  const resultAverage = Math.round(sumArray / array.length);
+  return resultAverage;
+};
+
+module.exports = average;
