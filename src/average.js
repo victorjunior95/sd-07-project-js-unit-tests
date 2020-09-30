@@ -14,13 +14,13 @@
 
 const average = (array) => {
   let resultado = 0;
-  let verificação = 0;
   for (let numro = 0; numro < array.length; numro += 1) {
     if (typeof (array[numero]) === 'number') {
-      verificação += 1;
+      resultado += 1;
     }
   }
-  if (verificação === array.length) {
+  if (resultado === array.length) {
+    resultado = 0;
     for (let numero = 0; numero < array.length; numero += 1) {
       resultado += array[numero];
     }
