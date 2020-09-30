@@ -41,6 +41,6 @@ describe('#productDetails', () => {
     assert.deepStrictEqual(typeof obj[1], 'object');    
     assert.notDeepStrictEqual(obj[0], obj[1]);
     assert.notStrictEqual(obj[0].details.productId.indexOf('123'), -1);
-    assert.notStrictEqual(obj[1].details.productId.indexOf('123'), -1);
+    assert.notStrictEqual(obj[1].details.productId.indexOf('123'), -1);    
   });
 });
