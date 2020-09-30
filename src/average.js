@@ -20,13 +20,15 @@ const runArray = () => {
       return undefined;
     }
   }
+  return total;
 }
 const average = (input) => {
-  let total = 0;
+  const total = 0;
   if (input.length === 0) {
     return undefined;
   }
   runArray();
   return Math.round(total / input.length);
 }
+
 module.exports = average;
