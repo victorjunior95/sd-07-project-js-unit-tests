@@ -38,6 +38,5 @@ describe('#productDetails', () => {
     assert.strictEqual(typeof(Object.values(productDetails('alcool', 'mascara'))), 'object');
     assert.notStrictEqual(Object.keys(productDetails('alcool', 'mascara')), true);
     assert.strictEqual(productDetails('alcool', 'mascara')[0].details.productId.endsWith('123') && productDetails('alcool', 'mascara')[1].details.productId.endsWith('123'), true);
-    // (Difícil) Teste que os dois productIds terminam com 123.
   });
 });
