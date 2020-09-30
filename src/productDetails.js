@@ -24,8 +24,7 @@
   ]
 */
 
-const productDetails = (firstProduct, secondProduct) => [
-  {
+const productDetails = (firstProduct, secondProduct) => [{
     name: firstProduct,
     details: {
       productId: `${firstProduct}123`,
@@ -38,5 +37,9 @@ const productDetails = (firstProduct, secondProduct) => [
     },
   },
 ];
+
+const pairKeyValue = Object.entries(productDetails("x","y"))[0];
+
+console.log(pairKeyValue);
 
 module.exports = productDetails;
