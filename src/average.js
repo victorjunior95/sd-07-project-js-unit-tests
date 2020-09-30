@@ -13,21 +13,21 @@
 */
 
 const average = (array) => {
-  let soma = 0 ,n = array.length , media = 0
-  if(n == 0){
-    return undefined
-
+  let soma = 0;
+  const n = array.length;
+  let media = 0;
+  if (n === 0) {
+    return undefined;
   }
-  for(numeros of array){
-    if(typeof(numeros) === 'string' ){
-      return undefined
+  for (index = 0; index < n ; index += 1) {
+    if (typeof (array[index]) === 'string') {
+      return undefined;
     }
-    soma += numeros
+    soma += array[index];
   }
-  media =  Math.round(soma/n)
-  return media
+  media = Math.round(soma / n);
+  return media;
 };
-console.log(average([-11, -5, 2]))
-
+console.log(average([-11, -5, 2]));
 module.exports = average;
 

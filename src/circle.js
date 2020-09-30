@@ -21,11 +21,12 @@
 const circle = (radius) => {
   const PI = 3.14;
   if (!radius) { return undefined; }
-  return {
-    radius,
-    area: PI * radius * radius,
-    circumference: 2 * PI * radius,
+  return { radius,
+    area: JSON.parse(parseFloat(PI * radius * radius).toPrecision(6)), // parseFloat eu passo para float e toPrecision eu estabeleço o numero de ponto depois da virgula
+    circumference: JSON.parse(parseFloat(2 * PI * radius).toPrecision(6)), // JSON.parse eu passo todo meu objeto para seus valores originais
+      // area:  (PI * radius * radius),
+      // circumference:  2 * PI * radius
   };
 };
-
+console.log(circle(1, 23));
 module.exports = circle;
