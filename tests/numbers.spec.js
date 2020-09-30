@@ -21,7 +21,7 @@ describe('#numbers', () => {
     assert.strictEqual(numbers([1, 2]), true);
     assert.strictEqual(numbers([1, 2, 3, 4, 5]), true);
     assert.strictEqual(numbers([1, 2, 'a']), false);
-    assert.strictEqual(numbers([]), false);
+    assert.notStrictEqual(numbers([]), true);
 
     // Escreva um teste em que a função recebe [1, 2, 3, 4, 5] e retorna true
     // Escreva um teste em que a função recebe [1, 2, '3', 4, 5] e retorna false
