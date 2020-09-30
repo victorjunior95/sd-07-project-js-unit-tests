@@ -20,7 +20,7 @@ const average = (arr) => {
     return resultado;
   }
   for (let item = 0; item < tamanho; item += 1) {
-    if (tamanho === 0 || typeof arr[item] === 'string') {
+    if (typeof arr[item] === 'string') {
       return resultado;
     }
     soma += arr[item];
