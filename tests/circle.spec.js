@@ -42,8 +42,8 @@ describe('#circle', () => {
         radius: parseFloat(obj.radius.toFixed(2)),
         area: parseFloat(obj.area.toFixed(2)),
         circumference: parseFloat(obj.circumference.toFixed(2))
-      }
-    }
+      };
+    };
     assert.deepStrictEqual(fixedPrecisionObject(circle(3)), {radius: 3, area: 28.26, circumference: 18.84});
   });
 });
