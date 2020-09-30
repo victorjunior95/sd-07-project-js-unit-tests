@@ -16,11 +16,11 @@ const average = (array) => {
   let result = 0;
   const div = array.length;
   if (div !== 0) {
-     for (let index = 0; index < array.length; index += 1) {
-       if (typeof (array[index]) === 'string') {
+    for (let index = 0; index < array.length; index += 1) {
+      if (typeof (array[index]) === 'string') {
         return undefined;
       }
-     }
+    }
     for (let key = 0; key < div; key += 1) {
       result += array[key];
     }
