@@ -11,13 +11,16 @@
 
 const numbers = (myArray) => {
   const arrayReference = myArray;
+  let bool = true;
   if (typeof myArray[0] !== 'number') return false;
 
-  for (let number in arrayReference) {
-    if (typeof arrayReference[number] !== 'number') return false;
-  }
+  arrayReference.forEach((number) => {
+    if (typeof number !== 'number') {
+      bool = false;
+    }
+  });
 
-  return true;
+  return bool;
 };
 
 console.log(numbers([]));
