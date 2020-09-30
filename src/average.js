@@ -17,7 +17,7 @@ const average = (array) => {
   for (let i = 0; i < array.length; i += 1) if (typeof i !== 'number') return undefined;
   tot = 0;
   for (let i = 0; i < array.length; i += 1) {
-    tot += i;
+    tot += array[i];
   }
   return Math.round(tot / array.length);
 };
