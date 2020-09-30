@@ -14,14 +14,13 @@
 
 const average = (grades) => {
   let exitAverage = 0;
-  
   grades.forEach((grade) => {
-    if(typeof grade === 'number'){
+    if (typeof grade === 'number') {
       exitAverage += grade;
     }
 
   });
   return exitAverage;
 };
-  
+
 module.exports = average;
