@@ -20,11 +20,11 @@ const average = (value) => {
   for (let i = 0; i < value.length; i += 1) {
     if (typeof value[i] !== 'number') {
       return undefined;
-    }; 
-    sum = sum + Math.round(value[i])
-      console.log(sum);
+    }
+    sum += (value[i]);
+    console.log(sum);
   }
-  const average = sum / value.length;
-   return average;
-}
+  const averageSum = sum / value.length;
+  return Math.round(averageSum);
+};
 module.exports = average;
