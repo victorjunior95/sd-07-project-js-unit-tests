@@ -31,17 +31,18 @@ const checkTypeOfNumber = (array) => {
   }
   return false;
 };
-
 const average = (array) => {
   let soma = 0;
   let media = 0;
-  if ((checkArrayLength() !== false) || (checkTypeOfNumber() === true)) {
+  if ((checkArrayLength(array) === true) && (checkTypeOfNumber(array) === true)) {
     for (let index = 0; index < array.length; index += 1) {
       soma += array[index];
       media = Math.round(soma / array.length);
-    } return media;
+    }
+    return media;
   }
   return undefined;
 };
+
 
 module.exports = average;
