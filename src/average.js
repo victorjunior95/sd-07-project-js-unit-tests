@@ -12,6 +12,16 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {};
+const average = (grades) => {
+  let exitAverage = 0;
+  
+  grades.forEach((grade) => {
+    if(typeof grade === 'number'){
+      exitAverage += grade;
+    }
 
+  });
+  return exitAverage;
+};
+  
 module.exports = average;
