@@ -13,15 +13,18 @@
 */
 
 const average = (array) => {
-  if (typeof array !== 'number' || array === []) {
-    return 'undefined';
+  if (array == 0) {
+    return undefined;
   }
   let sumArray = 0;
 
-  for (let index in array) {
+  for (let index = 1; index < array.length; index += 1) {
+    if (typeof array !== 'number') {
+      return undefined;
+    }
     sumArray += index;
   }
-  let mean = Math.round(sumArray / array.length);
+  const mean = Math.round(sumArray / array.length);
   return mean;
 };
 
