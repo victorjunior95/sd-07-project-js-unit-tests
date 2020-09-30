@@ -14,20 +14,19 @@
 
 const average = (array) => {
   let total = 0;
-  if (array.length == 0) {
+  if (array.length === 0) {
     return undefined;
   }
   for (let index = 0; index < array.length; index += 1) {
-    if (typeof array[index] != 'number') {
+    if (typeof array[index] !== 'number') {
       return undefined;
-    } else {
-      total += array[index];
     }
+    total += array[index];
   }
   return Math.round(total / array.length);
 };
 
-let vetor = [3, 4, 5];
+const vetor = [3, 4, 5];
 console.log(average(vetor));
 
 module.exports = average;
