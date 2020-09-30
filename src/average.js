@@ -15,15 +15,14 @@
 const average = (array) => {
   let result = 0;
   const div = array.length;
-  if (div !== 0) {
-    for (let index = 0; index < array.length; index += 1) {
-      if (typeof (array[index]) === 'string') {
-        return undefined;
-      }
-      result += array[index];
-    }
-  } else {
+  if (div === 0) {
     return undefined;
+  }
+  for (let index = 0; index < array.length; index += 1) {
+    if (typeof array[index] === 'string') {
+      return undefined;
+    }
+    result += array[index];
   }
   const output = Math.round(result / div);
   return output;
