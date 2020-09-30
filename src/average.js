@@ -15,19 +15,19 @@
 const average = (array) => {
   let result = 0;
   const div = array.length;
-   if(div!== 0){
-    for (let index = 0; index < array.length; index += 1) {
-      if (typeof(array[index]) === 'string') {
+  if (div!== 0) {
+     for (let index = 0; index < array.length; index += 1) {
+      if (typeof (array[index]) === 'string') {
         return undefined;
-      } 
+     }
     }
-    for (key in array) {
-      result += array[key];
+    for (let key = 0 ; key < div; key += 1) {
+     result += array[key];
     }
-  }else {
-    return undefined;
-  }
+  } else {
+     return undefined;
+   }
   const output = Math.round(result / div);
   return output;
-}
+};
 module.exports = average;
