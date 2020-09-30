@@ -24,7 +24,7 @@ const average = (array) => {
     }
     newArray.push(Math.round(array[index]));
     sum += newArray[index];
-  } 
+  }
   return (Math.round(sum / newArray.length));
 };
 
