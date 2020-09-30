@@ -15,7 +15,6 @@ const numbers = require('../src/numbers');
 
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
-console.log(numbers());
 describe('#numbers', () => {
   it('should return an array and return if it has only numbers or not', () => {
     // assert.fail();
