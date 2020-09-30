@@ -13,5 +13,6 @@
 */
 
 const average = () => {};
+// Começando projeto vqv
 
 module.exports = average;
