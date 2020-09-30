@@ -18,7 +18,7 @@ const average = (arr) => {
 
     if(typeof arr[i] !== 'number'|| arr.length === 0){
         return undefined;
-    };
+    }
 
   }
   
@@ -32,7 +32,7 @@ const average = (arr) => {
   }
   result= Math.round(media / arr.length);
   return result;
-};
+}
 
 
 module.exports = average;
