@@ -30,9 +30,8 @@ const average = (arr) => {
   for (let i = 0; i < arr.length; i += 1){
     media = media + arr[i];
   }
-  const resultado = Math.round(media / arr.length);
-  return resultado;
+    const resultado = Math.round(media / arr.length);
+    return resultado;
 }
+
 module.exports = average;
-
-
