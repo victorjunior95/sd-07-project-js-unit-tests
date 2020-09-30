@@ -16,18 +16,14 @@ const average = (array) => {
   const newArray = [];
   let sum = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if (typeof (array[index]) !== 'number' || array[index] === []) {
-      console.log(undefined);
+    if (typeof (array[index]) !== 'number' || array[index] === [] || array.length === 0) {
       return undefined;
     }
     newArray.push(Math.round(array[index]));
   } for (let j = 0; j < newArray.length; j += 1) {
     sum += newArray[j];
   }
-  if (array.length === 0) {
-    console.log(undefined);
-    return undefined;
-  }
-  console.log(Math.round(sum / newArray.length));
+  return (Math.round(sum / newArray.length));
 };
+
 module.exports = average;
