@@ -20,7 +20,7 @@ const average = (arr) => {
     if (typeof arr[i] !== 'number') {
       return undefined;
     }
-    sum =+ arr[i];
+    sum = arr[i] + sum;
   }
   return Math.round(sum / (arr.length));
 };
@@ -30,7 +30,6 @@ const average = (arr) => {
 //      let sum = 0;
 //      let media = 0;
 //      let arrString = []
-
 //      if (arr.length == 0) { 
 //        return undefined; 
 //      } else {
@@ -54,16 +53,12 @@ const average = (arr) => {
 //     media = cont / arr.length
 //     if (arrString.length == 0) {
 //       return cont;
-      
 //     } else {
 //      return undefined;
 //     }
 // };
-
-
 // const average = (array) => {
 //   let sum = 0;
-
 //   if (array.length === 0) { return undefined; }
 //   for (let index = 0; index < array.length; index += 1) {
 //     if (typeof array[index] !== 'number') {
@@ -73,4 +68,3 @@ const average = (arr) => {
 //   }
 //   return Math.round(sum / (array.length));
 // };
-
