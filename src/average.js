@@ -13,11 +13,13 @@
 */
 
 const average = (array) => {
-  if (array.length === 0 || array === undefined) {
+  if (array.length === 0) {
+    return undefined;
+  } else if (array === undefined) {
     return undefined;
   }
   for (index in array) {
-    if (typeof array[index] !== "number") {
+    if (typeof array[index] !== 'number') {
       return undefined;
     }
   }
