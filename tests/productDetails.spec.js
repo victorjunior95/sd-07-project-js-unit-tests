@@ -43,16 +43,17 @@ describe('#productDetails', () => {
 
     // Teste que os dois itens dentro do array retornado pela função são objetos.
     assert.deepStrictEqual({
-      obj1: typeof productDetails('teste', 'teste')[0],
-      obj2: typeof productDetails('teste', 'teste')[1],
+      obj1: typeof productDetails('teste', 'teste2')[0],
+      obj2: typeof productDetails('teste', 'teste2')[1],
     },
-    {
-      obj1: 'object',
-      obj2: 'object',
-    });
+      {
+        obj1: 'object',
+        obj2: 'object',
+      });
 
     // Teste que os dois objetos são diferentes entre si.
-    
+    assert.notDeepStrictEqual(productDetails('teste', 'teste2')[0], productDetails('teste', 'teste2')[1]);
+
     // (Difícil) Teste que os dois productIds terminam com 123.
   });
 });
