@@ -33,12 +33,57 @@ const productDetails = require('../src/productDetails');
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    assert.fail();
+    // assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
+    assert.deepStrictEqual(
+      typeof productDetails('banana', 'laranja'),
+      'object'
+    );
     // Teste que o array retornado pela função contém dois itens dentro.
+    assert.deepStrictEqual(productDetails('banana', 'laranja').length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
+    for (let i = 0; i < productDetails('banana', 'laranja').length; i += 1) {
+      assert.deepStrictEqual(
+        typeof productDetails('banana', 'laranja')[i],
+        'object'
+      );
+    }
     // Teste que os dois objetos são diferentes entre si.
+    function compareObjects() {
+      if (
+        productDetails('banana', 'laranja')[0] !==
+        productDetails('banana', 'laranja')[1]
+      ) {
+        return true;
+      }
+    }
+    assert.deepStrictEqual(true, compareObjects());
     // (Difícil) Teste que os dois productIds terminam com 123.
+
+    let arrayLastNumbers0 = productDetails(
+      'banana',
+      'laranja'
+    )[0].details.productId.split('');
+    let sumLastNumbers0 =
+      arrayLastNumbers0[arrayLastNumbers0.length - 3] +
+      arrayLastNumbers0[arrayLastNumbers0.length - 2] +
+      arrayLastNumbers0[arrayLastNumbers0.length - 1];
+
+    let arrayLastNumbers1 = productDetails(
+      'banana',
+      'laranja'
+    )[1].details.productId.split('');
+    let sumLastNumbers1 =
+      arrayLastNumbers1[arrayLastNumbers1.length - 3] +
+      arrayLastNumbers1[arrayLastNumbers1.length - 2] +
+      arrayLastNumbers1[arrayLastNumbers1.length - 1];
+
+    function compareLastNumbers() {
+      if (sumLastNumbers0 === sumLastNumbers1) {
+        return true;
+      }
+    }
+    assert.deepStrictEqual(true, compareLastNumbers());
   });
 });
