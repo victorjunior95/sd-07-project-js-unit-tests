@@ -21,7 +21,8 @@ const runArray = () => {
     }
   }
   return total;
-}
+};
+
 const average = (input) => {
   const total = 0;
   if (input.length === 0) {
@@ -29,6 +30,6 @@ const average = (input) => {
   }
   runArray();
   return Math.round(total / input.length);
-}
+};
 
 module.exports = average;
