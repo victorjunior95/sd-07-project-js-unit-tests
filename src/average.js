@@ -11,23 +11,17 @@
     - average([1, 2]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-//  função roubada da trybe:
-const numbers = (myArray) => {
-  for (let i = 0; i < myArray.length; i += 1) {
-    if (typeof myArray[i] !== 'number') {
-      return false;
-    }
-  }
-  return true;
-};
 
 const average = (array) => {
-  if (numbers(array) === false || array.length === 0) return;
   let soma = 0;
+  if (array.length === 0) return undefined;
   for (let index = 0; index < array.length; index += 1) {
+    if (typeof array[index] !== 'number') {
+      return undefined;
+    }
     soma += array[index];
   }
-  let result = Math.floor(soma / array.length);
+  const result = Math.floor(soma / array.length);
   return result;
 };
 
