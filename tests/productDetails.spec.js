@@ -42,7 +42,7 @@ describe('#productDetails', () => {
     assert.deepStrictEqual(typeof productDetails('Heineken', 'Colorado')[0], 'object');
     assert.deepStrictEqual(typeof productDetails('Heineken', 'Colorado')[1], 'object');
     // Teste que os dois objetos são diferentes entre si.
-    // assert.deepStrictEqual(productDetails('Heineken', 'Colorado')[0], productDetails('Heineken', 'Colorado')[1])
+    assert.notDeepStrictEqual(productDetails('Heineken', 'Colorado')[0], productDetails('Heineken', 'Colorado')[1])
     // (Difícil) Teste que os dois productIds terminam com 123.
     const item1 = productDetails('Heineken', 'Colorado')[0].details.productId;
     const item2 = productDetails('Heineken', 'Colorado')[1].details.productId;
