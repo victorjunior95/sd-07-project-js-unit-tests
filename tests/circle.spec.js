@@ -30,5 +30,15 @@ describe('#circle', () => {
     assert.deepStrictEqual(circle(3), {radius: 3, area: 28.26, circumference: 18.84});
     assert.deepStrictEqual(circle(), undefined);
     assert.deepStrictEqual(circle(0), undefined);
+    assert.deepStrictEqual(typeof(circle(1)), 'object');
+    assert.deepStrictEqual(Object.keys(circle(1)).length, 3); // 3 entradas
+    assert.deepStrictEqual(circle(2).circumference, 12.56); //circunferencia para raio 2
+    assert.deepStrictEqual(circle(3).area, 28.26); // area para raio 3
+    
+
+
+
+
+
   });
 });
