@@ -18,9 +18,9 @@ const average = (numbers) => {
   let average = 0;
   let sum = 0;
 
-  for (let num of numbers) {
-    if (typeof num !== 'number') return undefined;
-    sum += num;
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (typeof numbers[index] !== 'number') return undefined;
+    sum += numbers[index];
   }
 
   average = Math.round(sum / numbers.length);
