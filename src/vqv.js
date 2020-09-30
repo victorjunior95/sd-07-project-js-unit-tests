@@ -18,10 +18,10 @@
 
 const vqv = (nome, idade) => {
   if (typeof nome !== 'string' || typeof idade !== 'number') return undefined;
-  let phrase = `Oi, meu nome é ${nome}!
+  const phrase = `Oi, meu nome é ${nome}!
 Tenho ${idade} anos,
 trabalho na Trybe e mando muito em programação!
-#VQV!`
+#VQV!`;
   return phrase;
 };
 
