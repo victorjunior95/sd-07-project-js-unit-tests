@@ -20,10 +20,10 @@ const average = (arr) => {
       sum += arr[i];
       answer = Math.round(sum / arr.length);
     } else {
-      return answer;
+      return undefined;
     }
   }
-  return resposta;
+  return answer;
 };
 
 module.exports = average;
