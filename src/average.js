@@ -18,7 +18,6 @@ const average = (grades) => {
     if (typeof grade === 'number') {
       exitAverage += grade;
     }
-
   });
   return exitAverage;
 };
