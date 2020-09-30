@@ -14,11 +14,15 @@
 
 const average = (array) => {
   let sum = 0;
-  let mediaInFunction = 0; 
+  let mediaInFunction; 
   for (let index = 0; index < array.length; index += 1) {
-    sum += array[index];
+    if (typeof(array[index]) === 'number') {
+      sum += array[index];
+      mediaInFunction = Math.floor(sum / array.length);
+    } else {
+      mediaInFunction = 'undefined';
+    }
   }
-  mediaInFunction = Math.floor(sum / array.length);
   return mediaInFunction;
 };
 
