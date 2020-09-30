@@ -21,9 +21,8 @@ const average = (array) => {
   for (let index = 1; index < array.length; index += 1) {
     if (typeof array !== 'number') {
       return undefined;
-    }else {
-    sumArray += index;
     }
+    sumArray += index;
   }
   const mean = Math.round(sumArray / array.length);
   return mean;
