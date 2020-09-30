@@ -12,14 +12,13 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = (input) => {
-  
-  var total = 0;
-  if(input.length === 0){
+const average = (input) => {  
+  let total = 0;
+   if(input.length === 0){
     return undefined;
   }
-  for(index = 0; index < input.length; index += 1){
-    if(typeof(input[index]) === 'number'){
+  for (index = 0; index < input.length; index += 1) {
+    if (typeof (input[index]) === 'number'){
       total += (input[index]);
     } else {
       return undefined;
