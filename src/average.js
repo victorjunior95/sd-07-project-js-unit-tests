@@ -13,15 +13,14 @@
 */
 
 const average = (array) => {
-  //if (array.length == 0) return undefined
-  //for (i in array) if (typeof array[i] != Number) return undefined
+  if (array.length == 0) return undefined
+  for (const i in array) if (typeof array[i] != 'number') return undefined
   
   tot = 0
-  for (i in array) {
+  for (const i in array) {
     tot += array[i]
   }
-  return Math.round(tot/array.length-0.1)
+  return Math.round(tot/array.length)
 };
 
-console.log(average([1, 2]))
 module.exports = average;
