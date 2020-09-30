@@ -18,7 +18,7 @@ const average = (array) => {
     if (typeof (array[numero]) !== 'number') {
       resultado += array[numero];
     }
-    else{
+    else {
       return undefined;
     }
   }
