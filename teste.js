@@ -1,3 +1,4 @@
+/* Função average. */
 const average = (array) => {
   let med = 0;
   let sum = 0;
