@@ -17,11 +17,11 @@
 */
 
 const testType = (nome, idade) => {
-  if (typeof(nome) !== 'string' || typeof(idade) !== 'number') {
+  if (typeof nome !== 'string' || typeof idade !== 'number') {
     return true;
   }
   return false;
-}
+};
 
 const vqv = (nome, idade) => {
   if (testType(nome, idade)) {
