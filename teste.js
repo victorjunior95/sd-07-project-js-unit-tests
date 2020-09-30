@@ -28,3 +28,22 @@ trabalho na Trybe e mando muito em programação!
 };
 
 console.log(vqv('Marcelo', 34));
+
+/* Função productDetails
+ */
+
+const productDetails = (firstProduct, secondProduct) => [
+  {
+    name: firstProduct,
+    details: {
+      productId: `${firstProduct}123`,
+    },
+  },
+  {
+    name: secondProduct,
+    details: {
+      productId: `${secondProduct}123`,
+    },
+  },
+];
+console.log(productDetails('Alcool gel', 'Máscara')[1].details.productId);
