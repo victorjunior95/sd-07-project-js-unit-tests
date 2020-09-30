@@ -80,8 +80,8 @@ const createMenu = (Obj) => ({
   order: function(ordered){
     if(this.freeMenu[ordered]!=undefined){
       this.cost += this.freeMenu[ordered]
-      this.consumed.push(ordered)
     }
+    this.consumed.push(ordered)
   },
   consumption: function(){return this.consumed},
   pay: function(){return this.cost},
