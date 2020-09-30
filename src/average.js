@@ -13,25 +13,38 @@
 */
 
 const average = (arr) => {
-     // add your implementation here
-     let sum = 0;
-     let media = 0;
-     let arrString = []
+  let sum = 0;
 
-     if (arr.length == 0) { 
-       return undefined; 
-     } else {
-      for (let i = 0; i < arr.length; i += 1) {
-        if (typeof arr[i] !== 'number') {
-          return undefined;
-        } else {
-          sum =+ arr[i];
-        }
-      }
-      return Math.round(sum / (arr.length));
-     };
+  if (array.length === 0) { return undefined; }
+  for (let i = 0; i < arr.length; i += 1) {
+    if (typeof arr[i] !== 'number') {
+      return undefined;
+    }
+    sum =+ arr[i];
+  }
+  return Math.round(sum / (arr.length));
 };
-//      for (let i = 0; i < arr.length; i += 1) {
+
+// const average = (arr) => {
+//      // add your implementation here
+//      let sum = 0;
+//      let media = 0;
+//      let arrString = []
+
+//      if (arr.length == 0) { 
+//        return undefined; 
+//      } else {
+//       for (let i = 0; i < arr.length; i += 1) {
+//         if (typeof arr[i] !== 'number') {
+//           return undefined;
+//         } else {
+//           sum =+ arr[i];
+//         }
+//       }
+//       return Math.round(sum / (arr.length));
+//      };
+// };
+// //      for (let i = 0; i < arr.length; i += 1) {
 //       if (typeof arr[i] !== 'number') {
 //         arrString.push(arr[i])
 //       } else {
