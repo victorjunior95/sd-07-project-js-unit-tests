@@ -47,3 +47,16 @@ const productDetails = (firstProduct, secondProduct) => [
   },
 ];
 console.log(productDetails('Alcool gel', 'Máscara')[1].details.productId);
+
+/* Função myCounter */
+const myCounter = () => {
+  const myArray = [];
+  for (let count = 0; count <= 3; count += 1) {
+    myArray.push(count);
+    for (let index = 2; index <= 3; index += 1) {
+      myArray.push(index);
+    }
+  }
+  return myArray;
+};
+console.log(myCounter());
