@@ -14,7 +14,7 @@
 
 const average = (array) => {
   if (
-    array.find((element) => typeof element === 'string') !== undefined ||
+    (array.find(element => typeof (element) === 'string') !== undefined) ||
     array.length === 0
   ) {
     return undefined;
