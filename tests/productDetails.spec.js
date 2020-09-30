@@ -46,8 +46,6 @@ describe('#productDetails', () => {
     assert.notDeepStrictEqual(productDetails('Alcool gel', 'Máscara')[0],productDetails('Alcool gel', 'Máscara')[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
     const regexEnd123 = /123$/;
-    console.log('Teste :',regexEnd123.test(result[0]['details']['productId']), result[0]['details']['productId']);
-    console.log('Teste :',regexEnd123.test(result[1]['details']['productId']), result[1]['details']['productId']);
     assert.ok(regexEnd123.test(result[0]['details']['productId']) && regexEnd123.test(result[1]['details']['productId']));
   });
 });
