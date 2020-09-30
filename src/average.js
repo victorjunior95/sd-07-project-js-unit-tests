@@ -19,7 +19,7 @@ const average = (array) => {
   if (n === 0) {
     return undefined;
   }
-  for (index = 0; index < n ; index += 1){
+  for (index = 0; index < n; index += 1) {
     if (typeof (array[index]) === 'string') {
       return undefined;
     }
@@ -30,4 +30,3 @@ const average = (array) => {
 };
 console.log(average([-11, -5, 2]));
 module.exports = average;
-
