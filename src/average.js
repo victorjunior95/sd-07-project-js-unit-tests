@@ -15,7 +15,7 @@
 const average = (grades) => {
   let exitAverage = 0;
   if (grades.length === 0) {
-    return undefined
+    return undefined;
   }
 
   for (let i = 0; i < grades.length; i += 1) {
