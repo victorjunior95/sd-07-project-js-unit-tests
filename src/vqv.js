@@ -17,9 +17,9 @@
 */
 
 const vqv = (nome, idade) => {
-  if (nome == undefined) return undefined
-  return `Oi, meu nome é ${nome}!\n`+`Tenho ${idade} anos,\n`+`trabalho na Trybe e mando muito em programação!\n`+`#VQV!`
+  if (nome === undefined) return undefined;
+  return `Oi, meu nome é ${nome}!\nTenho ${idade} anos,\ntrabalho na Trybe e mando muito em programação!\n#VQV!`;
 };
-console.log(vqv())
+console.log(vqv());
 
 module.exports = vqv;
