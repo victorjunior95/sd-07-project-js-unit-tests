@@ -15,13 +15,12 @@
 const average = (arrayHere) => {
   let result;
   let sum = 0;
-  if (arrayHere.length === 0) result = undefined;
+  if (arrayHere.length === 0) return undefined;
   for (let i = 0; i < arrayHere.length; i += 1) {
     if (typeof (arrayHere[i]) === 'string') {
-      result = undefined;
-    } else {
-      sum += arrayHere[i];
+      return undefined;
     }
+    sum += arrayHere[i];
     result = Math.round(sum / arrayHere.length);
   }
   return result;
