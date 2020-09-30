@@ -14,21 +14,20 @@
 
 const average = (grades) => {
   let exitAverage = 0;
-  if(grades.length === 0){
+  if (grades.length === 0) {
     return undefined
   }
-  
-  for(let i = 0; i < grades.length; i += 1){
-    if (typeof grades[i] !== 'number'){
+
+  for (let i = 0; i < grades.length; i += 1) {
+    if (typeof grades[i] !== 'number') {
       return undefined;
     }
     exitAverage += grades[i];
-  } 
-  
-  exitAverage = Math.round(exitAverage/grades.length);
+  }
+
+  exitAverage = Math.round(exitAverage / grades.length);
 
   return exitAverage;
 };
 
 module.exports = average;
-
