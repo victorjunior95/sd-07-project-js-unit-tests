@@ -1,14 +1,14 @@
 /* eslint-disable max-len */
 
-/* Você é responsável por escrever o código do sistema de pedidos de um restaurante. Deve ser possível, através desse sistema, cadastrar um menu. Dado 
+/* 
+  Você é responsável por escrever o código do sistema de pedidos de um restaurante. Deve ser possível, através desse sistema, cadastrar um menu. Dado 
   que um menu foi cadastrado, o sistema deve disponibilizar um objeto através do qual se consegue:
   - ler o menu cadastrado;
   - fazer pedidos;
   - verificar o que foi pedido;
   - somar o valor da conta.
 
-  A estrutura deste código e deste objeto já foi definida e você irá implementá-la.
-  Abaixo você verá uma série de testes e passos que devem ser, NECESSARIAMENTE, feitos em ordem para o bom desenvolvimento do sistema. Eles guiarão 
+  A estrutura deste código e deste objeto já foi definida e você irá implementá-la. Abaixo você verá uma série de testes e passos que devem ser, NECESSARIAMENTE, feitos em ordem para o bom desenvolvimento do sistema. Eles guiarão 
   você pelo desenvolvimento.
 
   Parâmetros:
@@ -79,6 +79,23 @@
 // soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave
 // `food` quanto o objeto da chave `drink`.
 
+const somaPreco = (comsumption, drinkKey, drinkValue, foodKey, foodValue) => {
+  let precoTotal = 0;
+  for (let i = 0; i < comsumption.length; i += 1) {
+    for (let j = 0; j < drinkKey.length; j += 1) {
+      if (comsumption[i] === drinkKey[j]) {
+        precoTotal += drinkValue[j];
+      }
+    }
+    for (let k = 0; k < foodKey.length; k += 1) {
+      if (comsumption[i] === foodKey[k]) {
+        precoTotal += foodValue[k];
+      }
+    }
+  }
+  return precoTotal;
+};
+
 const createMenu = (myMenu) => {
   const menu = {
     fetchMenu: myMenu,
@@ -92,19 +109,15 @@ const createMenu = (myMenu) => {
       const foodKeys = Object.keys(menu.fetchMenu.food);
       const drinkValues = Object.values(menu.fetchMenu.drink);
       const foodValues = Object.values(menu.fetchMenu.food);
-      for (let i = 0; i < menu.consumption.length; i += 1) {
-        for (let j = 0; j < drinkKeys.length; j += 1) {
-          if (menu.consumption[i] === drinkKeys[j]) {
-            precoTotal += drinkValues[j];
-          }
-        }
-        for (let k = 0; k < foodKeys.length; k += 1) {
-          if (menu.consumption[i] === foodKeys[k]) {
-            precoTotal += foodValues[k];
-          }
-        }
-      }
-      let imposto = precoTotal * 0.1;
+
+      precoTotal = somaPreco(
+        menu.consumption,
+        drinkKeys,
+        drinkValues,
+        foodKeys,
+        foodValues
+      );
+      const imposto = precoTotal * 0.1;
       return precoTotal + imposto;
     },
   };
