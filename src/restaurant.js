@@ -95,7 +95,6 @@ const createMenu = (item) => {
   };
   return menu;
 };
-console.log(createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9}}).order('coxinha').order('agua').order('coxinha').pay())
 // console.log (createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9}}))
 // console.log(createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9}}).fetchMenu.food)
 // console.log (createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9}}).order('agua').order('coxinha').order('coxinha').pay());
