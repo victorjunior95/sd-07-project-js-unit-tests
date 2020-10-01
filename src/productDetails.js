@@ -38,5 +38,6 @@ const productDetails = (firstProduct, secondProduct) => [
     },
   },
 ];
+console.log(productDetails("Alcool", "Máscara")[0]["details"]["productId"].match("123")[0])
 
 module.exports = productDetails;
