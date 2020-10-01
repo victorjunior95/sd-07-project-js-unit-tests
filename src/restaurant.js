@@ -78,10 +78,12 @@
 // };
 
 const createMenu = (item) => {
-  let menu = { fetchMenu: item, consumption: [], order: createOrder = (item) => {
-   menu.consumption.push(item);
-    return menu;
-  }}
+  const menu = { fetchMenu: item,
+    consumption: [],
+    order: createOrder = (item2) => {
+      menu.consumption.push(item2);
+      return menu;
+    } };
   return menu;
 };
 createMenu('x');
