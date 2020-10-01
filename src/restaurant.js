@@ -74,12 +74,20 @@
 
     //assert.deepStrictEqual(createMenu(myMenu), { fetchMenu: myMenu });
 
-const myRestaurant = {};
-const createMenu = (myMenu) => {
-  myRestaurant.fetchMenu = myMenu // Adiciona a propriedade 'fetchMenu' ao objeto 'myRestaurant', e dá a ele o valor de 'myMenu' (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Trabalhando_com_Objetos)
-  myRestaurant.consumption = []
-  return myRestaurant;
+const restaurant = {};
+
+const orderFromMenu = (request) => {
+  restaurant.consumption.push(request);
 };
+
+const createMenu = (myMenu) => {
+  restaurant.fetchMenu = myMenu // Adiciona a propriedade 'fetchMenu' ao objeto 'restaurant', e dá a ele o valor de 'myMenu' (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Trabalhando_com_Objetos)
+  restaurant.consumption = []
+  restaurant.order = orderFromMenu
+  return restaurant;
+};
+
+
 
 module.exports = createMenu;
 
