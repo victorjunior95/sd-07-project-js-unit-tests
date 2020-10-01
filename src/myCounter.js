@@ -21,9 +21,9 @@ const myCounter = () => {
     myArray.push(counter);
     for (let otherCounter = 2; counter <= 3; otherCounter += 1) {
       myArray.push(otherCounter);
-  };
+    }
+  }
   return myArray;
-}
-}
+};
 
 module.exports = myCounter;
