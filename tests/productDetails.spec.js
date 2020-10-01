@@ -52,6 +52,31 @@ describe("#productDetails", () => {
 			}
     }
     assert.deepStrictEqual(compareObjetcts('leite','manga'),true);*/
-		// (Difícil) Teste que os dois productIds terminam com 123.
+    // (Difícil) Teste que os dois productIds terminam com 123.
+    let arrayNumbers0 = productDetails(
+      'leite',
+      'manga'
+    )[0].details.productId.split('');
+    let getNumbers0 =
+      arrayNumbers0[arrayNumbers0.length - 3] +
+      arrayNumbers0[arrayNumbers0.length - 2] +
+      arrayNumbers0[arrayNumbers0.length - 1];
+      
+
+    let arrayNumbers1 = productDetails(
+      'banana',
+      'laranja'
+    )[1].details.productId.split('');
+    let getNumbers1 =
+      arrayNumbers1[arrayNumbers1.length - 3] +
+      arrayNumbers1[arrayNumbers1.length - 2] +
+      arrayNumbers1[arrayNumbers1.length - 1];
+
+    function compareGetNumbers() {
+      if (getNumbers0 === getNumbers1) {
+        return true;
+      }
+    }
+    assert.deepStrictEqual(true, compareGetNumbers());
 	});
 });
