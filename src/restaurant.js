@@ -73,14 +73,15 @@
 
 const addItem = (string, object) => {
   object.consumption.push(string);
-}
+};
 
 const createMenu = (object) => {
-  return {
+  const returnedObject = {
     fetchMenu: object,
     consumption: [],
     order: addItem,
   };
+  return returnedObject;
 };
 
 module.exports = createMenu;
