@@ -20,7 +20,7 @@ const average = (elements) => {
     if (typeof elements[index] !== 'number') return undefined;
     med += elements[index];
   }
-  
+
   return Math.round(med / elements.length);
 };
 
