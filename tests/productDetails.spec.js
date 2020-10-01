@@ -40,7 +40,7 @@ describe('#productDetails', () => {
     assert.strictEqual(typeof product[0], 'object');
     assert.strictEqual(typeof product[1], 'object');
     assert.notStrictEqual(product[0], product[1]);
-    assert.deepStrictEqual(productId0.substr(-3), 123)
-    assert.deepStrictEqual(productId1.substr(-3), 123)
+    assert.deepStrictEqual(productId0.substr(-3), "123")
+    assert.deepStrictEqual(productId1.substr(-3), "123")
   });
 });
