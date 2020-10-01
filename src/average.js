@@ -13,18 +13,16 @@
 */
 
 const average = (array) => {
-  if (array.length == 0) {
+  if (array.length === 0) {
     return undefined;
   }
-  let newArray = array;
-  const numberOfElements = newArray.length;
+  const newArray = array;
   let total = 0;
   for (let index = 0; index < newArray.length; index += 1) {
-    if (typeof newArray[index] !== "number") {
+    if (typeof newArray[index] !== 'number') {
       return undefined;
-    } else {
-      total += newArray[index];
     }
+    total += newArray[index];
   }
   const avarage = total / newArray.length;
   return Math.round(avarage);

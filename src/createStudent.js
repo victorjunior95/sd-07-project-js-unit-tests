@@ -21,5 +21,4 @@ const createStudent = (string) => {
   student.feedback = () => 'Eita pessoa boa!';
   return student;
 };
-const estudante = createStudent('Leandrão, o Lobo Solitário');
 module.exports = createStudent;
