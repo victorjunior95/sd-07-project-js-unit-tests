@@ -14,6 +14,7 @@
 const calculateAverage = (numbers) => {
   let media = 0;
   for (let index = 0; index < numbers.length; index += 1) {
+    console.log(numbers);
     if (typeof (numbers[index]) === 'number') {
       media += numbers[index];
     } else {
@@ -28,7 +29,7 @@ const average = (numbers) => {
   if (numbers.length === 0) {
     return undefined;
   }
-  return calculateAverage();
+  return calculateAverage(numbers);
 };
 
 module.exports = average;
