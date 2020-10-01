@@ -57,14 +57,24 @@
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
+const soma = (comsumption, key, value, preco, index) => {
+  for (let k = 0; k < key.length; k += 1) {
+    if (comsumption[index] === key[k]) {
+      preco += value[k];
+    }
+  }
+  return preco;
+};
+
 const somaPrecoComida = (comsumption, foodKey, foodValue) => {
   let precoComida = 0;
   for (let i = 0; i < comsumption.length; i += 1) {
-    for (let k = 0; k < foodKey.length; k += 1) {
-      if (comsumption[i] === foodKey[k]) {
-        precoComida += foodValue[k];
-      }
-    }
+    precoComida = soma(comsumption, foodKey, foodValue, precoComida, i);
+    // for (let k = 0; k < foodKey.length; k += 1) {
+    //   if (comsumption[i] === foodKey[k]) {
+    //     precoComida += foodValue[k];
+    //   }
+    // }
   }
   return precoComida;
 };
@@ -72,11 +82,12 @@ const somaPrecoComida = (comsumption, foodKey, foodValue) => {
 const somaPrecoBebida = (comsumption, drinkKey, drinkValue) => {
   let precoBebida = 0;
   for (let i = 0; i < comsumption.length; i += 1) {
-    for (let j = 0; j < drinkKey.length; j += 1) {
-      if (comsumption[i] === drinkKey[j]) {
-        precoBebida += drinkValue[j];
-      }
-    }
+    precoBebida = soma(comsumption, drinkKey, drinkValue, precoBebida, i);
+    // for (let j = 0; j < drinkKey.length; j += 1) {
+    //   if (comsumption[i] === drinkKey[j]) {
+    //     precoBebida += drinkValue[j];
+    //   }
+    // }
   }
   return precoBebida;
 };
