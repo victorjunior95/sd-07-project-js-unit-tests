@@ -15,7 +15,7 @@
 function arrayOfNumbers(array) {
   if (array.length === 0) return false;
   for (let i = 0; i < array.length; i += 1) {
-    if (typeof (array[i]) !== 'number' || isNaN(array[i]) || array.length === 0) {
+    if (typeof array[i] !== 'number' || isNaN(array[i]) || array.length === 0) {
       return false;
     }
   }
