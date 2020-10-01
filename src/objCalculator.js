@@ -20,5 +20,12 @@
 */
 
 const calculator = {};
+calculator.add = (param, param2) => {
+  let sum = 0;
+  if (typeof (param) === 'number' && typeof (param2) === 'number') {
+    sum = Math.floor(param + param2);
+  }
+  return sum; 
+}
 
 module.exports = calculator;
