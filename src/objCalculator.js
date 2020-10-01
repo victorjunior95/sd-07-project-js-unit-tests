@@ -43,7 +43,7 @@ const calculator = {
       throw new Error('São strings');
     }
     return primeiroNumero - segundoInteiro;
-  }
+  },
 };
 
 module.exports = calculator;
