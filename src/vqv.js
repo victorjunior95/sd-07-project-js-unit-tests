@@ -24,10 +24,10 @@ const vqv = (nome, idade) => {
     name: nome,
     age: idade,
   };
-  return (`Oi, meu nome é ${me.name}! \n`+
-  `Tenho ${me.age} anos, \n`+
-  `trabalho na Trybe e mando muito em programação! \n`+
-  `#VQV!`);
+  return (`Oi, meu nome é ${me.name}! \n` +
+  `Tenho ${me.age} anos, \n` +
+  `trabalho na Trybe e mando muito em programação! \n` +
+  '#VQV!');
 };
 
 module.exports = vqv;
