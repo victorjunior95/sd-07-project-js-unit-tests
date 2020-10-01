@@ -50,7 +50,7 @@ describe('#productDetails', () => {
     assert (
       productDetails('Panela', 'Frigideira')[0].details.productId.substr(productDetails('Panela', 'Frigideira')[0].details.productId.length - 3) === '123'
       &&
-      productDetails('Panela', 'Frigideira')[1].details.productId(productDetails('Panela', 'Frigideira')[1].details.productId.length -3) === '123'
+      productDetails('Panela', 'Frigideira')[1].details.productId.substr(productDetails('Panela', 'Frigideira')[1].details.productId.length - 3) === '123'
     );
   });
 });
