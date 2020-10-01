@@ -98,9 +98,9 @@ describe('#createMenu', () => {
     // ```
     const objetoQualquer5 = { food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} };
     const objetoRetornado5 = createMenu(objetoQualquer5);
-    objetoRetornado5.order("coxinha");
+    objetoRetornado5.order('coxinha');
 
-    assert.deepStrictEqual(objetoRetornado5.comsuption, ['coxinha']);
+    assert.deepStrictEqual(objetoRetornado5.consumption, ['coxinha']);
     // objetoRetornado.order("coxinha");
     // objetoRetornado.comsuption // Retorno: ["coxinha"]
     // ```
