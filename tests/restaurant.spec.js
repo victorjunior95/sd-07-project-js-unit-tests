@@ -64,8 +64,14 @@ describe('#createMenu', () => {
     // Agora faça o PASSO 1 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------------
     // TESTE 2: Verifique que, dado que a função createMenu foi chamada com o objeto: `{ food: {}, drink: {} }`, verifique que 'objetoRetornado.fetchMenu' retorna um objeto cujas chaves são somente `food` e `drink`.
-    // ```
-    // const objetoRetornado = createMenu(objetoQualquer);
+    let food = {};
+    food.coxinha = 3.90;
+    food.sanduiche = 9.90;
+    let drink = {};
+    drink.agua = 3.90;
+    drink.cerveja = 6.90;
+    assert.deepStrictEqual(Object.keys(createMenu({food, drink}).fetchMenu), ['food', 'drink'])
+    // objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.fetchMenu // Retorno: { food: {}, drink: {}}
     // ```
     // Agora faça o TESTE 3 deste arquivo.
