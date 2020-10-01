@@ -15,32 +15,12 @@
   - Um número inteiro;
 
   Comportamento:
-  calculator.add(1, 1) // Retorno: 2;
-  calculator.div(3, 2) // Retorno: 1;
+  add(1, 1) // Retorno: 2;
+  div(3, 2) // Retorno: 1;
 */
-
-function add (num1, num2) {
-  return Math.round(num1 + num2)
-}
-function mult (num1, num2) {
-  return Math.round(num1 * num2)
-}
-function div (num1, num2) {
-  return Math.round(num1 / num2)
-}
-function sub (num1, num2) {
-  return Math.round(num1 - num2)
-}
-
-let calculator = (num1, num2) => {
-  if (typeof num1 === 'string' && typeof num2 === 'string') {
-    throw new Error('São strings');
-    add(add(num1, num2);
-    mult();
-    div();
-    sub();
-  }
-  
-};
-
+const calculator = {};
+  calculator.add = (num1, num2) => num1 + num2;
+  calculator.mult = (num1, num2) => num1 * num2;
+  calculator.div = (num1, num2) => Math.trunc(num1 / num2);
+  calculator.sub = (num1, num2) => num1 - num2;
 module.exports = calculator;
