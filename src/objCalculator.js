@@ -24,7 +24,7 @@ const calculator = {
   mult: (number1, number2) => number1 * number2,
   div: (number1, number2) => {
     const division = number1 / number2;
-    return parseInt(division);
+    return parseInt(division, 10);
   },
   sub: (number1, number2) => number1 - number2,
 };
