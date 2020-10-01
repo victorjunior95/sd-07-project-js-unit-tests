@@ -34,14 +34,13 @@ const productDetails = require("../src/productDetails");
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-
     assert.deepStrictEqual(
       productDetails('Alcool gel', 'Máscara'),
       [
         { details: { productId: 'Alcool gel123' }, name: 'Alcool gel' },
         { details: { productId: 'Máscara123' }, name: 'Máscara' },
       ],
-      'Não é um array'
+      'Não é um array',
     );
     const product = productDetails('Alcool gel', 'Máscara');
     assert.strictEqual(typeof product[0], 'object', 'Não é um objeto');
