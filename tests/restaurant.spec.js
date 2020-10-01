@@ -61,27 +61,8 @@ describe('#createMenu', () => {
     assert.strictEqual(createMenu('item').order('agua').consumption.includes('agua'), true)
     assert.strictEqual(createMenu('item').order('sopa').consumption.includes('sopa'), true)
     assert.strictEqual(createMenu('item').order('sashimi').consumption.includes('sashimi', 'sopa', 'agua', 'coxinha'), true)
-    // assert.strictEqual(createOrder
-    // --------------------------------------------------------------------------------------
-    // TESTE 6: Verifique que as três orders seguintes, de bebidas e comidas mescladas, somam três itens no array `objetoRetornado.consumption` conforme os itens pedidos.
-    // ```
-    // objetoRetornado.order("coxinha");
-    // objetoRetornado.order("agua");
-    // objetoRetornado.order("sopa");
-    // objetoRetornado.order("sashimi");
-    // objetoRetornado.consumption // Retorno: ["coxinha", "agua", "sopa", "sashimi"]
-    // ```
-    // Agora faça o TESTE 7 deste arquivo.
-    // --------------------------------------------------------------------------------------
-    // TESTE 7: Verifique que a função `order` aceita que pedidos repetidos sejam acrescidos a consumption.
-    // ```
-    // objetoRetornado.order('coxinha');
-    // objetoRetornado.order('agua');
-    // objetoRetornado.order('coxinha');
-    // objetoRetornado.comsuption // Retorno: ['coxinha', 'agua', 'coxinha']
-    // ```
-    // Agora faça o TESTE 8 deste arquivo.
-    // --------------------------------------------------------------------------------------
+    assert.deepStrictEqual(createMenu('item').order('coxinha').order('agua').order('coxinha').consumption, ['coxinha', 'agua', 'coxinha'])
+    assert.strictEqual(createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9}}).order('coxinha').order('agua').order('coxinha').pay(), 11.7)
     // TESTE 8: Verifique que, ao chamar `objetoRetornado.pay()`, retorna-se a soma dos preços de tudo que foi pedido, conforme registrado em `objetoRetornado.consumption`
     // ```
     // objetoRetornado.order('coxinha');
