@@ -66,6 +66,6 @@ describe('#productDetails', () => {
       }  
     return fim 
     };
-    assert.strict((getNumberOfS(productDetails("firstProduct","secondProduct"))),['123', '123']);    
+    assert.ok((getNumberOfS(productDetails("firstProduct","secondProduct"))),['123', '123']); // modo ok vai testar se a função é verdadeira ou nao 
   });
 });
