@@ -104,13 +104,15 @@ const foodsAccount = () => {
   const foodsArray = Object.entries(menu.fetchMenu.food);
   for (let index = 0; index < ordersArray.length; index += 1) {
     for (let foodsIndex = 0; foodsIndex < foodsArray.length; foodsIndex += 1) {
-      if (ordersArray[index] === foodsArray[foodsIndex][0]) {
-        foodAccount += foodsArray[foodsIndex][1];
+      let key = foodsArray[foodsIndex][0];
+      let value = foodsArray[foodsIndex][1];
+      if (ordersArray[index] === key) {
+        foodAccount += value;
       }
     }
   }
   return foodAccount;
-}
+};
 
 const drinksAccount = () => {
   let drinkAccount = 0;
@@ -124,7 +126,7 @@ const drinksAccount = () => {
     }
   }
   return drinkAccount;
-}
+};
 
 menu.pay = () => {
   let account = 0;
