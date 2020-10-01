@@ -71,6 +71,14 @@
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-const createMenu = () => {};
+
+    //assert.deepStrictEqual(createMenu(myMenu), { fetchMenu: myMenu });
+
+const meuRestaurante = {};
+const createMenu = (myMenu) => {
+  meuRestaurante.fetchMenu = myMenu; // Adiciona a propriedade 'fetchMenu' ao objeto 'meuRestaurante', e dá a ele o valor de 'myMenu' (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Trabalhando_com_Objetos)
+  return meuRestaurante;
+}; 
 
 module.exports = createMenu;
+
