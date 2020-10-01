@@ -24,26 +24,26 @@ const calculator = {
     if (typeof primeiroNumero === 'string' && typeof segundoInteiro === 'string') {
       throw new Error('São strings');
     }
-    return primeiroNumero + segundoInteiro
+    return primeiroNumero + segundoInteiro;
   },
   div: (primeiroNumero, segundoInteiro) => {
     if (typeof primeiroNumero === 'string' && typeof segundoInteiro === 'string') {
       throw new Error('São strings');
     }
-    return Math.floor(primeiroNumero / segundoInteiro)
+    return Math.floor(primeiroNumero / segundoInteiro);
   },
   mult: (primeiroNumero, segundoInteiro) => {
     if (typeof primeiroNumero === 'string' && typeof segundoInteiro === 'string') {
       throw new Error('São strings');
     }
-    return primeiroNumero * segundoInteiro
+    return primeiroNumero * segundoInteiro;
   },
   sub: (primeiroNumero, segundoInteiro) => {
     if (typeof primeiroNumero === 'string' && typeof segundoInteiro === 'string') {
       throw new Error('São strings');
     }
-    return primeiroNumero - segundoInteiro
-  }
+    return primeiroNumero - segundoInteiro;
+  };
 };
 
 module.exports = calculator;
