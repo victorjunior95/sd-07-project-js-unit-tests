@@ -15,13 +15,14 @@
 const average = (arrayNumber) => {
   let soma = 0;
   for (let i = 0; i < arrayNumber.length; i += 1) {
-    if (typeof arrayNumber[i] !== 'number' || arrayNumber.length <= 0) undefined;
-     
+    if (typeof arrayNumber[i] !== 'number' || arrayNumber.length <= 0) {
+      return undefined;
+    } 
     soma += arrayNumber[i];
     const arithmeticAverage = soma / arrayNumber.length;
-    const roundedNumer = Math.round(arithmeticAverage);
-    return roundedNumer;
+    soma = Math.round(arithmeticAverage);
   }
+  return soma;
 };
 
 module.exports = average;
