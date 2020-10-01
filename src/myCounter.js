@@ -18,7 +18,7 @@
 const myCounter = () => {
   const myArray = [];
   for (let count = 0; count <= 3; count += 1) {
-    myArray.push(counter);
+    myArray.push(count);
     for (let counter = 2; counter <= 3; counter += 1) {
       myArray.push(counter);
     }
