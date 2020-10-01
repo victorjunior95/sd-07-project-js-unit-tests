@@ -27,12 +27,25 @@ describe('#circle', () => {
   it('given a radius, should return an object with circles info', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
-    assert.strictEqual(circle(1), {})
+    const output = typeof(circle(1));
+    const expected = 'object'
+    assert.strictEqual(output, expected)
     // Teste se o objeto retornado tem 3 entradas.
-    assert.strictEqual(circle(1) , [1, 3.14, 6.28])
+    assert.strictEqual(Object.values(circle(1)).length, 3)
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
+    assert.strictEqual(circle() , undefined)
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
+    assert.strictEqual(circle(2).circumference, 12.56)
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
+    assert.strictEqual(circle(3).area.toPrecision(4), "28.26")
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
+    precision = (objeto) => {
+      return {
+        radius : parseFloat(objeto.radius.toFixed(2)),
+        area : parseFloat(objeto.area.toFixed(2)),
+        circumference : parseFloat(objeto.circumference.toFixed(2))
+      };
+    }
+    assert.deepStrictEqual(precision(circle(3)), { radius: 3, area: 28.26, circumference: 18.84 })
   });
 });
