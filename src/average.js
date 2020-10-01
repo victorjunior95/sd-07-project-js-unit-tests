@@ -19,10 +19,10 @@ const average = (arrayNumber) => {
       return undefined;
     }
     soma += arrayNumber[index];
-    const arithmeticAverage = soma / arrayNumber.length;
-    soma = Math.round(arithmeticAverage);
   }
+  const arithmeticAverage = soma / arrayNumber.length;
+  soma = Math.round(arithmeticAverage);
   return soma;
 };
-
+console.log(average([3,4,5]));
 module.exports = average;
