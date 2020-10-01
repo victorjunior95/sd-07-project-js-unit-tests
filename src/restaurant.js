@@ -70,11 +70,6 @@ const somaPrecoComida = (comsumption, foodKey, foodValue) => {
   let precoComida = 0;
   for (let i = 0; i < comsumption.length; i += 1) {
     precoComida = soma(comsumption, foodKey, foodValue, precoComida, i);
-    // for (let k = 0; k < foodKey.length; k += 1) {
-    //   if (comsumption[i] === foodKey[k]) {
-    //     precoComida += foodValue[k];
-    //   }
-    // }
   }
   return precoComida;
 };
@@ -83,11 +78,6 @@ const somaPrecoBebida = (comsumption, drinkKey, drinkValue) => {
   let precoBebida = 0;
   for (let i = 0; i < comsumption.length; i += 1) {
     precoBebida = soma(comsumption, drinkKey, drinkValue, precoBebida, i);
-    // for (let j = 0; j < drinkKey.length; j += 1) {
-    //   if (comsumption[i] === drinkKey[j]) {
-    //     precoBebida += drinkValue[j];
-    //   }
-    // }
   }
   return precoBebida;
 };
