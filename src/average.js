@@ -16,14 +16,14 @@ const average = (vector) => {
     return undefined;
   }
   let sum = 0;
-  for (let i = 0; i <= vector.length; i += 1) {
+  for (let i = 0; i < vector.length; i += 1) {
     if (typeof vector[i] !== 'number') {
       return undefined;
     }
     sum += vector[i];
   }
-  const avg = sum / vector.length;
-  return Math.round(avg);
+  const avg = Math.round(sum / vector.length);
+  return avg;
 };
 
 module.exports = average;
