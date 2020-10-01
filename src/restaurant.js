@@ -109,28 +109,35 @@ const foodSearch = (orderKey) => {
     }
   }
   return foodPrice;
-}
+};
 
 const foodsAccount = () => {
   let foodAccount = 0;
   const ordersArray = menu.consumption;
-  const foodsArray = Object.entries(menu.fetchMenu.food);
   for (let index = 0; index < ordersArray.length; index += 1) {
     foodAccount += foodSearch(ordersArray[index]);
   }
   return foodAccount;
 };
 
+const drinkSearch = (orderKey) => {
+  let drinkPrice = 0;
+  const drinksArray = Object.entries(menu.fetchMenu.drink);
+  for (let drinksIndex = 0; drinksIndex < drinksArray.length; drinksIndex += 1) {
+    const key = drinksArray[drinksIndex][0];
+    const value = drinksArray[drinksIndex][1];
+    if (orderKey === key) {
+      drinkPrice = value;
+    }
+  }
+  return drinkPrice;
+};
+
 const drinksAccount = () => {
   let drinkAccount = 0;
   const ordersArray = menu.consumption;
-  const drinksArray = Object.entries(menu.fetchMenu.drink);
   for (let index = 0; index < ordersArray.length; index += 1) {
-    for (let drinksIndex = 0; drinksIndex < drinksArray.length; drinksIndex += 1) {
-      if (ordersArray[index] === drinksArray[drinksIndex][0]) {
-        drinkAccount += drinksArray[drinksIndex][1];
-      }
-    }
+    drinkAccount += drinkSearch(ordersArray[index]);
   }
   return drinkAccount;
 };
