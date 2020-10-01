@@ -80,8 +80,7 @@ const payFood = (index) => {
   for (let keys = 0; keys < consumption.length; keys += 1) {
     if (consumption[index] === foodName[keys]) {
       sum += foodValue[keys];
-    }
-    if (consumption[index] === drinkName[keys]) {
+    } else if (consumption[index] === drinkName[keys]) {
       sum += drinkValue[keys];
     }
   }
