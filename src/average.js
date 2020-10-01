@@ -22,7 +22,8 @@ const calculateAverage = (numbers) => {
   }
   media /= numbers.length;
   return Math.round(media);
-}
+};
+
 const average = (numbers) => {
   if (numbers.length === 0) {
     return undefined;
