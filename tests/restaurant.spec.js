@@ -67,11 +67,15 @@ describe('#createMenu', () => {
     let food = {};
     food.coxinha = 3.90;
     food.sanduiche = 9.90;
-    let drink = {};
-    drink.agua = 3.90;
-    drink.cerveja = 6.90;
-    assert.deepStrictEqual(Object.keys(createMenu({food, drink}).fetchMenu), ['food', 'drink'])
+    let drinks = {};
+    drinks.agua = 3.90;
+    drinks.cerveja = 6.90;
+    assert.deepStrictEqual(Object.keys(createMenu({food, drinks}).fetchMenu), ['food', 'drinks'])
     // objetoRetornado = createMenu(objetoQualquer);
+    assert.deepStrictEqual(createMenu({food, drinks}), { fetchMenu: {
+      food: {'coxinha': 3.90, 'sanduiche': 9.90},
+      drinks: {'agua': 3.90, 'cerveja': 6.90}}
+    })
     // objetoRetornado.fetchMenu // Retorno: { food: {}, drink: {}}
     // ```
     // Agora faça o TESTE 3 deste arquivo.
