@@ -77,6 +77,6 @@ const createMenu = (object) => {
   return menu;
 };
 
-console.log(createMenu({ food: {}, drink: {} }));
+// console.log(createMenu({ food: {}, drink: {} }));
 
 module.exports = createMenu;
