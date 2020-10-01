@@ -24,4 +24,13 @@ createStudent('Leandrão, o Lobo Solitário');
 console.log(estudante.name);
 console.log(estudante.feedback());
 
+createStudent('Nobre');
+console.log(estudante.name);
+console.log(estudante.feedback());
+
+createStudent('Inácio');
+console.log(estudante.name);
+console.log(estudante.feedback());
+console.log(typeof estudante);
+
 module.exports = createStudent;
