@@ -35,15 +35,15 @@ describe("#productDetails", () => {
 	it("tests the function has the correct behaviour", () => {
 		// ESCREVA SEUS TESTES ABAIXO:
 		// Teste que o retorno da função é um array.
-		//assert.deepStrictEqual(typeof productDetails('Alcool gel', 'Máscara'),'object');
+		assert.deepStrictEqual(typeof productDetails('Alcool gel', 'Máscara'),'object');
 		// Teste que o array retornado pela função contém dois itens dentro.
-		//assert.deepStrictEqual(productDetails('Alcool gel', 'Máscara').length,2);
+		assert.deepStrictEqual(productDetails('Alcool gel', 'Máscara').length,2);
 		// Teste que os dois itens dentro do array retornado pela função são objetos.
-		/*for (let index = 0;index<productDetails('manga','leite').length;index+=1){
+		for (let index = 0;index<productDetails('manga','leite').length;index+=1){
        assert.deepStrictEqual(typeof productDetails('manga','leite')[index],'object');
-    }*/
+    }
 		// Teste que os dois objetos são diferentes entre si.
-		/*function compareObjetcts(string1,string2) {
+		function compareObjetcts(string1,string2) {
 			if (
 				productDetails(string1,string2)[0] !==
 				productDetails(string1,string2)[1]
