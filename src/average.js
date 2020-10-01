@@ -14,11 +14,13 @@
 
 const average = (array) => {
   let result = null;
+  if (isNaN(array) === false) return undefined;
   for (let num = 0; num < array.length; num += 1) {
-    if (typeof array[num] !== 'number') return undefined;
+    if (typeof array[num] !== 'number' || isNaN(array) === false) return undefined;
     result += array[num];
   }
   result /= array.length;
   return Math.round(result);
 };
+
 module.exports = average;
