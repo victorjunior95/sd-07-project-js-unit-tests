@@ -11,25 +11,23 @@
     - average([1, 2]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-
-const runArray = (input) => {
-  for (index = 0; index < input.length; index += 1) {
-    if (typeof (input[index]) === 'number') {
-      total += (input[index]);
+const calculateAverage = (numbers) => {
+  let media = 0;
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (typeof (numbers[index]) === 'number') {
+      media += numbers[index];
     } else {
       return undefined;
     }
   }
-  return total;
-};
-
-const average = (input) => {
-  const total = 0;
-  if (input.length === 0) {
+  media /= numbers.length;
+  return Math.round(media);
+}
+const average = (numbers) => {
+  if (numbers.length === 0) {
     return undefined;
   }
-  runArray();
-  return Math.round(total / input.length);
+  calculateAverage();
 };
 
 module.exports = average;
