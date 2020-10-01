@@ -56,15 +56,12 @@ describe('#createMenu', () => {
     assert.deepStrictEqual((Object.keys(createMenu({ food: {}, drink: {} }).fetchMenu)), [ 'food', 'drink' ])
     assert.deepStrictEqual(createMenu({ food: {}, drink: {} }).fetchMenu, { food: {}, drink: {} });
     assert.deepStrictEqual(createMenu('item').consumption, []);
-    assert.strictEqual(createOrder('coxinha').consumption, [ 'coxinha' ]);
-
-    // TESTE 5: Verifique que chamar uma função associada à chave `order` no objeto retornado, passando uma string como parâmetro, como `objetoRetornado.order('coxinha')`, tal string é adicionada ao array retornado em `objetoRetornado.consumption
-    // ```;
-    // const objetoRetornado = createMenu(objetoQualquer);
-    // objetoRetornado.order("coxinha");
-    // objetoRetornado.comsuption // Retorno: ["coxinha"]
-    // ```
-    // Agora faça o PASSO 3 no arquivo `src/restaurant.js`.
+    assert.deepStrictEqual(createMenu('item').order('coxinha').consumption, [ 'coxinha' ], 'itens não são iguais');
+    assert.strictEqual(createMenu('item').order('coxinha').consumption.includes('coxinha'), true)
+    assert.strictEqual(createMenu('item').order('agua').consumption.includes('agua'), true)
+    assert.strictEqual(createMenu('item').order('sopa').consumption.includes('sopa'), true)
+    assert.strictEqual(createMenu('item').order('sashimi').consumption.includes('sashimi', 'sopa', 'agua', 'coxinha'), true)
+    // assert.strictEqual(createOrder
     // --------------------------------------------------------------------------------------
     // TESTE 6: Verifique que as três orders seguintes, de bebidas e comidas mescladas, somam três itens no array `objetoRetornado.consumption` conforme os itens pedidos.
     // ```
