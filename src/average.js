@@ -24,5 +24,4 @@ const average = (arrayNumber) => {
   soma = Math.round(arithmeticAverage);
   return soma;
 };
-console.log(average([3,4,5]));
 module.exports = average;
