@@ -44,5 +44,13 @@ describe('#productDetails', () => {
     // Teste que os dois objetos são diferentes entre si.
     assert.notStrictEqual(productDetails('álcool', 'máscara')[0], productDetails('álcool', 'máscara')[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
+    const item1 = (productDetails('álcool', 'máscara')[0]);
+    const detailsItem1 = item1['details'];
+    const productIdItem1 = detailsItem1['productId'];
+    assert.strictEqual(productIdItem1.endsWith('123'), true);
+    const item2 = (productDetails('álcool', 'máscara')[1]);
+    const detailsItem2 = item2['details'];
+    const productIdItem2 = detailsItem2['productId'];
+    assert.strictEqual(productIdItem2.endsWith('123'), true);
   });
 });
