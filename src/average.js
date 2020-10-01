@@ -13,11 +13,13 @@
 */
 
 const average = (arrayNumber) => {
+  let soma = 0;
   for (let index = 0; index < arrayNumber.length; index += 1) {
-    if (typeof arrayNumber[index] !== 'number' && arrayNumber.length < 0) {
+    if (typeof arrayNumber[index] !== 'number' || arrayNumber.length <= 0) {
+      return undefined;
     } else {
-      const number = +arrayNumber[index];
-      const arithmeticAverage = number / arrayNumber.length;
+      soma += arrayNumber[index];
+      const arithmeticAverage = soma / arrayNumber.length;
       const roundedNumer = Math.round(arithmeticAverage);
       return roundedNumer;
     }
