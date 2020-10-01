@@ -74,19 +74,23 @@
 function Restaurant(obj) {
   this.fetchMenu = obj;
   this.consumption = [];
-  this.order = (order) => this.consumption.push(order);
+  this.order = order => this.consumption.push(order);
   this.pay = () => {
     let total = 0;
+    const values = Object.values(this.fetchMenu);
 
-    for (const item of this.consumption) {
-      for (const menu in this.fetchMenu)
-        if (this.fetchMenu[menu][item] !== undefined)
-          total += this.fetchMenu[menu][item];
-    }
+    this.consumption.forEach((item) => {
+      values.forEach((element) => {
+        if (element[item] !== undefined) {
+          total += element[item];
+        }
+      });
+    });
+
     return total;
   };
 }
 
-const createMenu = (obj) => new Restaurant(obj);
+const createMenu = obj => new Restaurant(obj);
 
 module.exports = createMenu;

@@ -55,7 +55,7 @@ describe('#createMenu', () => {
     // ```
     // createMenu(objetoQualquer) // Retorno: { fetchMenu: objetoQualquer }
     // ```
-    let parameter = { food: { 'coxinha': 3.9, 'sopa': 9.9 }, drink: { 'agua': 3.5, 'cerveja': 6.9 } };
+    let parameter = { food: { 'coxinha': 3.9, 'sopa': 9.9 }, drink: { 'agua': 3.9, 'cerveja': 6.9 } };
     let object = createMenu(parameter);
     let received = object.fetchMenu;
     let expected = parameter;
@@ -154,7 +154,7 @@ describe('#createMenu', () => {
     object.order('agua');
     object.order('coxinha');
     received = object.pay();
-    expected = 11.30;
+    expected = 11.70;
     assert.deepStrictEqual(received, expected);
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
