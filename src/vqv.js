@@ -25,6 +25,6 @@ const vqv = (nome, idade) => {
   tenho ${idade} anos,
   trabalho na Trybe e mando muito em programação!
   #VQV!`);
-  return resultado;     
+  return resultado;
 };
 module.exports = vqv;
