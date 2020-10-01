@@ -14,9 +14,13 @@
 
 const average = (arrayNumber) => {
   let soma = 0;
+  let not = undefined;
+  if (arrayNumber.length === 0) {
+    return not;
+  }
   for (let index = 0; index < arrayNumber.length; index += 1) {
-    if (typeof arrayNumber[index] !== 'number' || arrayNumber.length <= 0) {
-      return undefined;
+    if (typeof arrayNumber[index] !== 'number') {
+      return not;
     }
     soma += arrayNumber[index];
   }
@@ -24,4 +28,5 @@ const average = (arrayNumber) => {
   soma = Math.round(arithmeticAverage);
   return soma;
 };
+
 module.exports = average;
