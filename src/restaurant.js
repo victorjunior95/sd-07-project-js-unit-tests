@@ -76,9 +76,10 @@
 
 const myRestaurant = {};
 const createMenu = (myMenu) => {
-  myRestaurant.fetchMenu = myMenu; // Adiciona a propriedade 'fetchMenu' ao objeto 'myRestaurant', e dá a ele o valor de 'myMenu' (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Trabalhando_com_Objetos)
+  myRestaurant.fetchMenu = myMenu // Adiciona a propriedade 'fetchMenu' ao objeto 'myRestaurant', e dá a ele o valor de 'myMenu' (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Trabalhando_com_Objetos)
+  myRestaurant.consumption = []
   return myRestaurant;
-}; 
+};
 
 module.exports = createMenu;
 
