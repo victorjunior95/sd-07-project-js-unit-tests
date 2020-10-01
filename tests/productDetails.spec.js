@@ -27,8 +27,6 @@ const productDetails = require('../src/productDetails');
       }
     }
   ]
-  str.substr(-3)
-
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 
