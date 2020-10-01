@@ -28,7 +28,7 @@ const average = (numbers) => {
   if (numbers.length === 0) {
     return undefined;
   }
-  calculateAverage();
+  return calculateAverage();
 };
 
 module.exports = average;
