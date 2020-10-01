@@ -13,15 +13,15 @@
 */
 
 const average = (array) => {
-let element=0;
+let element = 0;
 if (array.length === 0){
   return undefined;
 }
 for (let index = 0; index < array.length; index +=1) {
-  if(typeof (arry[index]) === 'number'){
+  if (typeof (arry[index]) === 'number') {
     element += array[index];
   } 
-  else{
+  else {
     return undefined;
   }
  }
