@@ -11,20 +11,19 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-
-  
 const average = (vector) => {
   if (vector.length === 0) {
     return undefined;
   }
   let sum = 0;
-  for (let i in vector) {
+  for (let i = 0; i <= vector.length; i += 1) {
     if (typeof vector[i] !== 'number') {
-    return undefined;
+      return undefined;
+    }
+    sum += vector[i];
   }
-  sum += vector[i];
-} 
-  const avg = sum / vector.length
-  return Math.round(avg);   
-}
+  const avg = sum / vector.length;
+  return Math.round(avg);
+};
+
 module.exports = average;
