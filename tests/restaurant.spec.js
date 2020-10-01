@@ -95,8 +95,12 @@ describe('#createMenu', () => {
     // Agora faça o PASSO 2 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------------
     // TESTE 5: Verifique que chamar uma função associada à chave `order` no objeto retornado, passando uma string como parâmetro, como `objetoRetornado.order('coxinha')`, tal string é adicionada ao array retornado em `objetoRetornado.consumption
-    // ```;
-    // const objetoRetornado = createMenu(objetoQualquer);
+    // ```
+    const objetoQualquer5 = { food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} };
+    const objetoRetornado5 = createMenu(objetoQualquer5);
+    objetoRetornado5.order("coxinha");
+
+    assert.deepStrictEqual(objetoRetornado5.comsuption, ['coxinha']);
     // objetoRetornado.order("coxinha");
     // objetoRetornado.comsuption // Retorno: ["coxinha"]
     // ```
