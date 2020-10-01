@@ -93,6 +93,5 @@ const createMenu = (menuItems) => {
   };
   return menu;
 };
-const newMenu = createMenu({ coxinha: 'coxinha' });
 
 module.exports = createMenu;
