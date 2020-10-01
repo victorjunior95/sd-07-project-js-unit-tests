@@ -60,7 +60,7 @@ describe('#productDetails', () => {
       }
       let fim = []
       for(let indice = 0 ; indice < numeros.length ; indice += 1){
-         numeros[indice].slice([numeros[indice].length - 3],numeros[indice].length)
+         //numeros[indice].slice([numeros[indice].length - 3],numeros[indice].length)
          fim.push( numeros[indice].slice([numeros[indice].length - 3],numeros[indice].length))
            
       }  
