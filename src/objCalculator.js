@@ -19,6 +19,28 @@
   calculator.div(3, 2) // Retorno: 1;
 */
 
-const calculator = {};
+function add (num1, num2) {
+  return Math.round(num1 + num2)
+}
+function mult (num1, num2) {
+  return Math.round(num1 * num2)
+}
+function div (num1, num2) {
+  return Math.round(num1 / num2)
+}
+function sub (num1, num2) {
+  return Math.round(num1 - num2)
+}
+
+let calculator = (num1, num2) => {
+  if (typeof num1 === 'string' && typeof num2 === 'string') {
+    throw new Error('São strings');
+    add(add(num1, num2);
+    mult();
+    div();
+    sub();
+  }
+  
+};
 
 module.exports = calculator;
