@@ -45,9 +45,27 @@ describe('#productDetails', () => {
     // Teste que os dois objetos são diferentes entre si.
     //Se dois objetos, e seus objetos filhos, forem iguais (em valores e tipos), um erro é lançado e o programa é encerrado:
     //ou seja , se eles forem diferetnes está correto
-    assert.notDeepStrictEqual(Object.values(productDetails(a,b)) , Object.values(productDetails(a,b)) )
-
+    assert.notDeepStrictEqual(Object.values(productDetails("a","b")) , Object.values(productDetails("b","a"))) //testa os obejtos filhos , vai testar a e b , e verificar se são iguais
     // (Difícil) Teste que os dois productIds terminam com 123.
-    
+    objeto2 = (productDetails("firstProduct","secondProduct"))
+    const getNumberOfS = (objeto2) => {
+      let total = [];
+      let numeros = []
+      const array = Object.keys(objeto2);//os dois objetos tem 2 chaves
+      for (i in array) {
+          total.push((objeto2[array[i]]["details"]))// percorre as chacves dos dois objetos e me retorna a chave escolhida
+      }
+      for(let j of total){
+        numeros.push(j["productId"])
+      }
+      let fim = []
+      for(let indice = 0 ; indice < numeros.length ; indice += 1){
+         numeros[indice].slice([numeros[indice].length - 3],numeros[indice].length)
+         fim.push( numeros[indice].slice([numeros[indice].length - 3],numeros[indice].length))
+           
+      }  
+    return fim 
+    };
+    assert.strict((getNumberOfS(productDetails("firstProduct","secondProduct"))),['123', '123']);    
   });
 });
