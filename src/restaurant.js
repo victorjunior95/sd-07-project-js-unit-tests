@@ -79,13 +79,9 @@ const restaurant = {
   },
   pay: () => {
     let toPay = 0;
-    const itemPricePairList = Object.entries(restaurant.fetchMenu.food).concat(Object.entries(restaurant.fetchMenu.drink));
+    const itemPricePairList = Object.assign(restaurant.fetchMenu.food, restaurant.fetchMenu.drink);
     for (let i = 0; i < restaurant.consumption.length; i += 1) {
-      for (let j = 0; j < itemPricePairList.length; j += 1) {
-        if (restaurant.consumption[i] === itemPricePairList[j][0]) {
-          toPay += itemPricePairList[j][1];
-        }
-      }
+      toPay += itemPricePairList[restaurant.consumption[i]];
     }
     return toPay * 1.1;
   },
