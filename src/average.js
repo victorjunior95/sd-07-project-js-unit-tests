@@ -8,17 +8,18 @@
     - Um array. Exemplos: [1, 2]; [1, 2, 3, 4, 5]; [1, 2, '3']; [];
   Comportamento:
     - average([2, 2]) // Retorno: 2;
-    - average([1, 2]) // Retorno: 1;
+    - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
 
 const average = (array) => {
+  let result = null;
   for (let num = 0; num < array.length; num += 1) {
     if (typeof array[num] !== 'number') return undefined;
     result += num;
   }
   result /= array.length;
-  return Math.floor(result);
+  return Math.round(result);
 };
 
 module.exports = average;
