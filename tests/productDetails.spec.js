@@ -51,7 +51,7 @@ describe("#productDetails", () => {
 				return true;
 			}
     }
-    assert.deepStrictEqual(compareObjetcts('leite','manga'),true);*/
+    assert.deepStrictEqual(compareObjetcts('leite','manga'),true);
     // (Difícil) Teste que os dois productIds terminam com 123.
     let arrayNumbers0 = productDetails(
       'leite',
