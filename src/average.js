@@ -21,12 +21,11 @@ const average = (array) => {
   }
 
   for (let index = 0; index < array.length; index += 1) {
-    if (typeof array[index] !== "number") {
+    if (typeof array[index] !== 'number') {
       return (med = undefined);
-    } else {
-      sum += array[index];
-      med = Math.round(sum / array.length);
     }
+    sum += array[index];
+    med = Math.round(sum / array.length);
   }
   return med;
 };
