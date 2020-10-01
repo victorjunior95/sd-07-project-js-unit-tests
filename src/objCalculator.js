@@ -19,8 +19,8 @@
   div(3, 2) // Retorno: 1;
 */
 const calculator = {};
-  calculator.add = (num1, num2) => num1 + num2;
-  calculator.mult = (num1, num2) => num1 * num2;
-  calculator.div = (num1, num2) => Math.trunc(num1 / num2);
-  calculator.sub = (num1, num2) => num1 - num2;
+calculator.add = (num1, num2) => num1 + num2;
+calculator.mult = (num1, num2) => num1 * num2;
+calculator.div = (num1, num2) => Math.trunc(num1 / num2);
+calculator.sub = (num1, num2) => num1 - num2;
 module.exports = calculator;
