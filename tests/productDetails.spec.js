@@ -43,5 +43,12 @@ describe('#productDetails', () => {
     // Teste que os dois objetos são diferentes entre si.
     assert.notDeepStrictEqual(productDetails())
     // (Difícil) Teste que os dois productIds terminam com 123.
+    let firstProductId = (Object.values(productDetails('car', 'motorcycle')[0].details.productId)).toString();
+    let secondProductId = Object.values(productDetails('arroz', 'feijao')[1].details.productId).toString();
+    // firstProductId = firstProductId.reverse();
+    // secondProductId = secondProductId.reverse();
+    // assert.strictEqual(firstProductId[0] === secondProductId[0] && firstProductId[1] === secondProductId[1] && firstProductId[2] === secondProductId[2], true);
+    //https://www.w3schools.com/jsref/jsref_endswith.asp
+    assert.strictEqual(firstProductId.endsWith('1,2,3') && secondProductId.endsWith('1,2,3'), true);
   });
 });
