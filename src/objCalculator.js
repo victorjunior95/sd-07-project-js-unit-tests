@@ -26,7 +26,7 @@ calculator.add = (param, param2) => {
     sum = Math.floor(parseFloat(param + param2));
   }
   return sum; 
-}
+};
 
 calculator.div = (param, param2) => {
   let div;
@@ -34,7 +34,7 @@ calculator.div = (param, param2) => {
     div = Math.floor(parseFloat(param / param2));
   }
   return div;
-}
+};
 
 calculator.mult = (param, param2) => {
   let mult;
@@ -42,7 +42,7 @@ calculator.mult = (param, param2) => {
     mult = Math.floor(parseFloat(param * param2));
   }
   return mult;
-}
+};
 
 calculator.sub = (param, param2) => {
   let sub;
@@ -50,5 +50,5 @@ calculator.sub = (param, param2) => {
     sub = Math.floor(parseFloat(param - param2));
   }
   return sub;
-}
+};
 module.exports = calculator;
