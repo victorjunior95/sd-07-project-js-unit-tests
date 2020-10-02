@@ -59,15 +59,15 @@ let objetoDeRetorno = {
 const orderFromMenu = (request) => {
   objetoDeRetorno.consumption.push(request);
   return objetoDeRetorno;
-}
+};
 
 const createMenu = (objetoQualquer) => {
- objetoDeRetorno = {
-   fetchMenu: objetoQualquer,
-   consumption: [],
-   order: orderFromMenu,
- }
- return objetoDeRetorno;
+  objetoDeRetorno = {
+    fetchMenu: objetoQualquer,
+    consumption: [],
+    order: orderFromMenu,
+  };
+  return objetoDeRetorno;
 
 
 // PASSO 3: Crie uma função, separada da função `createMenu()`, que, dada uma string recebida por parâmetro, adiciona essa string ao array de `objetoRetornado.consumption`. Adicione essa função à chave `order`.
