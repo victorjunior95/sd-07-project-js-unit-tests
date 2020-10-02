@@ -25,7 +25,7 @@ calculator.add = (param, param2) => {
   if (typeof (param) === 'number' && typeof (param2) === 'number') {
     sum = Math.floor(parseFloat(param + param2));
   }
-  return sum; 
+  return sum;
 };
 
 calculator.div = (param, param2) => {

@@ -21,10 +21,10 @@ const vqv = (nome, idade) => {
   if (nome == null || idade == null) {
     msgReturn = undefined;
   } else {
-    msgReturn = `Oi, meu nome é ${nome}!\n`+
-    `Tenho ${idade} anos,\n`+
-    `trabalho na Trybe e mando muito em programação!\n`+
-    `#VQV!`
+    msgReturn = `Oi, meu nome é ${nome}!\n` +
+    `Tenho ${idade} anos,\n` +
+    'trabalho na Trybe e mando muito em programação!\n' +
+    '#VQV!';
   }
   return msgReturn;
 };
