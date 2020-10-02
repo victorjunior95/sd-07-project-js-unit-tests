@@ -16,37 +16,49 @@
 let result;
 
 // Checando de o array é indefinido
-const verifyArray = (array) => {
-  if (array === undefined || array.length === 0) {
-    result = undefined;
-    return result;
-  }
-};
+// const verifyArray = (array) => {
+//   if (array === undefined || array.length === 0) {
+//     result = undefined;
+//     return result;
+//   }
+// };
 
-const checkArrayItens = (array) => {
-  for (let index = 0; index <= array.length; index += 1) {
-    if (typeof array[index] !== "number") {
-      result = undefined;
-      return result;
-    }
-  }
-};
+// const checkArrayItens = (array) => {
+//   for (let index = 0; index <= array.length; index += 1) {
+//     if (typeof array[index] !== "number") {
+//       result = undefined;
+//       break;
+//     }
+//   }
+//   return result;
+// };
 
 const average = (array) => {
-  verifyArray(array);
-  checkArrayItens(array);
-  // Percorrendo o array e verificando se todos os itens são números
-  // for (let index = 0; index <= array.length; index += 1) {
-  //   if (typeof array[index] !== "number") {
-  //     return undefined;
-  //   }
-  // }
-  // let soma = 0;
-  // for (let index = 0; index <= array.length; index += 1) {
-  //   soma += array[index];
-  // }
-  // return Math.round(soma / array.length);
+  let soma = 0;
+  let media;
+  for (index = 0; index < array.length; index += 1) {
+    if (typeof array[index] === 'number') {
+      soma += array[index];
+      media = Math.round(soma / array.length);
+    } else {
+      media = undefined;
+      break;
+    }
+  }
+  return media;
 };
+// verifyArray(array);
+// checkArrayItens(array);
+
+//   let soma = 0;
+//   let media;
+//   for (let index = 0; index < array.length; index += 1) {
+//     soma += array[index];
+//   }
+//   media = Math.round(soma / array.length);
+//   result = media;
+//   return result;
+// };
 
 console.log(average([]));
 module.exports = average;
