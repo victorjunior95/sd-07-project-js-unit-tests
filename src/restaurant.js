@@ -44,11 +44,11 @@
 */
 
 // PASSO 1: Crie uma função `createMenu()` que, dado um objeto passado por parâmetro, retorna um objeto com o seguinte formato: { fetchMenu: objetoPassadoPorParametro }.
-let retorno = {};
+const retorno = {};
 const createMenu = (param) => {
   retorno.fetchMenu = param;
   return retorno;
-}
+};
 // Agora faça o TESTE 2 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------
