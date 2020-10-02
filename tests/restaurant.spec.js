@@ -49,6 +49,32 @@ const createMenu = require('../src/restaurant');
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 
+const meuRestauranteOficial = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9, 'sashimi': 6.9}, drink: {'agua': 3.9} });
+
+const pay = () => {
+  let arrayItemsOrder = meuRestauranteOficial.consumption;
+  let arrayFood = Object.keys(meuRestauranteOficial.fetchMenu.food);
+  let arrayFoodPrice = Object.values(meuRestauranteOficial.fetchMenu.food);
+  let arrayDrink = Object.keys(meuRestauranteOficial.fetchMenu.drink);
+  let arrayDrinkPrice = Object.values(meuRestauranteOficial.fetchMenu.drink);
+  let sumPrice = 0;
+  for (let i = 0; i < arrayItemsOrder.length; i += 1) {
+    for (let j = 0; j < arrayFood.length; j += 1) {
+      if (arrayItemsOrder[i] === arrayFood[j]) {
+        sumPrice += arrayFoodPrice[j];
+      }
+    }
+  }
+  for (let i = 0; i < arrayItemsOrder.length; i += 1) {
+    for (let z = 0; z < arrayDrink.length; z += 1) {
+      if (arrayItemsOrder[i] === arrayDrink[z]) {
+        sumPrice += arrayDrinkPrice[z];
+      }
+    }
+  }
+  return sumPrice;
+};
+
 describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
     // assert.fail();
@@ -89,8 +115,6 @@ describe('#createMenu', () => {
     // objetoRetornado.consumption // Retorno: []
 
     const consumption = (object, consumptionUser) => (object['consumption'] = consumptionUser);
-  
-    const meuRestauranteOficial = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9, 'sashimi': 6.9}, drink: {'agua': 3.9} });
 
     consumption(meuRestauranteOficial, []);
 
@@ -149,30 +173,6 @@ describe('#createMenu', () => {
     // objetoRetornado.order('agua');
     // objetoRetornado.order('coxinha');
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
-
-    const pay = () => {
-      let arrayItemsOrder = meuRestauranteOficial.consumption;
-      let arrayFood = Object.keys(meuRestauranteOficial.fetchMenu.food);
-      let arrayFoodPrice = Object.values(meuRestauranteOficial.fetchMenu.food);
-      let arrayDrink = Object.keys(meuRestauranteOficial.fetchMenu.drink);
-      let arrayDrinkPrice = Object.values(meuRestauranteOficial.fetchMenu.drink);
-      let sumPrice = 0;
-      for (let i = 0; i < arrayItemsOrder.length; i += 1) {
-        for (let j = 0; j < arrayFood.length; j += 1) {
-          if (arrayItemsOrder[i] === arrayFood[j]) {
-            sumPrice += arrayFoodPrice[j];
-          }
-        }
-      }
-      for (let i = 0; i < arrayItemsOrder.length; i += 1) {
-        for (let z = 0; z < arrayDrink.length; z += 1) {
-          if (arrayItemsOrder[i] === arrayDrink[z]) {
-            sumPrice += arrayDrinkPrice[z];
-          }
-        }
-      }
-      return sumPrice;
-    };
     
     meuRestauranteOficial.pay = pay;
 
