@@ -28,12 +28,10 @@ const myCounter = () => {
   }
   for (var counter = 2; counter < 3; counter += 1) {
     myArray.push(counter);
-    for (var counter = 2; counter < 3; counter += 1) {
+    myArray.push(counter);
+    for (var counter = 3; counter < 4; counter += 1) {
       myArray.push(counter);
-      if (counter === 2) {
-        myArray.push(counter+1);
-        myArray.push(counter+1);
-      }
+      myArray.push(counter);
     }
   }
   for (var counter = 2; counter <= 3; counter += 1) {
