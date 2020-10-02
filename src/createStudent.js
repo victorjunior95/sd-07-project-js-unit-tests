@@ -16,8 +16,10 @@
 */
 
 const createStudent = (nome) => {
-  const retornaFrase = _ => {
-    return 'Eita pessoa boa!';
+  const retornaFrase = () => {
+    let mensagem = '';
+    mensagem = 'Eita pessoa boa!';
+    return mensagem;
   };
   return {
     name: `${nome}`,
