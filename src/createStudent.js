@@ -18,12 +18,14 @@
 const feedback = () => 'Eita pessoa boa!';
 
 const createStudent = (name) => {
+  let object = {}
   if (typeof name === 'string') {
-    return {
+    object = {
       name,
-      feedback
+      feedback,
     };
   }
+  return object;
 };
 const estudante = createStudent('Leandrão, o Lobo Solitário');
 console.log(estudante);

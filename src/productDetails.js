@@ -43,7 +43,7 @@ const productDetails = (firstProduct, secondProduct) => [
 // console.log(typeof productDetails('banana', 'laranja'));
 // console.log(productDetails('banana', 'laranja')[0]);
 
-let arrayLastNumbers0 = productDetails('banana', 'laranja')[0].details.productId.split('');
+// let arrayLastNumbers0 = productDetails('banana', 'laranja')[0].details.productId.split('');
 // let sumLastNumbers0 = arrayLastNumbers0[arrayLastNumbers0.length -3] + arrayLastNumbers0[arrayLastNumbers0.length -2] + arrayLastNumbers0[arrayLastNumbers0.length -1];
 
 // console.log(arrayLastNumbers0.join('').endsWith('123'));
