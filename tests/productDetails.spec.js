@@ -41,7 +41,9 @@ describe('#productDetails', () => {
     // Teste que os dois itens dentro do array retornado pela função são objetos.
     assert.deepStrictEqual(productDetails(), Object.values(productDetails()));
     // Teste que os dois objetos são diferentes entre si.
-    assert.notDeepStrictEqual(productDetails())
+    let firstProductId1 = Object.values(productDetails('car','motorcycle')[0].details.productId);
+    let secondProductId2 = Object.values(productDetails('car','motorcycle')[1].details.productId);
+    assert.notDeepStrictEqual(firstProductId1, secondProductId2);
     // (Difícil) Teste que os dois productIds terminam com 123.
     let firstProductId = (Object.values(productDetails('car', 'motorcycle')[0].details.productId)).toString();
     let secondProductId = Object.values(productDetails('arroz', 'feijao')[1].details.productId).toString();
