@@ -61,8 +61,12 @@ const createMenu = (parametro) => {
   const mainMenu = {
     fetchMenu: parametro,
     consumption: [],
+    order: (strings) => {
+      mainMenu.consumption.push(strings);
+    }
   };
   return mainMenu;
 };
+
 
 module.exports = createMenu;
