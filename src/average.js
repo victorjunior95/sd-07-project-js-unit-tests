@@ -14,22 +14,20 @@
 
 /*
   const average = (array) => {
+    let total = 0;
+    for (let i = 0; i < array.length; i += 1) {
+  if (typeof array[i] !== 'number') {
+    console.log(undefined);
+  } else if (array === []) {
+      console.log(undefined);
+}
+ total += array[i];
+   console.log(total);
 
-  for (let i = 1; i < array.length; i += 1) {
-    if (typeof array[i] !== 'number') {
-      return undefined;
-    }
-    else if (array == []) {
-      return undefined;
-    }
-    let result = 0;
-    result += array;
-  average = Math.round(result / array.length);
-  return average;
-  }
 };
-
-average([1, 2, '3', 4, 5, 6]);
+  };
+average([1, 2, 3, 4, 5, 6]);
+average = Math.round(total/array.length);
 
 module.exports = average;
 */
