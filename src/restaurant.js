@@ -82,10 +82,10 @@ const total = (valuesOfFetchMenu, arrConsumption) => {
     });
   });
 
-  return result + result * 0.10;
-}
+  return result + (result * 0.10);
+};
 
-const createMenu = objetoTest => {
+const createMenu = (objetoTest) => {
   const mainObject = {
     fetchMenu: objetoTest,
     consumption: [],
@@ -95,10 +95,10 @@ const createMenu = objetoTest => {
       const arrConsumption = mainObject.consumption;
 
       return total(valuesOfFetchMenu, arrConsumption);
-    }
-  }
+    },
+  };
   return mainObject;
-}
+};
 
 // const functionMenu = createMenu({food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9}});
 // functionMenu.order('coxinha');
