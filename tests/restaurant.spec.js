@@ -124,8 +124,8 @@ describe('#createMenu', () => {
     // objetoRetornado.order('coxinha');
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
-    restaurant.fetchMenu = { food: {'coxinha': 3.9, 'sopa': 9.9 , 'sashimi': 1.5} }
-    assert.strictEqual(restaurant.toPay(), 16.83)
+    // restaurant.fetchMenu = { food: {'coxinha': 3.9, 'sopa': 9.9 , 'sashimi': 1.5} }
+    // assert.strictEqual(restaurant.toPay(), 16.83)
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
 });
