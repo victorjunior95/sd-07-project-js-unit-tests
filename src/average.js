@@ -17,7 +17,7 @@ const numbers = (arrayOfNumbers) => {
   let media = 0;
 
   for (let element = 0; element < arrayOfNumbers.length; element += 1) {
-    if (typeof (arrayOfNumbers[element]) !== 'number') return undefined;
+    if (typeof arrayOfNumbers[element] !== 'number') return undefined;
     sum += arrayOfNumbers[element];
   }
   media = sum / arrayOfNumbers.length;
@@ -27,8 +27,5 @@ const average = (array) => {
   if (array.length === 0) return undefined;
   return numbers(array);
 };
-
-console.log(average([1.5, 2]));
-
 
 module.exports = average;

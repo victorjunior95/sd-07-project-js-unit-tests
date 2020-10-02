@@ -21,15 +21,11 @@ const userData = (nome, idade) => {
   return text;
 };
 const dataValidate = (nome, idade) => {
-  if (typeof (nome) !== 'string' || typeof (idade) !== 'number') {
-    return undefined;
-  }
+  if (typeof (nome) !== 'string' || typeof (idade) !== 'number') return undefined;
   return userData(nome, idade);
 };
 const vqv = (nome, idade) => {
-  if (nome === undefined || idade === undefined) {
-    return undefined;
-  }
+  if (nome === undefined || idade === undefined) return undefined;
   return dataValidate(nome, idade);
 };
 console.log(vqv('Lorena', 27));
