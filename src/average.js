@@ -12,23 +12,45 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = (array) => {
-  if (array === undefined) {
-    return undefined;
-  } else if (array.length === 0) {
-    return undefined;
+// Criando uma variável global
+let result;
+
+// Checando de o array é indefinido
+const verifyArray = (array) => {
+  if (array === undefined || array.length === 0) {
+    result = undefined;
+    return result;
   }
-  for (let index = 0; index <= array.length; i += 1) {
-    if (typeof array[index] !== 'number') {
-      return undefined;
+};
+
+const checkArrayItens = (array) => {
+  for (let index = 0; index <= array.length; index += 1) {
+    if (typeof array[index] !== "number") {
+      result = undefined;
+      return result;
     }
   }
-  let soma = 0;
-  for (let index = 0; index <= array.length; index += 1) {
-    soma += array[index];
-  }
-  return Math.round(soma / array.length);
+};
+
+const average = (array) => {
+  verifyArray(array);
+  checkArrayItens(array);
+  // Percorrendo o array e verificando se todos os itens são números
+  // for (let index = 0; index <= array.length; index += 1) {
+  //   if (typeof array[index] !== "number") {
+  //     return undefined;
+  //   }
+  // }
+  // let soma = 0;
+  // for (let index = 0; index <= array.length; index += 1) {
+  //   soma += array[index];
+  // }
+  // return Math.round(soma / array.length);
 };
 
 console.log(average([]));
+module.exports = average;
+
+console.log(average([1, 2, 3, 4, 5]));
+
 module.exports = average;
