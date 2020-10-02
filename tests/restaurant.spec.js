@@ -77,7 +77,8 @@ describe('#createMenu', () => {
       drinks: {'agua': 3.90, 'cerveja': 6.90}}
     })
     // objetoRetornado.fetchMenu // Retorno: { food: {}, drink: {}}
-    // ```
+    let retorno = createMenu({food, drinks})
+    assert.deepStrictEqual(retorno.fetchMenu, retorno.fetchMenu)
     // Agora faça o TESTE 3 deste arquivo.
     // --------------------------------------------------------------------------------------
     // TESTE 3: Verifique que o menu passado pra função createMenu é identico ao menu recuperado pela função 'objetoRetornado.fetchMenu'
