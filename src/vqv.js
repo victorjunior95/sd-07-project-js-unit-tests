@@ -21,13 +21,9 @@ const vqv = (nome, idade) => {
   if (nome === '' || idade === '') {
     return undefined;
   } else if (typeof nome === 'string' || typeof idade === 'number') {
-    mensagem =
-      `Oi, meu nome é ${nome}!
-      Tenho   ${idade}  anos,
-      trabalho na Trybe e mando muito em programação!
-      #VQV!`;
+    mensagem = `Oi, meu nome é ${nome}!\nTenho ${idade} anos,\ntrabalho na Trybe e mando muito em programação!\n#VQV!`;
   }
   return mensagem;
 };
-
+console.log(vqv('Tunico', 29));
 module.exports = vqv;
