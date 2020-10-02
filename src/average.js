@@ -11,7 +11,6 @@
     - average([1, 2]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-
 const average = (array) => {
   let sum = 0;
   let mediaInFunction;
@@ -21,6 +20,7 @@ const average = (array) => {
       mediaInFunction = Math.floor(sum / array.length);
     } else {
       mediaInFunction = undefined;
+      break;
     }
   }
   return mediaInFunction;
