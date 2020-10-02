@@ -20,14 +20,10 @@ const userData = (nome, idade) => {
   const text = `Oi, meu nome é ${nome}!\nTenho ${idade} anos,\ntrabalho na Trybe e mando muito em programação!\n#VQV!`;
   return text;
 };
-const dataValidate = (nome, idade) => {
-  if (typeof (nome) !== 'string' || typeof (idade) !== 'number') return undefined;
+
+const vqv = (nome, idade) => {
+  if (typeof nome !== 'string' || typeof idade !== 'number') return undefined;
   return userData(nome, idade);
 };
-const vqv = (nome, idade) => {
-  if (nome === undefined || idade === undefined) return undefined;
-  return dataValidate(nome, idade);
-};
-console.log(vqv('Lorena', 27));
 
 module.exports = vqv;
