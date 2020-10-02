@@ -16,16 +16,16 @@
 */
 var myArray = [];
 
-function myCounter1 () {
+function myCounter1() {
   for (let i = 2; i <= 2; i += 1) {
-      myArray.push(i);
+    myArray.push(i);
   }
   return myArray;
 }
 
-function myCounter2 () {
+function myCounter2() {
   for (let j = 3; j <= 3; j += 1) {
-      myArray.push(j);
+    myArray.push(j);
   }
   return myArray;
 }
