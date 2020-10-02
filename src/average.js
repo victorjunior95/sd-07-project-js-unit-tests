@@ -22,7 +22,7 @@ const average = (numbers) => {
     }
     summ += math.round(numbers[count]);
   }
-  return (math.round(sum / numbers.lenght));
+  return (math.round(summ / numbers.lenght));
 };
 
 assert.strictEqual(average([2, 2, 6, 2, 7, 9, 0, 2]), 4);
