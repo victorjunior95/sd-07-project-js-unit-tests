@@ -100,6 +100,10 @@ describe('#createMenu', () => {
     // objetoRetornado.order("sashimi");
     // objetoRetornado.consumption // Retorno: ["coxinha", "agua", "sopa", "sashimi"]
     // ```
+    restaurant.order('coxinha');
+    restaurant.order('sopa');
+    restaurant.order('sashimi');
+    assert.deepStrictEqual(restaurant.consumption, ['coxinha', 'sopa', 'sashimi']);
     // Agora faça o TESTE 7 deste arquivo.
     // --------------------------------------------------------------------------------------
     // TESTE 7: Verifique que a função `order` aceita que pedidos repetidos sejam acrescidos a consumption.
@@ -109,6 +113,8 @@ describe('#createMenu', () => {
     // objetoRetornado.order('coxinha');
     // objetoRetornado.comsuption // Retorno: ['coxinha', 'agua', 'coxinha']
     // ```
+    restaurant.order("coxinha");
+    assert.deepStrictEqual(restaurant.consumption, ["coxinha", "sopa", "sashimi", "coxinha"]); 
     // Agora faça o TESTE 8 deste arquivo.
     // --------------------------------------------------------------------------------------
     // TESTE 8: Verifique que, ao chamar `objetoRetornado.pay()`, retorna-se a soma dos preços de tudo que foi pedido, conforme registrado em `objetoRetornado.consumption`
@@ -118,6 +124,8 @@ describe('#createMenu', () => {
     // objetoRetornado.order('coxinha');
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
+    restaurant.fetchMenu = { food: {'coxinha': 3.9, 'sopa': 9.9 , 'sashimi': 1.5} }
+    assert.strictEqual(restaurant.toPay(), 16.83)
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
 });
