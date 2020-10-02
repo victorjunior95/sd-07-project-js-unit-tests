@@ -69,10 +69,7 @@
 
 //------------------------------------------------------------------------------------------
 
-/* PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre
-todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o
-valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` 
-quanto o objeto da chave `drink`.*/
+// PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
 const priceVerify = (item, priceList) => {
   let itemPrice = 0;
@@ -96,8 +93,9 @@ const createMenu = (object) => {
 
   const getItensPrice = () => {
     let itensPrice = [];
-    for (let i in returnedObject.fetchMenu) {
-      itensPrice = itensPrice.concat(Object.entries(returnedObject.fetchMenu[i]));
+    const list = Object.values((Object.values(returnedObject.fetchMenu)));
+    for (let i = 0; i < list.length; i += 1) {
+      itensPrice = itensPrice.concat(Object.entries(list[i]));
     }
     return itensPrice;
   };
