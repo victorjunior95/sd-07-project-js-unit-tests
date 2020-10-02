@@ -18,11 +18,12 @@ const average = (array) => {
   }
   let sumArray = 0;
   for (let i = 0; i < array.length; i += 1) {
-    if (typeof array[i] === 'string') 
-    return undefined;
+    if (typeof array[i] === 'string') {
+      return undefined;
+    }
     sumArray += array[i];
   }
-  const averageArray = Math.round(sumArray / array.length);
+  const averageArray = Math.round(sumArray / array.length); //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round#:~:text=A%20fun%C3%A7%C3%A3o%20Math.,para%20o%20inteiro%20mais%20proximo.
   return averageArray;
 };
 
