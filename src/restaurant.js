@@ -87,9 +87,7 @@ const createMenu = (object) => {
     consumption: [],
   };
 
-  const addItem = (string) => {
-    returnedObject.consumption.push(string);
-  };
+  const addItem = (string) => returnedObject.consumption.push(string);
 
   const getItensPrice = () => {
     let itensPrice = [];
