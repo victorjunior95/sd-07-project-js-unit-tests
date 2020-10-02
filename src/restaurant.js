@@ -59,9 +59,10 @@
 
 const createMenu = (parametro) => {
   const mainMenu = {
-    fetchMenu: parametro
-  }
+    fetchMenu: parametro,
+    consumption: [],
+  };
   return mainMenu;
-}
+};
 
 module.exports = createMenu;
