@@ -52,8 +52,8 @@ OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enq
 describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
     // assert.fail();
-    
-    assert.deepStrictEqual(createMenu({food: {coxinha: 3.90, sanduiche: 9.90}}), {fetchMenu: {food: {coxinha: 3.90, sanduiche: 9.90}}});
+
+    assert.deepStrictEqual(createMenu({food: {}, drink: {}}).fetchMenu, {food: {}, drink: {}});
     
     // TESTE 1: Verifique que, dado um objeto qualquer passado como um parâmetro para a função createMenu(), checa se o retorno da função é um objeto no seguinte formato: { fetchMenu: objetoQualquer }.
     // ```
@@ -106,10 +106,10 @@ describe('#createMenu', () => {
     // --------------------------------------------------------------------------------------
     
     functionMenu = createMenu({food: {}, drink: {}});
-    let arrTestOrder = ['coxinha', 'agua', 'sopa', 'sashimi'];
-    for (let index = 0; index < arrTestOrder.length; index += 1) {
-      functionMenu.order(arrTestOrder[index]);
-    }
+    functionMenu.order('coxinha');
+    functionMenu.order('agua');
+    functionMenu.order('sopa');
+    functionMenu.order('sashimi');
     
     assert.deepStrictEqual(functionMenu.consumption, ['coxinha', 'agua', 'sopa', 'sashimi']);
     
@@ -125,12 +125,11 @@ describe('#createMenu', () => {
     // --------------------------------------------------------------------------------------
 
     functionMenu = createMenu({food: {}, drink: {}});
-    arrTestOrder = ['coxinha', 'agua', 'coxinha'];
-    for (let index = 0; index < arrTestOrder.length; index += 1) {
-      functionMenu.order(arrTestOrder[index]);
-    }
+    functionMenu.order('coxinha');
+    functionMenu.order('agua');
+    functionMenu.order('coxinha');
 
-    // assert.deepStrictEqual(functionMenu.consumption, ['coxinha', 'agua', 'coxinha']);
+    assert.deepStrictEqual(functionMenu.consumption, ['coxinha', 'agua', 'coxinha']);
 
     // TESTE 7: Verifique que a função `order` aceita que pedidos repetidos sejam acrescidos a consumption.
     // ```
@@ -143,13 +142,11 @@ describe('#createMenu', () => {
     // --------------------------------------------------------------------------------------
 
     functionMenu = createMenu({food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9}});
-    arrTestOrder = ['coxinha', 'agua', 'coxinha'];
-    for (let index = 0; index < arrTestOrder.length; index += 1) {
-      functionMenu.order(arrTestOrder[index]);
-      functionMenu.pay(arrTestOrder[index]);
-    }
+    functionMenu.order('coxinha');
+    functionMenu.order('agua');
+    functionMenu.order('coxinha');
 
-    assert.strictEqual(functionMenu.pay, 11.7);
+    assert.strictEqual(functionMenu.pay(), 12.87);
 
     // TESTE 8: Verifique que, ao chamar `objetoRetornado.pay()`, retorna-se a soma dos preços de tudo que foi pedido, conforme registrado em `objetoRetornado.consumption`
     // ```

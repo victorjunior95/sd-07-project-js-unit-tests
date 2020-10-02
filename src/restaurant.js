@@ -71,15 +71,40 @@ IMPORTANTE: COMECE PELO TESTE 1 DO ARQUIVO `tests/restaurant.spec.js` E NÃO PEL
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
+const total = (valuesOfFetchMenu, arrConsumption) => {
+  let result = 0;
+
+  arrConsumption.forEach((consumptionItem) => {
+    valuesOfFetchMenu.forEach((ItemOfValuesOfFetchMenu) => {
+      if (ItemOfValuesOfFetchMenu[consumptionItem] !== undefined) {
+        result += ItemOfValuesOfFetchMenu[consumptionItem];
+      }
+    });
+  });
+
+  return result + result * 0.10;
+}
+
 const createMenu = objetoTest => {
-  let totalPrice = 0;
-  result = {
+  const mainObject = {
     fetchMenu: objetoTest,
     consumption: [],
-    order: text => result.consumption.push(text),
+    order: orderItem => mainObject.consumption.push(orderItem),
+    pay: () => {
+      const valuesOfFetchMenu = Object.values(mainObject.fetchMenu);
+      const arrConsumption = mainObject.consumption;
+
+      return total(valuesOfFetchMenu, arrConsumption);
+    }
   }
-  return result;
+  return mainObject;
 }
+
+// const functionMenu = createMenu({food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9}});
+// functionMenu.order('coxinha');
+// functionMenu.order('agua');
+// functionMenu.order('coxinha');
+// functionMenu.pay();
 
 // PASSO 2: Adicione ao objeto retornado por `createMenu` uma chave `consumption` que, como valor inicial, tem um array vazio.
 
