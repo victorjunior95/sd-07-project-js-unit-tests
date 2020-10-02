@@ -61,9 +61,9 @@ describe('#productDetails', () => {
     assert.deepStrictEqual(true, compareObjects());
     // (Difícil) Teste que os dois productIds terminam com 123.
 
-    let lastNumbers0 = productDetails('banana', 'laranja')[0].details.productId.endsWith('123');
+    const lastNumbers0 = productDetails('banana', 'laranja')[0].details.productId.endsWith('123');
 
-    let lastNumbers1 = productDetails('banana', 'laranja')[1].details.productId.endsWith('123');
+    const lastNumbers1 = productDetails('banana', 'laranja')[1].details.productId.endsWith('123');
 
     function compareLastNumbers() {
       if (lastNumbers0 === lastNumbers1) {

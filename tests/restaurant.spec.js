@@ -51,12 +51,10 @@ const createMenu = require('../src/restaurant');
 
 const meuRestauranteOficial = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9, 'sashimi': 6.9}, drink: {'agua': 3.9} });
 
-const pay = () => {
-  let arrayItemsOrder = meuRestauranteOficial.consumption;
-  let arrayFood = Object.keys(meuRestauranteOficial.fetchMenu.food);
-  let arrayFoodPrice = Object.values(meuRestauranteOficial.fetchMenu.food);
-  let arrayDrink = Object.keys(meuRestauranteOficial.fetchMenu.drink);
-  let arrayDrinkPrice = Object.values(meuRestauranteOficial.fetchMenu.drink);
+const payFoods = () => {
+  const arrayItemsOrder = meuRestauranteOficial.consumption;
+  const arrayFood = Object.keys(meuRestauranteOficial.fetchMenu.food);
+  const arrayFoodPrice = Object.values(meuRestauranteOficial.fetchMenu.food);
   let sumPrice = 0;
   for (let i = 0; i < arrayItemsOrder.length; i += 1) {
     for (let j = 0; j < arrayFood.length; j += 1) {
@@ -65,6 +63,14 @@ const pay = () => {
       }
     }
   }
+  return sumPrice;
+};
+
+const pay = () => {
+  let sumPrice = payFoods();
+  const arrayItemsOrder = meuRestauranteOficial.consumption;
+  const arrayDrink = Object.keys(meuRestauranteOficial.fetchMenu.drink);
+  const arrayDrinkPrice = Object.values(meuRestauranteOficial.fetchMenu.drink);
   for (let i = 0; i < arrayItemsOrder.length; i += 1) {
     for (let z = 0; z < arrayDrink.length; z += 1) {
       if (arrayItemsOrder[i] === arrayDrink[z]) {

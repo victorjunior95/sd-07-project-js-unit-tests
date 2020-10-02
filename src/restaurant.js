@@ -97,12 +97,10 @@ meuRestauranteOficial.order('sopa');
 meuRestauranteOficial.order('sashimi');
 meuRestauranteOficial.order('coxinha');
 
-const pay = () => {
+const payFoods = () => {
   const arrayItemsOrder = meuRestauranteOficial.consumption;
   const arrayFood = Object.keys(meuRestauranteOficial.fetchMenu.food);
   const arrayFoodPrice = Object.values(meuRestauranteOficial.fetchMenu.food);
-  const arrayDrink = Object.keys(meuRestauranteOficial.fetchMenu.drink);
-  const arrayDrinkPrice = Object.values(meuRestauranteOficial.fetchMenu.drink);
   let sumPrice = 0;
   for (let i = 0; i < arrayItemsOrder.length; i += 1) {
     for (let j = 0; j < arrayFood.length; j += 1) {
@@ -111,6 +109,14 @@ const pay = () => {
       }
     }
   }
+  return sumPrice;
+};
+
+const pay = () => {
+  let sumPrice = payFoods();
+  const arrayItemsOrder = meuRestauranteOficial.consumption;
+  const arrayDrink = Object.keys(meuRestauranteOficial.fetchMenu.drink);
+  const arrayDrinkPrice = Object.values(meuRestauranteOficial.fetchMenu.drink);
   for (let i = 0; i < arrayItemsOrder.length; i += 1) {
     for (let z = 0; z < arrayDrink.length; z += 1) {
       if (arrayItemsOrder[i] === arrayDrink[z]) {
@@ -123,8 +129,8 @@ const pay = () => {
 
 meuRestauranteOficial.pay = pay;
 
-console.log(meuRestauranteOficial);
-console.log(meuRestauranteOficial.consumption);
+// console.log(meuRestauranteOficial);
+// console.log(meuRestauranteOficial.consumption);
 console.log(meuRestauranteOficial.pay());
 
 // PASSO 02
