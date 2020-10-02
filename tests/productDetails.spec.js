@@ -65,6 +65,7 @@ describe('#productDetails', () => {
       'banana',
       'laranja'
     )[0].details.productId.split('');
+
     let sumLastNumbers0 =
       arrayLastNumbers0[arrayLastNumbers0.length - 3] +
       arrayLastNumbers0[arrayLastNumbers0.length - 2] +
@@ -74,6 +75,7 @@ describe('#productDetails', () => {
       'banana',
       'laranja'
     )[1].details.productId.split('');
+    
     let sumLastNumbers1 =
       arrayLastNumbers1[arrayLastNumbers1.length - 3] +
       arrayLastNumbers1[arrayLastNumbers1.length - 2] +
