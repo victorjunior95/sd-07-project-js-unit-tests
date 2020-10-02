@@ -71,6 +71,85 @@
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-const createMenu = () => {};
+// PASSO 01
+const createMenu = (objetoQualquer) => {
+  let object = { fetchMenu: objetoQualquer };
+  return object;
+};
+
+const meuRestauranteOficial = createMenu({
+  food: { coxinha: 3.9, sopa: 9.9, sashimi: 6.9 },
+  drink: { agua: 3.9 },
+});
+
+const consumption = (object, consumptionUser) =>
+  (object['consumption'] = consumptionUser);
+consumption(meuRestauranteOficial, []);
+
+const order = (orderUser) => {
+  meuRestauranteOficial.consumption.push(orderUser);
+};
+meuRestauranteOficial.order = order;
+meuRestauranteOficial.order('coxinha');
+meuRestauranteOficial.order('agua');
+meuRestauranteOficial.order('sopa');
+meuRestauranteOficial.order('sashimi');
+meuRestauranteOficial.order('coxinha');
+
+const pay = () => {
+  let arrayItemsOrder = meuRestauranteOficial.consumption;
+  let arrayFood = Object.keys(meuRestauranteOficial.fetchMenu.food);
+  let arrayFoodPrice = Object.values(meuRestauranteOficial.fetchMenu.food);
+  let arrayDrink = Object.keys(meuRestauranteOficial.fetchMenu.drink);
+  let arrayDrinkPrice = Object.values(meuRestauranteOficial.fetchMenu.drink);
+  let sumPrice = 0;
+  for (let i = 0; i < arrayItemsOrder.length; i += 1) {
+    for (let j = 0; j < arrayFood.length; j += 1) {
+      if (arrayItemsOrder[i] === arrayFood[j]) {
+        sumPrice += arrayFoodPrice[j];
+      }
+    }
+  }
+  for (let i = 0; i < arrayItemsOrder.length; i += 1) {
+    for (let z = 0; z < arrayDrink.length; z += 1) {
+      if (arrayItemsOrder[i] === arrayDrink[z]) {
+        sumPrice += arrayDrinkPrice[z];
+      }
+    }
+  }
+  return sumPrice;
+};
+
+meuRestauranteOficial.pay = pay;
+
+console.log(meuRestauranteOficial);
+console.log(meuRestauranteOficial.consumption);
+console.log(meuRestauranteOficial.pay());
+
+// PASSO 02
+const ObjectMenu = createMenu({ food: {}, drink: {} }).fetchMenu;
+const arrayMenu = Object.keys(ObjectMenu);
+const itemArray01 = arrayMenu[0];
+const itemArray02 = arrayMenu[1];
+// console.log(ObjectMenu);
+// console.log(arrayMenu);
+// console.log(itemArray01);
+// console.log(itemArray02);
+
+// PASSO 03
+// console.log(createMenu({ food: {}, drink: {} }).fetchMenu);
+// console.log({ food: {}, drink: {} });
+
+// PASSO 04
+// const objetoRetornado4 = createMenu({ bebida: 'coca-cola' });
+
+// PASSO 05
+// console.log(meuRestauranteOficial.consumption);
+
+// PASSO 06 E 07
+// console.log(meuRestauranteOficial.consumption);
+
+// PASSO 08
+// console.log(meuRestauranteOficial.pay());
 
 module.exports = createMenu;
