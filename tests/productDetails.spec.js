@@ -71,6 +71,5 @@ describe('#productDetails', () => {
       }
     }
     assert.deepStrictEqual(true, compareLastNumbers());
-    
   });
 });
