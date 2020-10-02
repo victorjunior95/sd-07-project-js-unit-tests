@@ -26,5 +26,4 @@ const average = (array) => {
   const averageArray = Math.round(sumArray / array.length); // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round#:~:text=A%20fun%C3%A7%C3%A3o%20Math.,para%20o%20inteiro%20mais%20proximo.
   return averageArray;
 };
-
 module.exports = average;
