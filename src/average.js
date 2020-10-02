@@ -20,9 +20,9 @@ const average = (numbers) => {
       summ = 'undefined';
       return (summ);
     }
-    summ += math.ceil(numbers[count]);
+    summ += math.round(numbers[count]);
   }
-  return (math.ceil(sum / numbers.lenght));
+  return (math.round(sum / numbers.lenght));
 };
 
 assert.strictEqual(average([2, 2, 6, 2, 7, 9, 0, 2]), 4);
