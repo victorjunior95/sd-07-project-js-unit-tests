@@ -11,10 +11,20 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
+const assert = require('assert');
+
 const average = (numbers) => {
-  let summ = 0;
+  let summ = '';
   for (let count = 0; count < numbers.lenght; count += 1) {
-    let summ = summ + numbers[count];
+    if (isNaN(numbers[count])) {
+      summ = 'undefined';
+      return (summ);
+    }
+    summ += math.ceil(numbers[count]);
   }
-  return(sum / numbers.lenght);
+  return (math.ceil(sum / numbers.lenght));
 };
+
+assert.strictEqual(average([2, 2, 6, 2, 7, 9, 0, 2]), 4);
+assert.strictEqual(average([2, 2, 6, 2, 7, 'Márcio', 0, 2]), 'undefined');
+assert.strictEqual(average(['Márcio', 'João', 'José']), 'undefined');
