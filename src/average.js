@@ -13,7 +13,7 @@
 */
 
 // Criando uma variável global
-let result;
+// let result;
 
 // Checando de o array é indefinido
 // const verifyArray = (array) => {
