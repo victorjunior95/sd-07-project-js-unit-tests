@@ -63,7 +63,7 @@ const createMenu = (parametro) => {
     consumption: [],
     order: (strings) => {
       mainMenu.consumption.push(strings);
-    }
+    },
   };
   return mainMenu;
 };
