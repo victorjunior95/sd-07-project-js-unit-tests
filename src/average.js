@@ -12,8 +12,24 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {
-  //mudança
+const average = (valores) => {
+  let soma = 0;
+  for (let index = 0; index < valores.length; index += 1) {
+    if (isNaN(valores[i])) {
+      return undefined;
+    } else if (valores.length == 0) {
+      return undefined;
+    } else {
+      soma += valores[i];
+    }
+  }
+
+  let media = soma/valores.length;
+  media = Math.round(media);
+  return media;
 };
+
+let array = [4, 7];
+console.log(average(array));
 
 module.exports = average;
