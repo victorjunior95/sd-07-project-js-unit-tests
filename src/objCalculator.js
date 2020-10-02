@@ -20,30 +20,22 @@
 */
 
 const addNumber = (number1, number2) => {
-  const numberInt1 = parseInt(number1);
-  const numberInt2 = parseInt(number2);
-  const sum = numberInt1 + numberInt2;
+  const sum = number1 + number2;
   return Math.floor(sum);
 };
 
 const multNumber = (number1, number2) => {
-  const numberInt1 = parseInt(number1);
-  const numberInt2 = parseInt(number2);
-  const mult = numberInt1 * numberInt2;
+  const mult = number1 * number2;
   return Math.floor(mult);
 };
 
 const divNumber = (number1, number2) => {
-  const numberInt1 = parseInt(number1);
-  const numberInt2 = parseInt(number2);
-  const div = numberInt1 / numberInt2;
+  const div = number1 / number2;
   return Math.floor(div);
 };
 
 const subNumber = (number1, number2) => {
-  const numberInt1 = parseInt(number1);
-  const numberInt2 = parseInt(number2);
-  const sub = numberInt1 - numberInt2;
+  const sub = number1 - number2;
   return Math.floor(sub);
 };
 

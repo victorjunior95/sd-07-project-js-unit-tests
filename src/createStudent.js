@@ -18,7 +18,7 @@
 const feedback = () => 'Eita pessoa boa!';
 
 const createStudent = (name) => {
-  let object = {}
+  let object = {};
   if (typeof name === 'string') {
     object = {
       name,

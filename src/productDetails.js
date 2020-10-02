@@ -43,16 +43,10 @@ const productDetails = (firstProduct, secondProduct) => [
 // console.log(typeof productDetails('banana', 'laranja'));
 // console.log(productDetails('banana', 'laranja')[0]);
 
-// let arrayLastNumbers0 = productDetails('banana', 'laranja')[0].details.productId.split('');
-// let sumLastNumbers0 = arrayLastNumbers0[arrayLastNumbers0.length -3] + arrayLastNumbers0[arrayLastNumbers0.length -2] + arrayLastNumbers0[arrayLastNumbers0.length -1];
+let arrayLastNumbers0 = productDetails('banana', 'laranja')[0].details.productId.endsWith('123');
+console.log(arrayLastNumbers0);
 
-// console.log(arrayLastNumbers0.join('').endsWith('123'));
-// console.log(sumLastNumbers0);
-
-// let arrayLastNumbers1 = productDetails('banana', 'laranja')[1].details.productId.split('');
-// let sumLastNumbers1 = arrayLastNumbers1[arrayLastNumbers1.length -3] + arrayLastNumbers1[arrayLastNumbers1.length -2] + arrayLastNumbers1[arrayLastNumbers1.length -1];
-
-// console.log(arrayLastNumbers1);
-// console.log(sumLastNumbers1);
+let arrayLastNumbers1 = productDetails('banana', 'laranja')[1].details.productId.endsWith('123');
+console.log(arrayLastNumbers1);
 
 module.exports = productDetails;
