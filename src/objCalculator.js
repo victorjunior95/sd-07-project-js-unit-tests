@@ -21,9 +21,9 @@
 
 const calculator = {
   add: (number1, number2) => (number1 + number2),
-  mult: (number3, number4) => (number3 * number4),
-  div: (number5, number6) => Math.trunc(number5, number6), // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc
-  sub: (number7, number8) => (number7 - number8),
+  mult: (number1, number2) => (number1 * number2),
+  div: (number1, number2) => Math.trunc(number1, number2), // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc
+  sub: (number1, number2) => (number1 - number2),
 };
 
 module.exports = calculator;
