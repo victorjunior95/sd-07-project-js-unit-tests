@@ -17,19 +17,18 @@ const average = (valores) => {
   for (let index = 0; index < valores.length; index += 1) {
     if (isNaN(valores[i])) {
       return undefined;
-    } else if (valores.length == 0) {
+    } else if (valores.length === 0) {
       return undefined;
-    } else {
-      soma += valores[i];
     }
+      soma += valores[i];
   }
 
-  let media = soma/valores.length;
+  let media = soma / valores.length;
   media = Math.round(media);
   return media;
 };
 
-let array = [4, 7];
+const array = [4, 7];
 console.log(average(array));
 
 module.exports = average;
