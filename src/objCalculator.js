@@ -27,7 +27,7 @@ const calculator = {
     if (secondInteger === 0 || secondInteger === null) return undefined;
     const result = firstInteger / secondInteger;
     return Math.trunc(result);
-  }
+  },
 };
 
 module.exports = calculator;
