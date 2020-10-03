@@ -25,7 +25,7 @@ const average = (numbers) => {
   return (math.round(summ / numbers.lenght));
 };
 
-assert.strictEqual(average([2, 2, 6, 2, 7, 9, 0, 2]), 4);
+assert.strictEqual(average([2, 2, 6, 2, 7, 9, 2]), 4);
 assert.strictEqual(average([2, 2, 6, 2, 7, 'Márcio', 0, 2]), 'undefined');
 assert.strictEqual(average(['Márcio', 'João', 'José']), 'undefined');
 
