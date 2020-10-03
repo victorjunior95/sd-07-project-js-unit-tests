@@ -77,13 +77,12 @@ const createMenu = (objetoPassadoPorParametro) => {
     fetchMenu: objetoPassadoPorParametro,
     consumption: pedido,
     order: string => pedido.push(string),
-    pay: () => 0
+    pay: () => 0,
   };
 
   return newObject;
 };
-/* 
-const parameter = {
+/* const parameter = {
   food: {
     'coxinha': 3.90,
     'sanduiche': 9.90
@@ -94,8 +93,7 @@ const parameter = {
   }
 };
 
-let menu = { 
-  food: {'coxinha': 3.9, 'sopa': 9.9},
+let menu = { food: {'coxinha': 3.9, 'sopa': 9.9},
   drink: {'agua': 3.9, 'cerveja': 6.9}
 };
 
