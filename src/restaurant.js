@@ -76,7 +76,7 @@ const createMenu = (menu) => {
     fetchMenu: menu,
     consumption: [],
     order: (pedido) => {
-      res.consumption.push(pedido)
+      res.consumption.push(pedido);
     },
     pay: () => {
       let value = 0;
@@ -88,7 +88,7 @@ const createMenu = (menu) => {
         });
       });
       return Math.round(value);
-    }
+    },
   };
   return res;
 };
