@@ -20,7 +20,7 @@ const average = (valores) => {
     } else if (valores.length === 0) {
       return undefined;
     }
-      soma += valores[i];
+    soma += valores[i];
   }
 
   let media = soma / valores.length;
