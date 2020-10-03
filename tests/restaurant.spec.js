@@ -83,6 +83,12 @@ describe('#createMenu', () => {
     // objetoRetornado.order("sashimi");
     // objetoRetornado.consumption // Retorno: ["coxinha", "agua", "sopa", "sashimi"]
     // ```
+    const objetoRetornado6 = createMenu(objetoQualquer);
+    objetoRetornado6.order('coxinha');
+    objetoRetornado6.order('agua');
+    objetoRetornado6.order('sopa');
+    objetoRetornado6.order('sashimi');
+    assert.deepStrictEqual(objetoRetornado6.consumption, ['coxinha', 'agua', 'sopa', 'sashimi']);
     // Agora faça o TESTE 7 deste arquivo.
     // --------------------------------------------------------------------------------------
     // TESTE 7: Verifique que a função `order` aceita que pedidos repetidos sejam acrescidos a consumption.
@@ -92,6 +98,11 @@ describe('#createMenu', () => {
     // objetoRetornado.order('coxinha');
     // objetoRetornado.comsuption // Retorno: ['coxinha', 'agua', 'coxinha']
     // ```
+    const objetoRetornado7 = createMenu(objetoQualquer);
+    objetoRetornado7.order('coxinha');
+    objetoRetornado7.order('agua');
+    objetoRetornado7.order('coxinha');
+    assert.deepStrictEqual(objetoRetornado7.consumption, ['coxinha', 'agua', 'coxinha']);
     // Agora faça o TESTE 8 deste arquivo.
     // --------------------------------------------------------------------------------------
     // TESTE 8: Verifique que, ao chamar `objetoRetornado.pay()`, retorna-se a soma dos preços de tudo que foi pedido, conforme registrado em `objetoRetornado.consumption`
@@ -102,5 +113,11 @@ describe('#createMenu', () => {
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
+    const objetoQualquer8 = { food: { 'coxinha': 3.90, 'sopa': 8.50, 'sashimi': 2.60 }, drink: { 'agua': 1.80 } };
+    const objetoRetornado8 = createMenu(objetoQualquer8);
+    objetoRetornado8.order('coxinha');
+    objetoRetornado8.order('agua');
+    objetoRetornado8.order('coxinha');
+    assert.deepStrictEqual(objetoRetornado8.pay(), 10.56);
   });
 });
