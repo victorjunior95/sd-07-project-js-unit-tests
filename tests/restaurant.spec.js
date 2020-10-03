@@ -183,5 +183,10 @@ describe('#createMenu', () => {
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
+    myMenu = createMenu(parameter);
+    myMenu.order('coxinha');
+    myMenu.order('agua');
+    myMenu.order('coxinha');
+    assert.strictEqual(myMenu.pay(), 11.7) // Retorno: somaDosPreçosDosPedidos
   });
 });
