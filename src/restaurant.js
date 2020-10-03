@@ -82,13 +82,13 @@ const createMenu = (obj) => {
       pedido.forEach((itemPedido) => {
         Object.keys(obj).forEach((key) => {
           Object.keys(obj[key]).forEach((item) => {
-            if(itemPedido === item){
+            if (itemPedido === item) {
               totalSum += obj[key][item];
             }
-          })
-        })
-      })
-      totalSum += (totalSum*0.1);
+          });
+        });
+      });
+      totalSum += (totalSum * 0.1);
       return totalSum;
     },
   };
