@@ -77,7 +77,7 @@ const createMenu = (objetoPassadoPorParametro) => {
     fetchMenu: objetoPassadoPorParametro,
     consumption: pedido,
     order: string => pedido.push(string),
-    pay: () => 0;
+    pay: () => 0
   };
 
   return newObject;
