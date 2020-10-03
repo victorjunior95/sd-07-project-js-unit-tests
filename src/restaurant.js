@@ -76,14 +76,14 @@ const createMenu = (objetoPassadoPorParametro) => {
   const newObject = {
     fetchMenu: objetoPassadoPorParametro,
     consumption: pedido,
-    order: (string) => pedido.push(string),
-    pay: () => 0
+    order: string => pedido.push(string),
+    pay: () => 0;
   };
 
   return newObject;
 };
-
-let parameter = {
+/* 
+const parameter = {
   food: {
     'coxinha': 3.90,
     'sanduiche': 9.90
@@ -100,6 +100,6 @@ let menu = {
 };
 
 let teste = createMenu(parameter).order('coxinha');
-console.log(teste.consumption)
+console.log(teste.consumption) */
 
 module.exports = createMenu;
