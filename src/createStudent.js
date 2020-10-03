@@ -21,6 +21,7 @@ const createStudent = (input) => {
       const text = 'Eita pessoa boa!';
       return text;
     },
+    //Por que essa virgula code climate?
   };
   return object;
 };
