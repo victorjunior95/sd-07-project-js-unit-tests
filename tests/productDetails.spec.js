@@ -37,9 +37,16 @@ describe('#productDetails', () => {
     // Hamaji https://www.w3schools.com/jsref/jsref_isarray.asp - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
 
     assert.ok(Array.isArray(productDetails('Alcool gel', 'Máscara')));
+
     assert.strictEqual(productDetails('Alcool gel', 'Máscara').length, 2);
+
     assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara')[0, 1], 'object');
-    assert.notStrictEqual(productDetails('Alcool gel', 'Máscara')[0], productDetails('Alcool gel', 'Máscara')[1])
+
+    assert.notStrictEqual(productDetails('Alcool gel', 'Máscara')[0], productDetails('Alcool gel', 'Máscara')[1]);
+
+    assert.strictEqual((Object.values((productDetails('Alcool gel', 'Máscara')[0]).details).toString()).endsWith('123'), (Object.values((productDetails('Alcool gel', 'Máscara')[1]).details).toString()).endsWith('123'))
+
+    // const teste = Object.values(productDetails().details)
 
     // Teste que o retorno da função é um array.
     // Teste que o array retornado pela função contém dois itens dentro.
