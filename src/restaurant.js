@@ -44,13 +44,11 @@
 */
 
 // PASSO 1: Crie uma função `createMenu()` que, dado um objeto passado por parâmetro, retorna um objeto com o seguinte formato: { fetchMenu: objetoPassadoPorParametro }.
-//
 // Agora faça o TESTE 2 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------
 
 // PASSO 2: Adicione ao objeto retornado por `createMenu` uma chave `consumption` que, como valor inicial, tem um array vazio.
-//
 // Agora faça o TESTE 5 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------
@@ -64,13 +62,51 @@
 // const createMenu = (myMenu) => // Lógica que edita o objeto `restaurant`
 //
 // const orderFromMenu = (request) => // Lógica que adiciona à chave `consumption` de `restaurant` a string recebida no parâmetro `request`. Essa função deve ser associada à chave `order` de `restaurant`
-// ```
+// const paymentCalculator = (values) {
+// }
+const calcValueConsumption = (a, b) => {
+  let payValue = 0;
+  for (let index = 0; index < b.length; index += 1) {
+    const nameItem = b[index];
+    if (a.food[nameItem] !== undefined) {
+      payValue += a.food[nameItem];
+    }
+    if (a.drinks[nameItem] !== undefined) {
+      payValue += a.drinks[nameItem];
+    }
+  }
+  return parseFloat(payValue);
+};
+
+const createMenu = (data) => {
+  const menu = {
+    fetchMenu: data,
+    consumption: [],
+    order: item => menu.consumption.push(item),
+    pay: () => {
+      const sendFetchMenu = menu.fetchMenu;
+      const sendConsumption = menu.consumption;
+      return calcValueConsumption(sendFetchMenu, sendConsumption);
+    },
+    resetConsumption: () => { menu.consumption = []; },
+  };
+  return menu;
+};
+/*
+const meuRestaurante = createMenu({
+  food: {'coxinha': 3.90, 'sanduiche': 9.90},
+  drinks: {'agua': 3.90, 'cerveja': 6.90}
+});
+meuRestaurante.resetConsumption();
+meuRestaurante.order('coxinha');
+meuRestaurante.order('agua');
+meuRestaurante.order('coxinha');
+console.log(meuRestaurante.pay());
+*/
 // Agora faça o TESTE 6 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------
 
-// PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
-
-const createMenu = () => {};
+// PASSO 4: Adicione ao objeto retornado por `createMenu()` uma  chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
 module.exports = createMenu;
