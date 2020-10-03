@@ -26,3 +26,4 @@ const vqv = (nome, idade) => {
   }
   return undefined;
 };
+module.exports = vqv;
