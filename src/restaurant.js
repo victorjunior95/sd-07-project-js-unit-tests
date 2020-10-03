@@ -97,41 +97,54 @@ meuRestauranteOficial.order('sopa');
 meuRestauranteOficial.order('sashimi');
 meuRestauranteOficial.order('coxinha');
 
-const payFoods = () => {
+let sumPrice = 0;
+const compareArrayFoods = (index) => {
   const arrayItemsOrder = meuRestauranteOficial.consumption;
   const arrayFood = Object.keys(meuRestauranteOficial.fetchMenu.food);
   const arrayFoodPrice = Object.values(meuRestauranteOficial.fetchMenu.food);
-  let sumPrice = 0;
-  for (let i = 0; i < arrayItemsOrder.length; i += 1) {
-    for (let j = 0; j < arrayFood.length; j += 1) {
-      if (arrayItemsOrder[i] === arrayFood[j]) {
-        sumPrice += arrayFoodPrice[j];
-      }
+  for (let j = 0; j < arrayFood.length; j += 1) {
+    if (arrayItemsOrder[index] === arrayFood[j]) {
+      sumPrice += arrayFoodPrice[j];
     }
   }
   return sumPrice;
+}
+
+const payFoods = () => {
+  const arrayItemsOrder = meuRestauranteOficial.consumption;
+  for (let i = 0; i < arrayItemsOrder.length; i += 1) {
+    compareArrayFoods(i);
+  }
+  return compareArrayFoods();
 };
 
-const pay = () => {
-  let sumPrice = payFoods();
+let sumPriceFood = payFoods();
+const compareArrayDrinks = (index) => {
   const arrayItemsOrder = meuRestauranteOficial.consumption;
   const arrayDrink = Object.keys(meuRestauranteOficial.fetchMenu.drink);
   const arrayDrinkPrice = Object.values(meuRestauranteOficial.fetchMenu.drink);
-  for (let i = 0; i < arrayItemsOrder.length; i += 1) {
-    for (let z = 0; z < arrayDrink.length; z += 1) {
-      if (arrayItemsOrder[i] === arrayDrink[z]) {
-        sumPrice += arrayDrinkPrice[z];
-      }
+  for (let z = 0; z < arrayDrink.length; z += 1) {
+    if (arrayItemsOrder[index] === arrayDrink[z]) {
+      sumPriceFood += arrayDrinkPrice[z];
     }
   }
-  return sumPrice;
+  return sumPriceFood;
+}
+
+const pay = () => {
+  const arrayItemsOrder = meuRestauranteOficial.consumption;
+  
+  for (let i = 0; i < arrayItemsOrder.length; i += 1) {
+    compareArrayDrinks(i);
+  }
+  return compareArrayDrinks();
 };
+// console.log(pay());
 
 meuRestauranteOficial.pay = pay;
-
+console.log(meuRestauranteOficial.pay());
 // console.log(meuRestauranteOficial);
 // console.log(meuRestauranteOficial.consumption);
-console.log(meuRestauranteOficial.pay());
 
 // PASSO 02
 // const ObjectMenu = createMenu({ food: {}, drink: {} }).fetchMenu;

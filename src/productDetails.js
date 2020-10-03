@@ -43,10 +43,12 @@ const productDetails = (firstProduct, secondProduct) => [
 // console.log(typeof productDetails('banana', 'laranja'));
 // console.log(productDetails('banana', 'laranja')[0]);
 
-// const arrayLastNumbers0 = productDetails('banana', 'laranja')[0].details.productId.endsWith('123');
+// const object0 = productDetails('banana', 'laranja')[0];
+// const arrayLastNumbers0 = object0.details.productId.endsWith('123');
 // console.log(arrayLastNumbers0);
 
-// const arrayLastNumbers1 = productDetails('banana', 'laranja')[1].details.productId.endsWith('123');
+// const object1 = productDetails('banana', 'laranja')[1];
+// const arrayLastNumbers1 = object1.details.productId.endsWith('123');
 // console.log(arrayLastNumbers1);
 
 module.exports = productDetails;
