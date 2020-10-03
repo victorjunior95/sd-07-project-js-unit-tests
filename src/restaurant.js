@@ -108,7 +108,7 @@ const compareArrayFoods = (index) => {
     }
   }
   return sumPrice;
-}
+};
 
 const payFoods = () => {
   const arrayItemsOrder = meuRestauranteOficial.consumption;
@@ -129,11 +129,10 @@ const compareArrayDrinks = (index) => {
     }
   }
   return sumPriceFood;
-}
+};
 
 const pay = () => {
   const arrayItemsOrder = meuRestauranteOficial.consumption;
-  
   for (let i = 0; i < arrayItemsOrder.length; i += 1) {
     compareArrayDrinks(i);
   }
