@@ -3,7 +3,6 @@
 
 const assert = require('assert');
 const createMenu = require('../src/restaurant');
-
 /*
   Você é responsável por escrever o código do sistema de pedidos de um restaurante. Deve ser possível, através desse sistema, cadastrar um menu. Dado que um menu foi cadastrado, o sistema deve disponibilizar um objeto através do qual se consegue:
   - ler o menu cadastrado;
@@ -183,10 +182,20 @@ describe('#createMenu', () => {
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
-    myMenu = createMenu(parameter);
-    myMenu.order('coxinha');
-    myMenu.order('agua');
-    myMenu.order('coxinha');
-    assert.strictEqual(myMenu.pay(), 11.7) // Retorno: somaDosPreçosDosPedidos
+    let objeto = {
+      food: {
+        'coxinha': 3.90,
+        'sanduiche': 9.90
+      },
+      drinks: {
+        'agua': 3.90,
+        'cerveja': 6.90
+      }
+    };
+    myMeny = createMenu(objeto);
+    myMeny.order('coxinha');
+    myMeny.order('agua');
+    myMeny.order('coxinha');
+    assert.strictEqual(myMeny.pay(), 12.87) // Retorno: somaDosPreçosDosPedidos
   });
 });

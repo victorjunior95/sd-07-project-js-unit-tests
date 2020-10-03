@@ -88,30 +88,12 @@ const createMenu = (obj) => {
           })
         })
       })
+      totalSum += (totalSum*0.1);
       return totalSum;
     },
   };
 
   return newObject;
 };
-const parameter = {
-  food: {
-    'coxinha': 3.90,
-    'sanduiche': 9.90,
-    'salgado': 4.50,
-    'pizza': 45.00,
-  },
-  drinks: {
-    'agua': 3.90,
-    'cerveja': 6.90,
-    'refigerante': 6.50,
-  }
-};
-
-let teste = createMenu(parameter);
-teste.order('coxinha');
-teste.order('agua');
-teste.order('coxinha');
-console.log(teste.pay());
 
 module.exports = createMenu;
