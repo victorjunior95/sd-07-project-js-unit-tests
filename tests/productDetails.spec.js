@@ -33,7 +33,6 @@ const productDetails = require('../src/productDetails');
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    assert.fail();
     // ESCREVA SEUS TESTES ABAIXO: 
     // Para realizar alguns criterios deste exercicio, consultei o repositorio do colega Yogor Fonseca, quem foi minha dupla no projeto do bloco 6.
     // Teste que o retorno da função é um array.
