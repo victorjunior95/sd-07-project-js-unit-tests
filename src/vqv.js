@@ -17,7 +17,7 @@
 */
 
 const vqv = (nome, idade) => {
-  if (nome === '' && idade === '') {
+  if (nome === undefined && idade === undefined) {
     return undefined;
   } else {
     const text =
@@ -28,5 +28,4 @@ const vqv = (nome, idade) => {
     return text;
   }
 };
-
 module.exports = vqv;
