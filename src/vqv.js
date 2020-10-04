@@ -20,11 +20,11 @@ const vqv = (nome, idade) => {
   if (nome === '' && idade === '') {
     return undefined;
   }
-  return (
+  return console.log(
     `Oi, meu nome é ${nome}!\n` +
-    `Tenho ${idade} anos,\n` +
-    'trabalho na Trybe e mando muito em programação!\n' +
-    '#VQV!'
+      `Tenho ${idade} anos,\n` +
+      'trabalho na Trybe e mando muito em programação!\n' +
+      '#VQV!'
   );
 };
 
