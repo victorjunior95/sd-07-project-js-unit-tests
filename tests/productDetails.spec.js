@@ -56,13 +56,13 @@ describe('#productDetails', () => {
     // (Difícil) Teste que os dois productIds terminam com 123.
 
     for (
-      let i = 0;
-      i <= productDetails('Alcool gel', 'Máscara').length;
-      i += 1
+      let index = 0;
+      index <= productDetails('Alcool gel', 'Máscara').length;
+      index += 1
     ) {
-      if(i<=1){assert.deepStrictEqual(
+      if(index<=1){assert.deepStrictEqual(
         parseFloat(
-          productDetails('Alcool gel', 'Máscara')[i].details.productId.substr(
+          productDetails('Alcool gel', 'Máscara')[index].details.productId.substr(
             -3
           )
         ),
