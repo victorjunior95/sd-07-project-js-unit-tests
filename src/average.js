@@ -13,6 +13,9 @@
 */
 
 const average = (array) => {
+  if(array === 0){
+    return = null;
+  }
   let sum = 0;
   for (let index = 0; index < array.length; index += 1) {
     if (typeof array[index] === 'string') {
