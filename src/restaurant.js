@@ -74,28 +74,26 @@
 const createMenu = (param) => {
   let objectReturned = {};
   objectReturned = {
-  fetchMenu: param,
-  consumption: [],
-  order: param => {
-    for (let i = 0; i <= objectReturned.consumption.length; i += 1) {
-      if (param !== objectReturned.consumption[i]) {
+    fetchMenu: param,
+    consumption: [],
+    order: (param) => {
+      if(param !== objectReturned.consumption[0]){
         objectReturned.consumption.push(param);
-        return objectReturned;
-      } else {
-        return objectReturned;
       }
+      return objectReturned;
     }
-  },
   }
+
   return objectReturned;
-}
+
+};
 
 // createMenu(menuRestaurante);
 
-// objectReturned.order('coxinha');
-// objectReturned.order('coxinha');
-// objectReturned.order('coxinha1');
-// objectReturned.order('coxinha2');
+// objectReturned.order("coxinha");
+// objectReturned.order("agua");
+// objectReturned.order("sopa");
+// objectReturned.order("sashimi");
 
 // console.log(objectReturned.consumption);
 
