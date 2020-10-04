@@ -39,10 +39,4 @@ const productDetails = (firstProduct, secondProduct) => [
   },
 ];
 
-console.log(
-  parseFloat(
-    productDetails('Alcool gel', 'Máscara')[0].details.productId.substr(-3)
-  
-  )
-);
 module.exports = productDetails;
