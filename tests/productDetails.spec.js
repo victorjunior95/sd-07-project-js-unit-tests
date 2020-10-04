@@ -60,16 +60,15 @@ describe('#productDetails', () => {
       i <= productDetails('Alcool gel', 'Máscara').length;
       i += 1
     ) {
-      if (i <= 1) {
-        assert.deepStrictEqual(
-          parseFloat(
-            productDetails('Alcool gel', 'Máscara')[i].details.productId.substr(
-              -3
-            )
-          ),
-          123
-        );
-      }
+      if(i<=1){assert.deepStrictEqual(
+        parseFloat(
+          productDetails('Alcool gel', 'Máscara')[i].details.productId.substr(
+            -3
+          )
+        ),
+        123
+      );}
+      
     }
   });
 });
