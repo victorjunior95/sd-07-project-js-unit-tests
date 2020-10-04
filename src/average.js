@@ -18,7 +18,7 @@ const average = (array) => {
     if (typeof array[index] === 'string') {
       return undefined;
     }
-    sum += array[index]; 
+    sum += array[index];
   }
   const mediaArray = Math.round(sum / array.length);
   return mediaArray;
