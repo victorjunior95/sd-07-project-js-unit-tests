@@ -68,10 +68,10 @@ const calcValueConsumption = (a, b) => {
   let payValue = 0;
   for (let index = 0; index < b.length; index += 1) {
     const nameItem = b[index];
-    if (a.food[nameItem] !== undefined) {
+    if (typeof (a.food[nameItem]) === 'number') {
       payValue += a.food[nameItem];
     }
-    if (a.drinks[nameItem] !== undefined) {
+    if (typeof (a.drinks[nameItem]) === 'number') {
       payValue += a.drinks[nameItem];
     }
   }
@@ -92,17 +92,6 @@ const createMenu = (data) => {
   };
   return menu;
 };
-/*
-const meuRestaurante = createMenu({
-  food: {'coxinha': 3.90, 'sanduiche': 9.90},
-  drinks: {'agua': 3.90, 'cerveja': 6.90}
-});
-meuRestaurante.resetConsumption();
-meuRestaurante.order('coxinha');
-meuRestaurante.order('agua');
-meuRestaurante.order('coxinha');
-console.log(meuRestaurante.pay());
-*/
 // Agora faça o TESTE 6 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------
