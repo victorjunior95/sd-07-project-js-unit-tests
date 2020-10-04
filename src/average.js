@@ -14,17 +14,16 @@
 
 const average = (array) => {
   if (array.length === 0) {
-    return undefined;
+    return (undefined);
   }
   let sumArray = 0;
   for (let i = 0; i < array.length; i += 1) {
-    if (typeof array[i] === 'string') {
-      return undefined;
+    if (typeof array[i] !== 'number') {
+      return (undefined);
     }
     sumArray += array[i];
   }
-  const averageArray = Math.round(sumArray / array.length);
-  return averageArray;
+  return (Math.round(sumArray / array.length));
 };
 
 module.exports = average;
