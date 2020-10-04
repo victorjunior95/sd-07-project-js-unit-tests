@@ -54,13 +54,22 @@ describe('#productDetails', () => {
       true
     );
     // (Difícil) Teste que os dois productIds terminam com 123.
-    assert.deepStrictEqual(
-      parseFloat(
-        productDetails('Alcool gel', 'Máscara')[teste].details.productId.substr(
-          -3
-        )
-      ),
-      123
-    );
+
+    for (
+      let i = 0;
+      i <= productDetails('Alcool gel', 'Máscara').length;
+      i += 1
+    ) {
+      if (i <= 1) {
+        assert.deepStrictEqual(
+          parseFloat(
+            productDetails('Alcool gel', 'Máscara')[i].details.productId.substr(
+              -3
+            )
+          ),
+          123
+        );
+      }
+    }
   });
 });
