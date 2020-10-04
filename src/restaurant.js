@@ -80,17 +80,17 @@ const createMenu = (obj) => {
     },
     pay: () => {
       let total = 0;
-      menu.consumption.forEach((item)=>{
+      menu.consumption.forEach((item) => {
         Object.keys(menu.fetchMenu).forEach((content) => {
-          if(menu.fetchMenu[content][item] !== undefined) {
+          if (menu.fetchMenu[content][item] !== undefined) {
             total += menu.fetchMenu[content][item];
           }
-        })
+        });
       });
         return total;
-    }
+    },  
   };
-  return menu
+  return menu;
 };
 
 module.exports = createMenu;
