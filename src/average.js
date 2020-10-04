@@ -16,7 +16,7 @@ const average = (valores) => {
   if (valores.length === 0) return undefined;
   let soma = 0;
   for (let index = 0; index < valores.length; index += 1) {
-    if (typeof(valores[index]) !== 'number') {
+    if (typeof (valores[index]) !== 'number') {
       console.log('entrou');
       return undefined;
     }
