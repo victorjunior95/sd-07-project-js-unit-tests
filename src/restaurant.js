@@ -76,16 +76,15 @@ const createMenu = (param) => {
   objectReturned = {
     fetchMenu: param,
     consumption: [],
-    order: (param) => {
-      if(param !== objectReturned.consumption[0]){
-        objectReturned.consumption.push(param);
+    order: (newOrder) => {
+      if (newOrder !== objectReturned.consumption[0]) {
+        objectReturned.consumption.push(newOrder);
       }
       return objectReturned;
-    }
-  }
+    },
+  };
 
   return objectReturned;
-
 };
 
 // createMenu(menuRestaurante);
@@ -96,7 +95,5 @@ const createMenu = (param) => {
 // objectReturned.order("sashimi");
 
 // console.log(objectReturned.consumption);
-
-
 
 module.exports = createMenu;
