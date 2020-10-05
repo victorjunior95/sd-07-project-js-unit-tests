@@ -9,6 +9,7 @@
     - numbers([2, 'errado', 5]); // Retorna: false
 */
 
+const assert = require('assert');
 const numbers = (myArray) => {
   for (let i = 0; i < myArray.length; i += 1) {
     if (typeof myArray[i] !== 'number') {
@@ -17,5 +18,8 @@ const numbers = (myArray) => {
   }
   return true;
 };
+
+const parameter = [1, 2, 3, 4, 5];
+assert(numbers(parameter), true);
 
 module.exports = numbers;

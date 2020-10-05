@@ -19,7 +19,7 @@ const isEmpty = (arr) => {
 const validateNumber = (arr) => {
   let result = false;
   for (let index = 0; index < arr.length; index += 1) {
-    if (typeof index !== 'number') {
+    if (typeof arr[index] !== 'number') {
       result = true;
       break;
     }
