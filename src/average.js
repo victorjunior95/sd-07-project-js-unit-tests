@@ -33,7 +33,7 @@ const average = (arr) => {
     element = Math.round(element);
     sum += element;
   });
-  return sum / arr.length;
+  return Math.round(sum / arr.length);
 };
 
 module.exports = average;
