@@ -51,6 +51,7 @@ describe('#circle', () => {
 
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
     const objectReceived = circle(3);
+    objectReceived.area = parseFloat(objectReceived.area.toFixed(2));
     const objectExpected = { radius: 3, area: 28.26, circumference: 18.84 };
     assert.deepStrictEqual(objectReceived, objectExpected);
   });
