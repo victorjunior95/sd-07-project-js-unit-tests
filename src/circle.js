@@ -18,7 +18,6 @@
         Use esse conhecimento para te ajudar a lidar com possíveis problemas que esses testes trarão!
 */
 const assert = require('assert');
-const { type } = require('os');
 
 const circle = (radius = -1) => {
   const PI = 3.14;
