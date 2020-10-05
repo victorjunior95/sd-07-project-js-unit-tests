@@ -86,7 +86,7 @@ total = () => {
   });
   valor *= 1.1;
   return parseFloat(valor.toFixed(2));
-}
+};
 
 const createMenu = (pedido) => {
   restaurante.fetchMenu = pedido;
