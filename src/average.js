@@ -13,14 +13,17 @@
 */
 
 const isEmpty = (arr) => {
-  if (arr === null || arr.length === 0) return true
+  if (arr === null || arr.length === 0) return true;
   return false;
-}
+};
 const validateNumber = (arr) => {
   let result = false;
-  arr.forEach((element) => {
-    if (typeof element !== 'number') return result = true;
-  });
+  for (let index of arr) {
+    if (typeof index !== 'number') {
+      result = true;
+      break;
+    }
+  }
   return result;  
 };    
 const average = (arr) => {
@@ -28,7 +31,6 @@ const average = (arr) => {
   let sum = 0;
   arr.forEach((element) => {
     element = Math.round(element);
-    console.log(element);
     sum += element;
   });
   return sum / arr.length;
