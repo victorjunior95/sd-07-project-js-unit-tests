@@ -12,7 +12,7 @@
 
   Parâmetros:
   - Um objeto. Exemplos: { food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} }.
-  
+
   Comportamento:
   const meuRestaurante = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} }).
   meuRestaurante.fetchMenu() // Retorno: { food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} }
@@ -67,18 +67,18 @@
 const createMenu = (menu) => {
   obj = { fetchMenu: menu,
     consumption: [],
-    order: (item) => {obj.consumption.push(item)},
+    order: item => obj.consumption.push(item),
     pay: () => {
       let total = 0;
-      obj.consumption.forEach(item => {
-        let valorDoItem = obj.fetchMenu[item];
+      obj.consumption.forEach((item) => {
+        const valorDoItem = obj.fetchMenu[item];
         total += valorDoItem;
         return total;
       });
-      return total*1.1;
-    }
+      return total * 1.1;
+    },
   };
-  return obj
+  return obj;
 };
 
 module.exports = createMenu;

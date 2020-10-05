@@ -22,7 +22,10 @@
 const calculator = {
   add: (primeiroInteiro, segundoInteiro) => primeiroInteiro + segundoInteiro,
   mult: (primeiroInteiro, segundoInteiro) => primeiroInteiro * segundoInteiro,
-  div: (primeiroInteiro, segundoInteiro) => (primeiroInteiro - (primeiroInteiro % segundoInteiro)) / segundoInteiro,
+  div: (primeiroInteiro, segundoInteiro) => {
+    const primeiroInteiroAjustado = (primeiroInteiro - (primeiroInteiro % segundoInteiro));
+    return primeiroInteiroAjustado / segundoInteiro;
+  },
   sub: (primeiroInteiro, segundoInteiro) => primeiroInteiro - segundoInteiro,
 };
 
