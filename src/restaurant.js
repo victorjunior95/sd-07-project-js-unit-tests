@@ -67,19 +67,23 @@
 
 // const createMenu = () => {};
 
-// let menuRestaurante = { food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} };
-
-// let objectReturned = {};
-
 const createMenu = (param) => {
   let objectReturned = {};
   objectReturned = {
     fetchMenu: param,
     consumption: [],
     order: (newOrder) => {
-      if (newOrder !== objectReturned.consumption[0]) {
-        objectReturned.consumption.push(newOrder);
-      }
+      let countArr = 0;
+        for (i in objectReturned.consumption) {
+          if (newOrder === objectReturned.consumption[i]) {
+            objectReturned.consumption.repeatedOrde += newOrder;
+            countArr += 1;
+          }
+        }
+        if (countArr === 0) {
+          objectReturned.consumption.repeatedOrder = [];
+          objectReturned.consumption.push(newOrder);
+        }
       return objectReturned;
     },
   };
@@ -87,13 +91,6 @@ const createMenu = (param) => {
   return objectReturned;
 };
 
-// createMenu(menuRestaurante);
 
-// objectReturned.order("coxinha");
-// objectReturned.order("agua");
-// objectReturned.order("sopa");
-// objectReturned.order("sashimi");
-
-// console.log(objectReturned.consumption);
 
 module.exports = createMenu;
