@@ -13,18 +13,25 @@
 */
 
 const average = (array) => {
-  let resultado;
-  let x = 0;
-  if (typeof array !== 'number') {
-    x = undefined;
-  } else {
-    for (let i = 0; i < array.length; i += 1) {
-      resultado += array[i];
-    }
-    const media = resultado / array.length;
-    x = Math.round(media);
+  let soma = 0;
+  let resultado = 0;
+  if (array.length === 0) {
+    resultado = undefined;
+    return resultado;
   }
-  return x;
+  for (let i = 0; i < array.length; i += 1) {
+    if (typeof array[i] !== 'number') {
+      resultado = undefined;
+      return resultado;
+    }
+    console.log(array[i]);
+    soma += array[i];
+    console.log(soma);
+  }
+  const media = soma / array.length;
+  resultado = Math.round(media);
+  console.log(`o resultado final é ${resultado}`);
+  return resultado;
 };
 
 module.exports = average;
