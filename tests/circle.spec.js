@@ -26,10 +26,9 @@ const { type } = require('os');
 
 describe('#circle', () => {
   it('given a radius, should return an object with circles info', () => {
-    assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
-    assert.strictEqual(typeof circle(1,7,3), 'object')
-    assert.deepEqual(Object.keys(circle(1,7,3)).length, 3);
+    assert.strictEqual(typeof circle(1, 7, 3), 'object')
+    assert.deepEqual(Object.keys(circle(1, 7, 3)).length, 3);
     assert.deepEqual(circle(), undefined);
     assert.strictEqual(circle(2).circumference, 12.56);
     assert.strictEqual(circle(3).area, 28.259999999999998);
