@@ -81,7 +81,7 @@ const createMenu = (object) => {
       menu.consumption.push(item);
       return menu.consumption;
     },
-    
+
     pay: () => {
       Object.entries(menu.fetchMenu);
     },
