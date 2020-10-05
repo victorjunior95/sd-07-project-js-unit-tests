@@ -29,16 +29,5 @@ const circle = (radius = -1) => {
   };
 };
 
-
-assert.strictEqual(typeof circle(1), 'object');
-
-const objectSize = Object.keys(circle(2)).length;
-assert.strictEqual(objectSize, 3);
-
-assert.deepStrictEqual(circle(1), { radius: 1, area: 3.14, circumference: 6.28 });
-
-assert.deepStrictEqual(circle(7), { radius: 7, area: 153.86, circumference: 43.96 });
-
-assert.deepStrictEqual(circle(3), { radius: 3, area: 28.26, circumference: 18.84 });
-
+console.log(circle(2).circumference);
 module.exports = circle;
