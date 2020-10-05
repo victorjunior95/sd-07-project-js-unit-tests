@@ -13,6 +13,15 @@ alteração
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {};
+const average = (array) => {
+let returnnumber = 0;
+  array.forEach(element => {
+    if (element !== Number) {
+      return undefined
+    }
+    returnnumber = returnnumber + element
+  });
+  return returnnumber;
+};
 
 module.exports = average;
