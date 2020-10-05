@@ -54,5 +54,13 @@ describe('#productDetails', () => {
     assert.notDeepStrictEqual(object1, object2);
 
     // (Difícil) Teste que os dois productIds terminam com 123.
+    const productOne = 'bolo';
+    const productTwo = 'manga';
+    const object = productDetails(productOne, productTwo);
+    const objectOne = object[0].details.productId;
+    const objectTwo = object[1].details.productId;
+    const productOneOnlyNumber = objectOne.replace(productOne,'');
+    const productTwoOnlyNumber = objectTwo.replace(productTwo,'');
+    assert.strictEqual(productOneOnlyNumber, productTwoOnlyNumber);
   });
 });
