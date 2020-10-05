@@ -21,8 +21,8 @@ const vqv = (nome, idade) => {
     return undefined;
   }
   const paragraph = `Oi, meu nome é ${nome}!\n`
-  + `Tenho ${idade} anos, \n` +
-  'trabalho na Trybe e mando muito em programação!\n'
+  + `Tenho ${idade} anos,\n` 
+  + 'trabalho na Trybe e mando muito em programação!\n'
   + '#VQV!';
   return paragraph;
 };
