@@ -18,6 +18,7 @@
         Use esse conhecimento para te ajudar a lidar com possíveis problemas que esses testes trarão!
 */
 const assert = require('assert');
+const { type } = require('os');
 
 const circle = (radius = -1) => {
   const PI = 3.14;
@@ -28,6 +29,12 @@ const circle = (radius = -1) => {
     circumference: 2 * PI * radius,
   };
 };
+
+
+assert(typeof circle(1), 'object');
+
+const objectSize = Object.keys(circle(2)).length;
+assert(objectSize, 3);
 
 assert.deepStrictEqual(circle(1), { radius: 1, area: 3.14, circumference: 6.28 });
 
