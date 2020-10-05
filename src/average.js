@@ -14,12 +14,12 @@ alteração
 */
 
 const average = (array) => {
-let returnnumber = 0;
+  let returnnumber = 0;
   array.forEach(element => {
     if (element !== Number) {
-      return undefined
+      return undefined;
     }
-    returnnumber = returnnumber + element
+    returnnumber = returnnumber + element;
   });
   return returnnumber;
 };
