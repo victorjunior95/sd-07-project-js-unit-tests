@@ -30,10 +30,10 @@ const circle = (radius = -1) => {
 };
 
 
-assert(typeof circle(1), 'object');
+assert.ok(typeof circle(1), 'object');
 
 const objectSize = Object.keys(circle(2)).length;
-assert(objectSize, 3);
+assert.fail(objectSize, 3);
 
 assert.deepStrictEqual(circle(1), { radius: 1, area: 3.14, circumference: 6.28 });
 
