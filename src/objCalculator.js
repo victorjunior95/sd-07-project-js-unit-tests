@@ -20,33 +20,9 @@
 */
 
 const calculator = {
-  add: function add(a, b) {
-    if (Number.isInteger(a) && Number.isInteger(b)) {
-      return a + b;
-    } else {
-      return false;
-    }
-  },
-  mult: function mult(a, b) {
-    if (Number.isInteger(a) && Number.isInteger(b)) {
-      return a * b;
-    } else {
-      return false;
-    }
-  },
-  div: function div(a, b) {
-    if (Number.isInteger(a) && Number.isInteger(b)) {
-      return Math.floor(a / b);
-    } else {
-      return false;
-    }
-  },
-  sub: function sub(a, b) {
-    if (Number.isInteger(a) && Number.isInteger(b)) {
-      return a - b;
-    } else {
-      return false;
-    }
-  },
+  add: (a, b) => a + b,
+  mult: (a, b) => a * b,
+  div: (a, b) => Math.floor(a / b),
+  sub: (a, b) => a - b,
 };
 module.exports = calculator;
