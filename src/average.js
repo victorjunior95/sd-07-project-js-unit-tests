@@ -12,26 +12,22 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const isEmpty = (arr) => {
-  return arr.length === 0;
-}
-
+const isEmpty = (arr) => return arr.length === 0;
 const validateNumber = (arr) => {
   let result = false;
-  arr.forEach(element => {
-      if ( typeof element !== 'number') return result = true;
+  arr.forEach((element) => {
+    if (typeof element !== 'number') result = true;
   });
   return result;  
-}
-    
+};    
 const average = (arr) => {
   if (isEmpty(arr) || validateNumber(arr)) return undefined;
   let sum = 0;
   arr.forEach((element) => {
-    element = Math.round(element)
+    element = Math.round(element);
     console.log(element);
     sum += element;
-  }) 
+  });
   return sum / arr.length;
 };
 
