@@ -24,7 +24,7 @@ const vqv = (nome, idade) => {
   + `Tenho ${idade} anos, \n` +
   'trabalho na Trybe e mando muito em programação!\n'
   + '#VQV!';
-  return paragraph; 
+  return paragraph;
 };
 
 module.exports = vqv;
