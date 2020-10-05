@@ -13,10 +13,8 @@
 */
 
 const average = (array) => {
-  let acumulador = 0;
-  if (array.length === 0) {
-    return undefined;
-  } else {
+  if (array.length != 0) {
+    let acumulador = 0;
     for (let i = 0; i < array.length; i += 1) {
       if (Number.isInteger(array[i])) {
         acumulador += array[i];
@@ -25,6 +23,8 @@ const average = (array) => {
       }
     }
     return Math.round(acumulador / array.length);
+  } else {
+    return undefined;
   }
 };
 
