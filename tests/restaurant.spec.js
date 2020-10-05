@@ -72,6 +72,8 @@ describe('#createMenu', () => {
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.comsuption // Retorno: ["coxinha"]
     // ```
+    /* Daniel Cespedes esclareceu */
+    /* Hamaji disse que eu poderia chamar função e depois acessar consumption */
     assert.deepStrictEqual(objetoRetornado.order('coxinha').consumption, ['coxinha']);
     // Agora faça o PASSO 3 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------------
