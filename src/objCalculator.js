@@ -19,11 +19,16 @@
   calculator.div(3, 2) // Retorno: 1;
 */
 
+const addIntegers = (n1, n2) => {return n1 + n2};
+const multIntegers = (n1, n2) => {return n1 * n2};
+const divIntegers = (n1, n2) => {return Math.trunc(n1 / n2)};
+const subIntegers = (n1, n2) => {return n1 - n2};
+
 const calculator = {
-  add(number1, number2) { return number1 + number2 },
-  mult(number1, number2) { return number1 * number2 },
-  div (number1, number2) { return Math.trunc(number1 / number2) },
-  sub(number1, number2) { return number1 - number2 },
+  add: addIntegers,
+  mult: multIntegers,
+  div: divIntegers, 
+  sub: subIntegers,
 };
 
 module.exports = calculator;
