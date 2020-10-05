@@ -28,7 +28,7 @@ describe('#circle', () => {
     //assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
-    assert.strictEqual(typeof(circle(3)), "object");
+    assert.strictEqual(typeof(circle(3)), 'object');
     // Teste se o objeto retornado tem 3 entradas.
     assert.strictEqual(Object.values(circle(3)).length , 3);
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
@@ -38,7 +38,7 @@ describe('#circle', () => {
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
     assert.strictEqual(parseFloat(circle(3).area.toPrecision(4)), 28.26);
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
-    assert.deepStrictEqual(circle(3), { radius: 3, area: 28.259999999999998, circumference: 18.84 })
+    assert.deepStrictEqual(circle(3), { radius: 3, area: 28.259999999999998, circumference: 18.84 });
     //Foi a soluçao q achei mais correta, porem minha opiniao é que o erro de precisao esta dentro da funçao e nao no teste.
   });
 });
