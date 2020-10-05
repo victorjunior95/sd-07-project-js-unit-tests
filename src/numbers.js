@@ -20,7 +20,13 @@ const numbers = (myArray) => {
   return true;
 };
 
-const parameter = [1, 2, 3, 4, 5];
-assert(numbers(parameter), true);
+const parameter1 = [1, 2, 3, 4, 5];
+assert(numbers(parameter1), true);
+
+const parameter2 = [1, 2, '3', 4, 5];
+assert.strictEqual(numbers(parameter2),false);
+
+const parameter3 = [1, 'a', 3];
+assert.strictEqual(numbers(parameter3),false);
 
 module.exports = numbers;
