@@ -15,7 +15,7 @@ alteração
 
 const average = (array) => {
   let returnnumber = 0;
-  array.forEach( (element) => {
+  array.forEach((element) => {
     if (element !== Number) {
       return undefined;
     }
