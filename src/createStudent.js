@@ -20,8 +20,7 @@ const createStudent = (name) => {
 
   student.name = name;
   student.feedback = () => 'Eita pessoa boa!';
-  return student; 
+  return student;
 };
 
-
-module.exports = createStudent; 
+module.exports = createStudent;
