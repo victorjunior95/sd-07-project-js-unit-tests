@@ -22,6 +22,6 @@ describe('#numbers', () => {
     assert.strictEqual(average([1, 2, 3, 4, 5]), true);
     assert.strictEqual(average([1, 2, '3', 4, 5]), false);
     assert.strictEqual(average([1, 'a', 3]), false);
-    assert.strictEqual(average(['']), false);
+    assert.strictEqual(average([' ']), false);
   });
 });
