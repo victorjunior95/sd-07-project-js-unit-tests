@@ -37,7 +37,7 @@ describe('#productDetails', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
     const expected = 'function';
-    assert.strictEqual(productDetails(), expected);
+    assert.strictEqual(typeof productDetails(), expected);
 
     // Teste que o array retornado pela função contém dois itens dentro.
     const arr = productDetails('manga', 'tangerina');
