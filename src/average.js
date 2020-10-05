@@ -24,8 +24,8 @@ const average = (arr) => {
     arrSum += arr[index];
   }
   const averageArr = Math.round(arrSum / arr.length);
-  
-  /*https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round
+  return averageArr ;
+  /* https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round
   https://stackoverflow.com/questions/29544371/finding-the-average-of-an-array-using-js#:~:text=You%20calculate%20an%20average%20by,var%20avg%20%3D%20total%20%2F%20grades.
   return averageArr;
   */
