@@ -12,11 +12,14 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const isEmpty = (arr) => return arr.length === 0;
+const isEmpty = (arr) => {
+  if (arr === null || arr.length === 0) return true
+  return false;
+}
 const validateNumber = (arr) => {
   let result = false;
   arr.forEach((element) => {
-    if (typeof element !== 'number') result = true;
+    if (typeof element !== 'number') return result = true;
   });
   return result;  
 };    
