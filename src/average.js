@@ -19,9 +19,9 @@ const average = (array) => {
   array.forEach((element) => {
     if (element !== Number) {
       return undefined;
-    } else (
+    } else {
       returnnumber += element;
-    )
+  }
   return returnnumber;
 });
 };
