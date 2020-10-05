@@ -21,6 +21,9 @@ const average = (array) => {
   for (let index = 0; index < array.length; index += 1) {
     if (typeof array[index] === 'number') {
       element += array[index];
+    }
+    else{
+      return undefined;
     } 
   }
   const rounds = Math.round(element / array.length);
