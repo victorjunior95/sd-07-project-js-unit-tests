@@ -22,7 +22,7 @@ describe('#numbers', () => {
   
     // Escreva um teste em que a função recebe [1, 2, 3, 4, 5] e retorna true
     const parameter1 = [1, 2, 3, 4, 5];
-    assert(numbers(parameter1), true);
+    assert.strictEqual(numbers(parameter1), true);
 
     // Escreva um teste em que a função recebe [1, 2, '3', 4, 5] e retorna false
     const parameter2 = [1, 2, '3', 4, 5];

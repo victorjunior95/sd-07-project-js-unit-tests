@@ -29,7 +29,8 @@ describe('#circle', () => {
             
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
-    assert.ok(typeof circle(1), 'object');
+    const result = typeof(circle(5));
+    assert.strictEqual(result, 'object');
 
     // Teste se o objeto retornado tem 3 entradas.
     const objectSize = Object.keys(circle(2)).length;
