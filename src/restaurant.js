@@ -73,18 +73,18 @@
 
 const findAndComputeItem = (item, result, menuItems) => {
   const keys = Object.keys(menuItems);
-  for (let j = 0; j < keys.length; j += 1) {
-    if (item === keys[j]) {
-      result += menuItems[keys[j]];
+  keys.forEach((key) => {
+    if (item === key) {
+      result += menuItems[key];
     }
-  }
+  });
   return result;
 };
 
 const computeResult = (items, result, menuItems) => {
-  for (let i = 0; i < items.length; i += 1) {
-    result = findAndComputeItem(items[i], result, menuItems);
-  }
+  items.forEach((item) => {
+    result = findAndComputeItem(item, result, menuItems);
+  });
   return result;
 };
 
