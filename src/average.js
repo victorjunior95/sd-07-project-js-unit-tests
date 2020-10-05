@@ -18,14 +18,14 @@ const isEmpty = (arr) => {
 };
 const validateNumber = (arr) => {
   let result = false;
-  for (let index of arr) {
+  for (let index = 0; index < arr.length; index += 1) {
     if (typeof index !== 'number') {
       result = true;
       break;
     }
   }
-  return result;  
-};    
+  return result;
+};
 const average = (arr) => {
   if (isEmpty(arr) || validateNumber(arr)) return undefined;
   let sum = 0;
