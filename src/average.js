@@ -14,15 +14,17 @@
 const average = (arrayInput) => {
   // add your implementation here
   let summ = 0;
-  let notDesiredAraay = false;
+  let notDesiredArray = true;
+  let arrayType = typeof(arrayInput);
   for (let count = 0; count < arrayInput.length; count += 1) {
-    if (typeof (arrayInput[count]) !== 'number' || arrayInput[count] === null) {
-      notDesiredAraay = true;
+    if (arrayType !== 'number') {
+      notDesiredArray = true;
     }
+    notDesiredArray = false;
     summ += arrayInput[count];
   }
   const averageOutput = Math.round((summ / arrayInput.length));
-  if (notDesiredAraay === false) {
+  if (notDesiredArray === 'true') {
     return (averageOutput);
   }
   return (undefined);
