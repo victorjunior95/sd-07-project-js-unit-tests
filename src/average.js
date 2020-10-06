@@ -24,6 +24,7 @@ const average = (array) => {
     } else {
       return undefined;
     }
+    return
   });
   return returnnumber / array.length;
 };
