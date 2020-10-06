@@ -11,7 +11,7 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-var assert = require('assert');
+const assert = require('assert');
 
 const average = (arrayInput) => {
   // add your implementation here
