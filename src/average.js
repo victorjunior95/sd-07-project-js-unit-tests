@@ -20,17 +20,17 @@ const average = (array) => {
   }
   array.forEach((element) => {
     if (typeof element === 'number') {
-      return returnnumber += element;
+      returnnumber += element;
     } else {
       return undefined;
     }
-  });
+  })
   return returnnumber / array.length;
 };
 
 module.exports = average;
 
-const arrayone = [2, 2];
-const numone = average(arrayone);
-const assert = require('assert');
-assert.strictEqual(numone, 2, "deu ruim mané");
+// const arrayone = [2,2];
+// const numone = average(arrayone);
+// const assert = require('assert');
+// assert.strictEqual(numone,2,"deu ruim mané");
