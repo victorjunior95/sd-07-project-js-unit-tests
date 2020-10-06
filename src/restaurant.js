@@ -93,9 +93,9 @@ const payFunction = (item) => {
   const drink = (objRetorno.fetchMenu.drink);
   const total = Object.assign({}, food, drink);
   for (let i = 0; i < (Object.keys(total).length); i += 1) {
-      if (item === Object.keys(total)[i]) {
-          sum += Object.values(total)[i];
-      }
+    if (item === Object.keys(total)[i]) {
+        sum += Object.values(total)[i];
+    }
   }
   return sum;
 };
