@@ -20,10 +20,12 @@
 */
 
 const calculator = {
-  add: (value1,value2) => { return value1 + value2},
-  mult: (value1,value2) => { return parseInt((value1*value2).toString())},
-  div: (value1,value2) => { return parseInt((value1/value2).toString())},
-  sub: (value1,value2) => { return parseInt((value1-value2).toString())}
+  add: (value1, value2) => value1 + value2,
+  mult: (value1, value2) => value1 * value2,
+  div: (value1, value2) => Math.trunc(value1 / value2),
+  sub: (value1, value2) => value1 - value2,
 };
 
 module.exports = calculator;
+
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc
