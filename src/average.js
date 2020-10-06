@@ -25,7 +25,7 @@ const average = (arrayInput) => {
   if (notDesiredAraay === false) {
     return (averageOutput);
   }
-  return ('undefined');
+  return (undefined);
 };
 
 module.exports = average;
