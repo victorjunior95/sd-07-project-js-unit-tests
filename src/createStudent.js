@@ -14,16 +14,16 @@
     estudante.name // Retorna: 'Leandrão, o Lobo Solitário'
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
+const retornaFrase = () => {
+  let mensagem = '';
+  mensagem = 'Eita pessoa boa!';
+  return mensagem;
+};
 
 const createStudent = (nome) => {
-  const retornaFrase = () => {
-    let mensagem = '';
-    mensagem = 'Eita pessoa boa!';
-    return mensagem;
-  };
   return {
     name: `${nome}`,
-    feedback: retornaFrase(),
+    feedback: retornaFrase (),
   };
 };
 
