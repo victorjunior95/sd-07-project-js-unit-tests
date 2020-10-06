@@ -44,5 +44,12 @@ describe('#productDetails', () => {
     // Teste que os dois objetos são diferentes entre si.
     assert.deepStrictEqual(productDetails('Alcool gel', 'Máscara')[0] === productDetails('Alcool gel', 'Máscara')[1], false, "os itens não são iguais");
     // (Difícil) Teste que os dois productIds terminam com 123.
+    const lasttest = productDetails('Alcool gel', 'Máscara');
+    const equatest = lasttest[0].details.productId.slice(-3) === lasttest[1].details.productId.slice(-3);
+    let totest = undefined;
+    if (equatest === true && lasttest[0].details.productId.slice(-3) === "123") {
+    totest = true;
+    }
+    assert.deepStrictEqual(totest, true, "não terminam com 123");
   });
 });
