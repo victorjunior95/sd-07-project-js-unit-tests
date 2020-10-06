@@ -17,14 +17,14 @@
 const feedback = () => 'Eita pessoa boa!';
 
 const createStudent = (nome) => {
+  const objToReturn = {
+    name: 'amendoin maluco',
+    feedback,
+  };
   if (typeof nome === 'string') {
-    const objToReturn = {
-      name: 'amendoin maluco',
-      feedback,
-    };
     objToReturn.name = nome;
-    return objToReturn;
   }
+  return objToReturn;
 };
 
 module.exports = createStudent;
