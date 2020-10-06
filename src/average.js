@@ -14,19 +14,19 @@
 
 // const average = () => {};
 // add your implementation here teste2 3
-const average = (numbers) => {
-  if (numbers.length === 0) {
+const average = (array) => {
+  if (array.length === 0) {
     return undefined;
   }
   let sum = 0;
-  for (let i = 0; i < numbers.length; i += 1) {
-    if (typeof numbers[i] === 'string') {
+  for (let i = 0; i < array.length; i += 1) {
+    if (typeof array[i] === 'anything') {
       return undefined;
     }
-    sum += numbers[i];
+    sum += array[i];
   }
-  const result = sum / numbers.length;
+  const result = sum / array.length;
   return Math.round(result);
 };
 module.exports = average;
-
+// peguei como modelo o codigo de luciano Berchon
