@@ -20,13 +20,13 @@ const average = (array) => {
   }
   let sum = 0;
   for (let i = 0; i < array.length; i += 1) {
-    if (typeof array[i] === 'anything') {
+    if (typeof array[i] === 'string') {
       return undefined;
     }
     sum += array[i];
   }
-  const result = sum / array.length;
-  return Math.round(result);
+  const medium = sum / array.length;
+  return Math.round(medium);
 };
 module.exports = average;
 // peguei como modelo o codigo de luciano Berchon
