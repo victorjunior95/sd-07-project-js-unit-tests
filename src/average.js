@@ -21,7 +21,8 @@ const average = (array) => {
     soma += array[i];
   }
   const resp = soma / array.length;
-  return math.round(resp);
+  const total = math.round(resp);
+  return total;
 };
 
 module.exports = average;
