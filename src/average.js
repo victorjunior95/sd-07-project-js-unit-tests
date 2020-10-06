@@ -21,8 +21,8 @@ const average = (numbers) => {
   numbers.forEach((number) => {
     sum += Math.round(number);
   });
-  const average = Math.round(sum / numbers.length);
-  return average;
+  const resultAverage = Math.round(sum / numbers.length);
+  return resultAverage;
 };
 
 module.exports = average;
