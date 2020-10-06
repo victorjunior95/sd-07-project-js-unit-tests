@@ -19,10 +19,10 @@ const average = (array) => {
     if (typeof element === 'number') {
       returnnumber += element;
     } else {
-      return undefined
+      return undefined;
     }
   });
-  return returnnumber / array.length
+  return returnnumber / array.length;
 };
 
 module.exports = average;
