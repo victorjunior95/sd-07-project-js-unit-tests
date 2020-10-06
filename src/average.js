@@ -15,15 +15,20 @@ alteração
 
 const average = (array) => {
   let returnnumber = 0;
-
   array.forEach((element) => {
-    if (element === Number) {
+    if (typeof element === 'number') {
       returnnumber += element;
     } else {
-      return undefined;
+      console;log("não somou")
+      return undefined
     }
-    return returnnumber;
   });
+  return returnnumber/array.length
 };
 
 module.exports = average;
+
+// const arrayone = [1,2];
+// const numone = average(arrayone);
+// const assert = require('assert');
+// assert.strictEqual(numone,1.5,"deu ruim mané");
