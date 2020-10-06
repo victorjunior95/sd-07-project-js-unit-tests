@@ -12,19 +12,29 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
+const isEmpty = (array) => {
+  if (array.length === 0) {
+    return undefined;
+  }
+};
+
+const isNumber = (array) => {
+  for (let i = 0; i < array.length; i += 1) {
+    if (!Number.isInteger(array[i])) {
+      return undefined;
+    }
+  }
+};
+
 const average = (array) => {
-  if (array.length != 0) {
+  if (isEmpty(array) === undefined || isNumber(array) === undefined) {
+    return undefined;
+  } else {
     let acumulador = 0;
     for (let i = 0; i < array.length; i += 1) {
-      if (Number.isInteger(array[i])) {
-        acumulador += array[i];
-      } else {
-        return undefined;
-      }
+      acumulador += array[i];
     }
     return Math.round(acumulador / array.length);
-  } else {
-    return undefined;
   }
 };
 
