@@ -22,8 +22,8 @@ const retornaFrase = () => {
 
 const createStudent = (nome) => {
   return {
-  name: `${nome}`,
-  feedback: retornaFrase (),
+    name: `${nome}`,
+    feedback: retornaFrase(),
   };
 };
 
