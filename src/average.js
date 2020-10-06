@@ -15,9 +15,6 @@ alteração
 
 const average = (array) => {
   let returnnumber = 0;
-  if (typeof array !== 'object') {
-    return undefined;
-  }
   if (array.length === 0) {
     return undefined;
   }
