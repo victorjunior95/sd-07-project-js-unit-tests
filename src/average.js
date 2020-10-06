@@ -15,6 +15,9 @@ alteração
 
 const average = (array) => {
   let returnnumber = 0;
+  if (typeof array !== 'object') {
+    return undefined;
+  }
   array.forEach((element) => {
     if (typeof element === 'number') {
       returnnumber += element;
@@ -26,8 +29,3 @@ const average = (array) => {
 };
 
 module.exports = average;
-
-// const arrayone = [1,2];
-// const numone = average(arrayone);
-// const assert = require('assert');
-// assert.strictEqual(numone,1.5,"deu ruim mané");
