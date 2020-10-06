@@ -12,19 +12,19 @@
     const estudante = createStudent('Leandrão, o Lobo Solitário')
 
     estudante.name // Retorna: 'Leandrão, o Lobo Solitário'
-    estudante.feedback() // Retorna: 'Eita pessoa boa!'
-*/
-const retornaFrase = () => {
-  let mensagem = '';
-  mensagem = 'Eita pessoa boa!';
-  return mensagem;
-};
+//     estudante.feedback() // Retorna: 'Eita pessoa boa!'
+// */
+// const retornaFrase = () => {
+//   let mensagem = '';
+//   mensagem = 'Eita pessoa boa!';
+//   return mensagem;
+// };
 
-const createStudent = (nome) => {
+const createStudent = name => {
   return {
-    name: `${nome}`,
-    feedback: retornaFrase(),
-  }
+    name,
+    feedback: () => 'Eita pessoa boa!',
+  };
 };
 
 const estudante = createStudent('Leandrão, o Lobo Solitário');
