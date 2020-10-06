@@ -18,20 +18,12 @@
   calculator.add(1, 1) // Retorno: 2;
   calculator.div(3, 2) // Retorno: 1;
 */
-const add = (numberA, numberB) => {
-  return Math.trunc(numberA + numberB);
-};
-const subtract = (numberA, numberB) => {
-  return Math.trunc(numberA - numberB);
-};
-const division = (numberA, numberB) => {
-  return Math.trunc(numberA / numberB);
-};
-const multiplication = (numberA, numberB) => {
-  return Math.trunc(numberA * numberB);
-};
+const addInter = (numberA, numberB) => Math.trunc(numberA + numberB);
+const subtract = (numberA, numberB) => Math.trunc(numberA - numberB);
+const division = (numberA, numberB) => Math.trunc(numberA / numberB);
+const multiplication = (numberA, numberB) => Math.trunc(numberA * numberB);
 const calculator = {
-  add: add,
+  add: addInter,
   sub: subtract,
   div: division,
   mult: multiplication,
