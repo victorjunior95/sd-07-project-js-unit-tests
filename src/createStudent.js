@@ -24,9 +24,9 @@ const createStudent = (nome) => {
       name: 'amendoin maluco',
       feedback
     };
-    objToReturn["name"] = nome
+    objToReturn["name"] = nome;
     return objToReturn;
-  }
+  };
 };
 
 module.exports = createStudent;
