@@ -29,9 +29,9 @@ const circle = (radius) => {
   };
 };
 
-module.exports = circle;
-
-assert.deepStrictEqual(circle(), undefined);
+assert.fail(circle(), undefined);
 assert.deepStrictEqual(circle(1), { radius: 1, area: 3.14, circumference: 6.28 });
 assert.deepStrictEqual(circle(1), { radius: 7, area: 153.86, circumference: 43.96 });
 assert.deepStrictEqual(circle(1), { radius: 3, area: 28.259999999999998, circumference: 18.84 });
+
+module.exports = circle;
