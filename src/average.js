@@ -30,9 +30,4 @@ const average = (arrayInput) => {
   return ('undefined');
 };
 
-assert.deepEqual(average([1, 2]), 2);
-assert.deepEqual(average([1, 2, 3, 4, 5]), 3);
-assert.deepEqual(average([1, 2, '3']), 'undefined');
-assert.deepEqual(average([]), 'undefined');
-
 module.exports = average;
