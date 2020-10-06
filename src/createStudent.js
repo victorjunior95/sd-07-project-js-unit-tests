@@ -20,7 +20,7 @@
 //   return mensagem;
 // };
 
-const createStudent = (name) => ({
+const createStudent = name => ({
   name,
   feedback: () => 'Eita pessoa boa!',
 });
