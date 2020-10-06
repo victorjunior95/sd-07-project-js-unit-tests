@@ -21,17 +21,25 @@
 
 const calculator = {
   add: {
-    add: (numberA, numberB) => {return Math.trunc(numberA + numberB) } 
+    add: (numberA, numberB) => {
+      return Math.trunc(numberA + numberB);
+    },
   },
   sub: {
-    sub: (numberA, numberB) => {return Math.trunc(numberA - numberB) } 
+    sub: (numberA, numberB) => {
+      return Math.trunc(numberA - numberB);
+    },
   },
   div: {
-    div: (numberA, numberB) => {return Math.trunc(numberA / numberB) } 
+    div: (numberA, numberB) => {
+      return Math.trunc(numberA / numberB);
+    },
   },
   mult: {
-    mult: (numberA, numberB) => {return Math.trunc(numberA * numberB) } 
-  }
+    mult: (numberA, numberB) => {
+      return Math.trunc(numberA * numberB);
+    },
+  },
 };
 
 module.exports = calculator;
