@@ -22,7 +22,7 @@ const createStudent = (nome) => {
       name: 'amendoin maluco',
       feedback,
     };
-    objToReturn['name'] = nome;
+    objToReturn.name = nome;
     return objToReturn;
   } else {
     return undefined;
