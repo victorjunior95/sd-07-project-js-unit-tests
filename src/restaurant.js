@@ -76,27 +76,31 @@ const orderFromMenu = (request) => {
   restaurant.consumption.push(request);
 };
 
+const sumItems = (consumedItems, allPrices) => {
+  let bill = null;
+  const keysAllPrices = Object.keys(allPrices);
+  const valuesAllPrices = Object.values(allPrices);
+  consumedItems.forEach((element) => {
+    keysAllPrices.forEach((elementTwo, indexTwo) => {
+      if (element === elementTwo) {
+        bill += valuesAllPrices[indexTwo];
+      }
+    });
+  });
+  return bill;
+};
+
 const price = () => {
-  let bill = 0;
+  let billAndTax = 0;
   const allPrices = {};
-  let consumedItems = restaurant.consumption;
+  const consumedItems = restaurant.consumption;
   Object.assign(
     allPrices,
     restaurant.fetchMenu.food,
     restaurant.fetchMenu.drinks,
   );
-  for (let index = 0; index < consumedItems.length; index += 1) {
-    for (
-      let indexTwo = 0;
-      indexTwo < Object.keys(allPrices).length;
-      indexTwo += 1
-    ) {
-      if (consumedItems[index] === Object.keys(allPrices)[indexTwo]) {
-        bill += Object.values(allPrices)[indexTwo];
-      }
-    }
-  }
-  return bill;
+  billAndTax = 1.1 * sumItems(consumedItems, allPrices);
+  return billAndTax;
 };
 
 const createMenu = (objeto) => {

@@ -160,6 +160,7 @@ describe('#createMenu', () => {
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
 
+    const somaDosPreçosDosPedidos = 1.1 * (3.9 + 3.9 + 3.9);
     const meuRestaurante = createMenu({
       food: { coxinha: 3.9, sanduiche: 9.9 },
       drinks: { agua: 3.9, cerveja: 6.9 },
@@ -168,7 +169,7 @@ describe('#createMenu', () => {
     returnEight.order('coxinha');
     returnEight.order('agua');
     returnEight.order('coxinha');
-    assert.strictEqual(returnEight.pay(), 3.9 + 3.9 + 3.9);
+    assert.strictEqual(returnEight.pay(), somaDosPreçosDosPedidos);
 
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
