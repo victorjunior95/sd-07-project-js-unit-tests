@@ -25,12 +25,12 @@ const average = (array) => {
       return undefined;
     }
   }
-  return returnnumber / array.length;
+  return Math.round(returnnumber / array.length);
 };
 
 module.exports = average;
 
-// const arrayone = [2,2];
-// const numone = average(arrayone);
-// const assert = require('assert');
-// assert.strictEqual(numone, 2, "deu ruim mané");
+const arrayone = [0, 0, 0, 0, 0, 0, 1];
+const numone = average(arrayone);
+const assert = require('assert');
+assert.strictEqual(numone, 2, "deu ruim mané");
