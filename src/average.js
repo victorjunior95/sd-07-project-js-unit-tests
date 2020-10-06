@@ -15,7 +15,7 @@ const average = (arrayInput) => {
   // add your implementation here
   let summ = 0;
   let notDesiredArray = true;
-  let arrayType = typeof(arrayInput);
+  const arrayType = typeof (arrayInput);
   for (let count = 0; count < arrayInput.length; count += 1) {
     if (arrayType !== 'number') {
       notDesiredArray = true;
