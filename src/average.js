@@ -30,7 +30,7 @@ const average = (array) => {
 
 module.exports = average;
 
-const arrayone = [0, 0, 0, 0, 0, 0, 1];
-const numone = average(arrayone);
-const assert = require('assert');
-assert.strictEqual(numone, 2, "deu ruim mané");
+// const arrayone = [0, 0, 0, 0, 0, 0, 1];
+// const numone = average(arrayone);
+// const assert = require('assert');
+// assert.strictEqual(numone, 2, "deu ruim mané");
