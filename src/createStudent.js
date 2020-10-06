@@ -20,10 +20,12 @@ const retornaFrase = () => {
   return mensagem;
 };
 
-const createStudent = (nome) => ({
+const createStudent = (nome) => {
+  return {
   name: `${nome}`,
   feedback: retornaFrase(),
-});
+  }
+};
 
 const estudante = createStudent('Leandrão, o Lobo Solitário');
 console.log(estudante.name);
