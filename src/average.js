@@ -12,7 +12,7 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {
+const average = (array) => {
   const verifyNumbers = array.every(numero => typeof (numero) === 'number');
   if (verifyNumbers === false || array.length === 0) {
     return undefined;
