@@ -26,7 +26,6 @@ const circle = require('../src/circle');
 describe('#circle', () => {
   it('given a radius, should return an object with circles info', () => {
     const circleTest = circle(1);
-    assert.fail(undefined);
     // ESCREVA SEUS TESTES ABAIXO:
     assert.strictEqual(typeof circleTest, 'object');
     assert.strictEqual(Object.keys(circleTest).length, 3);
