@@ -24,13 +24,13 @@ const average = (array) => {
       resultado = undefined;
       return resultado;
     }
-    console.log(array[i]);
+    // console.log(array[i]);
     soma += array[i];
-    console.log(soma);
+    // console.log(soma);
   }
   const media = soma / array.length;
   resultado = Math.round(media);
-  console.log(`o resultado final é ${resultado}`);
+  // console.log(`o resultado final é ${resultado}`);
   return resultado;
 };
 
