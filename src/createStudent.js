@@ -20,12 +20,10 @@ const createStudent = (nome) => {
   if (typeof nome === 'string') {
     const objToReturn = {
       name: 'amendoin maluco',
-      feedback
+      feedback,
     };
-    objToReturn['name'] = nome;
+    objToReturn.name = nome;
     return objToReturn;
-  } else {
-    return undefined;
   }
 };
 
