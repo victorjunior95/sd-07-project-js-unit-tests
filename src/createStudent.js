@@ -20,7 +20,7 @@ const retornaFrase = () => {
   return mensagem;
 };
 
-const createStudent = (nome) => {
+const createStudent = nome => {
   return {
     name: `${nome}`,
     feedback: retornaFrase(),
