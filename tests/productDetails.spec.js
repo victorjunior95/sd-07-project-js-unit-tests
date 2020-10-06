@@ -34,9 +34,7 @@ const compareProductIDLastNumbers = (parameter1, parameter2) => {
   const arr = productDetails(parameter1, parameter2);
   const object1 = arr[0].details.productId.endsWith('123');
   const object2 = arr[1].details.productId.endsWith('123');
-  return (
-    object1 && object2
-  );
+  return object1 && object2;
 };
 
 describe('#productDetails', () => {
@@ -59,7 +57,10 @@ describe('#productDetails', () => {
       false
     );
     // (Difícil) Teste que os dois productIds terminam com 123.
-    assert.deepStrictEqual(compareProductIDLastNumbers('leonardo', 'sardinha'), true);
+    assert.deepStrictEqual(
+      compareProductIDLastNumbers('leonardo', 'sardinha'),
+      true
+    );
   });
 });
 
