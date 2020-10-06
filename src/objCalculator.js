@@ -21,22 +21,22 @@
 
 const calculator = {
   add: {
-    add: (numberA, numberB) => {
+    add: function (numberA, numberB) {
       return Math.trunc(numberA + numberB);
     },
   },
   sub: {
-    sub: (numberA, numberB) => {
+    sub: function (numberA, numberB) {
       return Math.trunc(numberA - numberB);
     },
   },
   div: {
-    div: (numberA, numberB) => {
+    div: function (numberA, numberB) {
       return Math.trunc(numberA / numberB);
     },
   },
   mult: {
-    mult: (numberA, numberB) => {
+    mult: function (numberA, numberB) {
       return Math.trunc(numberA * numberB);
     },
   },
