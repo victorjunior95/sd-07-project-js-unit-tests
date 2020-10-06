@@ -71,29 +71,37 @@
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-// const order = (frase) => {
-//   return createMenu.consumption.push(frase);
+// const paymentFromMenu = () => {
+//   let total = 0;
+//   operations.consumption.forEach(consumed => {
+//     Object.values(operations.fetchMenu).forEach(element => {
+//       if (consumed(element) !== undefined) {
+//         total += Object.values(operations.fetchMenu.food)[index];
+//       }
+//     });
+//   });
+//   const tip = total * 0.1;
+//   return parseFloat((total += tip).toPrecision(2));
 // };
 
-const createMenu = (objParameter) => {
-  const menu = {
-    fetchMenu: objParameter,
+const createMenu = (menu) => {
+  const operations = {
+    fetchMenu: menu,
     consumption: [],
+    order: request => operations.consumption.push(request),
+    pay: () => {
+      let total = 0;
+      operations.consumption.forEach((consumed) => {
+        Object.values(operations.fetchMenu).forEach((element) => {
+          if (element[consumed] !== undefined) {
+            total += element[consumed];
+          }
+        });
+      });
+      return parseFloat((total *= 1.1).toPrecision(4));
+    },
   };
-  return menu;
+  return operations;
 };
-
-// let objeto = { food: {}, drink: {} };
-// createMenu(objeto);
-// createMenu.order('coxinha');
-// console.log(Object.keys(createMenu({ food: {}, drink: {} }).fetchMenu));
-// console.log(Object.keys(objeto));
-// console.log(JSON.stringify(objeto) === JSON.stringify(createMenu(objeto).fetchMenu));
-
-// console.log(createMenu(objeto).consumption);
-// console.log(JSON.stringify(createMenu(objeto).consumption) === JSON.stringify([]));
-// console.log((createMenu(objeto).consumption) === ([]));
-// console.log(createMenu(objeto));
-// console.log(createMenu.order('coxinha'));
 
 module.exports = createMenu;
