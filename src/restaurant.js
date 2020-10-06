@@ -71,18 +71,45 @@
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-
 // PASSO 1: Crie uma função `createMenu()` que, dado um objeto passado por parâmetro, retorna um objeto com o seguinte formato: { fetchMenu: objetoPassadoPorParametro }.
-const objRetorno = {};
-
 const inputConsumption = (str) => {
-  objRetorno.consumption.push(str);
+    objRetorno.consumption.push(str);
+};
+let sum = 0;
+const objRetorno = {};
+const createMenu = (obj) => {
+    objRetorno.fetchMenu = obj;
+    objRetorno.consumption = [];
+    objRetorno.order = inputConsumption;
+    objRetorno.pay = () => {
+        const orderConsumption = objRetorno.consumption;
+        orderConsumption.forEach(payFunction);
+        return ((sum * 1.1).toFixed(2)) * 1;
+    };
+    return objRetorno;
 };
 
-const createMenu = (obj) => {
-  objRetorno.fetchMenu = obj;
-  objRetorno.consumption = [];
-  objRetorno.order = inputConsumption;
-  return objRetorno;
+const payFunction = (item) => {
+    const food = (objRetorno.fetchMenu.food);
+    const drink = (objRetorno.fetchMenu.drink);
+    const total = Object.assign({}, food, drink);
+    for (let i = 0; i < (Object.keys(total).length); i += 1) {
+        if (item === Object.keys(total)[i]) {
+            sum += Object.values(total)[i];
+        }
+    }
+    return sum;
 };
+
+//toda função pay foi inspirada e adaptada a partir duma discussão do slack, que surgiu de Jéssica de Paula,
+//mas houveram  modificações,afim de adaptar para o formato de criação de objeto, e da função definida,
+//além de  correções para verificar quaisquer valores (Uso de toFixed() e Multiply by one)
+
+//referência para toFixed():https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
+//referência para multiply by one: https://stackabuse.com/javascript-convert-string-to-number/
+//referência para Object.assign(): https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+//referência para Object.keys(): https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+//referência para Object.values():https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/values
+//referência  para o trabalho de Paula: https://github.com/tryber/sd-07-project-js-unit-tests/pull/31
+
 module.exports = createMenu;
