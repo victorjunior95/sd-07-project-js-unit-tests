@@ -24,7 +24,7 @@ const average = (arrayInput) => {
     }
     summ += Math.round(arrayInput[count]);
   }
-  const averageOutput = Math.round((summ / 2));
+  const averageOutput = Math.round((summ / arrayInput.lengh));
   if (notDesiredAraay === false) {
     return (averageOutput);
   }
