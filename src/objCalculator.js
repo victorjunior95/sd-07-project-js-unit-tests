@@ -25,5 +25,5 @@ const calculator = {
   div: (firstNumber, secondNumber) => Math.floor(firstNumber / secondNumber),
   sub: (firstNumber, secondNumber) => firstNumber - secondNumber,
 };
-  
+
 module.exports = calculator;
