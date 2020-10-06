@@ -31,9 +31,9 @@ const average = (arrayInput) => {
   return ('undefined');
 };
 
-assert.toStrictEqual(average(10, 7, 5, 3, 4), 4);
-assert.toStrictEqual(average(), 'undefined');
-assert.toStrictEqual(average(5, 3, 8, 2, 'Márcio'), 'undefined');
-assert.toStrictEqual(average('Maria', 'João', 'Francisco'), 'undefined');
+assert.deepEqual(average(10, 7, 5, 3, 4), 4);
+assert.deepEqual(average(), 'undefined');
+assert.deepEqual(average(5, 3, 8, 2, 'Márcio'), 'undefined');
+assert.deepEqual(average('Maria', 'João', 'Francisco'), 'undefined');
 
 module.exports = average;
