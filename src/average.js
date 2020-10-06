@@ -17,23 +17,22 @@ const average = (arrayInput) => {
   // add your implementation here
   let summ = 0;
   let notDesiredAraay = false;
-  for (let count = 0; count < arrayInput.lengh; count += 1) {
-    if (isNaN(arrayInput) || arrayInput === null) {
+  for (let count = 0; count < arrayInput.length; count += 1) {
+    if (typeof(arrayInput[count])  !== 'number' || arrayInput[count] === null) {
       notDesiredAraay = true;
-      break;
     }
-    summ += Math.round(arrayInput[count]);
+    summ += arrayInput[count];
   }
-  const averageOutput = Math.round((summ / arrayInput.lengh));
+  const averageOutput = Math.round((summ / arrayInput.length));
   if (notDesiredAraay === false) {
     return (averageOutput);
   }
   return ('undefined');
 };
 
-assert.deepEqual(average(10, 7, 5, 3, 4), 4);
-assert.deepEqual(average(), 'undefined');
-assert.deepEqual(average(5, 3, 8, 2, 'Márcio'), 'undefined');
-assert.deepEqual(average('Maria', 'João', 'Francisco'), 'undefined');
+assert.deepEqual(average([1,2]), 2);
+assert.deepEqual(average([1, 2, 3, 4, 5]), 3);
+assert.deepEqual(average([1, 2, '3']), 'undefined');
+assert.deepEqual(average([]), 'undefined');
 
 module.exports = average;
