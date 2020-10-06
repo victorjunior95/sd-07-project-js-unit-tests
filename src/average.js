@@ -11,9 +11,29 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
+const assert = expect('assert');
 
-const average = () => {
+const average = (arrayInput) => {
   // add your implementation here
+  let summ = 0;
+  let notDesiredAraay = false;
+  for (let count = 0; count < arrayInput.lengh; count += 1) {
+    if (isNaN(arrayInput) || arrayInput === null) {
+      notDesiredAraay = true;
+      break;
+    }
+    summ += Math.round(arrayInput[count]);
+  }
+  const averageOutput = Math.round((summ / 2));
+  if (notDesiredAraay === false) {
+    return (averageOutput);
+  }
+  return ('undefined');
 };
+
+assert.toStrictEqual(average(10, 7, 5, 3, 4), 4);
+assert.toStrictEqual(average(), 'undefined');
+assert.toStrictEqual(average(5, 3, 8, 2, 'Márcio'), 'undefined');
+assert.toStrictEqual(average('Maria', 'João', 'Francisco'), 'undefined');
 
 module.exports = average;
