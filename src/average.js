@@ -11,7 +11,7 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-const assert = expect('assert');
+var assert = require('assert');
 
 const average = (arrayInput) => {
   // add your implementation here
@@ -31,9 +31,9 @@ const average = (arrayInput) => {
   return ('undefined');
 };
 
-assert.toEqual(average(10, 7, 5, 3, 4), 4);
-assert.toEqual(average(), 'undefined');
-assert.toEqual(average(5, 3, 8, 2, 'Márcio'), 'undefined');
-assert.toEqual(average('Maria', 'João', 'Francisco'), 'undefined');
+assert.deepStrictEqual(average(10, 7, 5, 3, 4), 4);
+assert.deepStrictEqual(average(), 'undefined');
+assert.deepStrictEqual(average(5, 3, 8, 2, 'Márcio'), 'undefined');
+assert.deepStrictEqual(average('Maria', 'João', 'Francisco'), 'undefined');
 
 module.exports = average;
