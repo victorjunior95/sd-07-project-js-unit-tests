@@ -19,7 +19,6 @@ const average = (array) => {
     if (typeof element === 'number') {
       returnnumber += element;
     } else {
-      console;log("não somou")
       return undefined
     }
   });
