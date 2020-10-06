@@ -20,7 +20,7 @@ const retornaFrase = () => {
   return mensagem;
 };
 
-const createStudent = nome => {
+const createStudent = (nome) => {
   return {
     name: `${nome}`,
     feedback: retornaFrase(),
@@ -30,5 +30,6 @@ const createStudent = nome => {
 const estudante = createStudent('Leandrão, o Lobo Solitário');
 console.log(estudante.name);
 console.log(estudante.feedback);
+console.log(typeof estudante.feedback);
 console.log(createStudent('Leonardo'));
 module.exports = createStudent;
