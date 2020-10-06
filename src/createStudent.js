@@ -24,7 +24,8 @@ const createStudent = (nome) => {
     };
     objToReturn.name = nome;
     return objToReturn;
-  } else {
+  } 
+  if (typeof nome !== 'string') {
     return undefined;
   }
 };
