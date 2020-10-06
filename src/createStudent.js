@@ -16,7 +16,7 @@
 */
 
 const createStudent = (param) => {
-    estudante = {
+  estudante = {
     name: param,
     feedback: () => {
       'Eita pessoa boa!';
