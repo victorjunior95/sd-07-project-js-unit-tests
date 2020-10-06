@@ -18,7 +18,7 @@ const average = (arrayInput) => {
   let summ = 0;
   let notDesiredAraay = false;
   for (let count = 0; count < arrayInput.length; count += 1) {
-    if (typeof(arrayInput[count])  !== 'number' || arrayInput[count] === null) {
+    if (typeof (arrayInput[count]) !== 'number' || arrayInput[count] === null) {
       notDesiredAraay = true;
     }
     summ += arrayInput[count];
@@ -30,7 +30,7 @@ const average = (arrayInput) => {
   return ('undefined');
 };
 
-assert.deepEqual(average([1,2]), 2);
+assert.deepEqual(average([1, 2]), 2);
 assert.deepEqual(average([1, 2, 3, 4, 5]), 3);
 assert.deepEqual(average([1, 2, '3']), 'undefined');
 assert.deepEqual(average([]), 'undefined');
