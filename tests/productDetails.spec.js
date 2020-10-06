@@ -30,11 +30,12 @@ const productDetails = require('../src/productDetails');
 
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
-const compareStrings = (parameter1, parameter2) => {
+const compareProductIDLastNumbers = (parameter1, parameter2) => {
   const arr = productDetails(parameter1, parameter2);
+  const object1 = arr[0].details.productId.endsWith('123');
+  const object2 = arr[1].details.productId.endsWith('123');
   return (
-    arr[0].details.productId.endsWith('123') &&
-    arr[1].details.productId.endsWith('123')
+    object1 && object2
   );
 };
 
@@ -58,7 +59,7 @@ describe('#productDetails', () => {
       false
     );
     // (Difícil) Teste que os dois productIds terminam com 123.
-    assert.deepStrictEqual(compareStrings('leonardo', 'sardinha'), true);
+    assert.deepStrictEqual(compareProductIDLastNumbers('leonardo', 'sardinha'), true);
   });
 });
 
