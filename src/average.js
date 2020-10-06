@@ -18,13 +18,13 @@ const average = (array) => {
   if (typeof array !== 'object') {
     return undefined;
   }
-  array.forEach((element) => {
-    if (typeof element === 'number') {
-      returnnumber += element;
+  for (let index = 0; index < array.length; index += 1) {
+    if (typeof array[index] === 'number') {
+      returnnumber += array[index];
     } else {
       return undefined;
     }
-  })
+  }
   return returnnumber / array.length;
 };
 
@@ -33,4 +33,4 @@ module.exports = average;
 // const arrayone = [2,2];
 // const numone = average(arrayone);
 // const assert = require('assert');
-// assert.strictEqual(numone,2,"deu ruim mané");
+// assert.strictEqual(numone, 2, "deu ruim mané");
