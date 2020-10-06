@@ -23,8 +23,8 @@ const retornaFrase = () => {
 const createStudent = (nome) => {
   return {
   name: `${nome}`,
-  feedback: retornaFrase(),
-  }
+  feedback: retornaFrase (),
+  };
 };
 
 const estudante = createStudent('Leandrão, o Lobo Solitário');
