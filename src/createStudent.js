@@ -16,12 +16,12 @@
 */
 
 const createStudent = (param) => {
-  const estudante = {
+    estudante = {
     name: param,
     feedback: () => {
-      'Eita pessoa boa!'
-    }
-  }
+      'Eita pessoa boa!';
+    },
+  };
 };
 
 module.exports = createStudent;
