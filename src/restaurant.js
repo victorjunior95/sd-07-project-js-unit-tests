@@ -70,12 +70,9 @@
 //------------------------------------------------------------------------------------------
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
-const myMenu = {
-  food: { coxinha: 3.9, sopa: 9.9 },
-  drink: { agua: 3.9, cerveja: 6.9 },
-};
-let restaurant = {};
-
+//------------------------------------------------------------------------------------------
+// Essa sessão comentada contém duas funções que criei em minhas primeiras tentativas de solucionar o passo 4 desse arquivo.
+// Apesar de elas não terem funcionado como esperado, resolvi que as deixaria aqui como conteúdo extra.
 // const priceToPay = (itens) => {
 //   let sum = 0;
 //   for (let index = 0; index < itens.length; index += 1) {
@@ -85,21 +82,41 @@ let restaurant = {};
 //   }
 //   return sum;
 // }
+// const getPayment = () => {
+//   let sum = 0;
+//   const toBePaid = restaurant.consumption;
+//   const food = Object.keys(restaurant.fetchMenu.food);
+//   const drink = Object.keys(restaurant.fetchMenu.drink);
+//   const section = Object.keys(restaurant.fetchMenu);
+//   const itens = food.concat(drink);
+//   for (let item = 0; item < itens.length; item += 1) {
+//     if (toBePaid === itens[item]) {
+//       sum += restaurant.fetchMenu[section][itens][item];
+//     }
+//   }
+//   const tip = sum * 0.1;
+//   return (parseFloat((sum + tip).toFixed(2)));
+// };
+//------------------------------------------------------------------------------------------
+const myMenu = {
+  food: { coxinha: 3.9, sopa: 9.9 },
+  drink: { agua: 3.9, cerveja: 6.9 },
+};
+let restaurant = {};
 
 const getPayment = () => {
   let sum = 0;
-  const toBePaid = restaurant.consumption;
-  const food = Object.keys(restaurant.fetchMenu.food);
-  const drink = Object.keys(restaurant.fetchMenu.drink);
-  const section = Object.keys(restaurant.fetchMenu);
-  const itens = food.concat(drink);
-  for (let item = 0; item < itens.length; item += 1) {
-    if (toBePaid === itens[item]) {
-      sum += restaurant.fetchMenu[section][itens][item];
-    }
-  }
+  const itensToBePaid = restaurant.consumption;
+  const priceItens = Object.values(restaurant.fetchMenu);
+  itensToBePaid.forEach((item) => {
+    priceItens.forEach((price) => {
+      if (price[item] !== undefined) {
+        sum += price[item];
+      }
+    });
+  });
   const tip = sum * 0.1;
-  return (parseFloat((sum + tip).toFixed(2)));
+  return sum + tip;
 };
 
 const createMenu = () => {
@@ -111,6 +128,5 @@ const createMenu = () => {
   };
   return (restaurant);
 };
-console.log(createMenu(myMenu));
 
 module.exports = createMenu;
