@@ -28,3 +28,5 @@ describe('#numbers', () => {
     assert.strictEqual(numbers([' ']), false);
   });
 });
+
+//Fonte: https://www.w3schools.com/nodejs/met_assert.asp
