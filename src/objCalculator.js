@@ -22,8 +22,13 @@
 const calculator = {
   add: (a, b) => a + b,
   mult: (a, b) => a * b,
-  div: (a, b) => b === 0 ? 'Essa operação não pode ser realizada!' : Math.floor(a / b),
-  sub: (a, b) => a - b 
+  div: (a, b) => {
+    if (b === 0) {
+      return 'Essa operação não pode ser realizada!';
+    }
+    return Math.floor(a / b);
+  },
+  sub: (a, b) => a - b,
 };
 
 module.exports = calculator;
