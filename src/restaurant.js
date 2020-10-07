@@ -81,6 +81,8 @@ const createMenu = (menu) => {
     pay() {
       let amount = 0;
       object.consumption.forEach((item) => {
+        // referência para uso do if com IN retirada do código
+        // https://github.com/tryber/sd-06-project-js-unit-tests/blob/brunolemoscoutinho-js-unit-tests/src/restaurant.js do Bruno Coutinho
         if (item in object.fetchMenu.food) {
           amount += object.fetchMenu.food[item];
         }
