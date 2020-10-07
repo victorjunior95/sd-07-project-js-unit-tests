@@ -84,13 +84,13 @@ const payTotal = (valuesOfFetchMenu, arrConsumption) => {
     });
   });
   return total + (total * interest);
-}
+};
 
 const restaurant = {};
 const orderFromMenu = string => restaurant.consumption.push(string);
 
-const createMenu = (object) => { 
-  restaurant = {
+const createMenu = (object) => {
+  const restaurant = {
     fetchMenu: object,
     consumption: [],
     order: orderFromMenu,
@@ -99,10 +99,10 @@ const createMenu = (object) => {
       const valuesOfFetchMenu = Object.values(mainObject.fetchMenu);
       const arrConsumption = mainObject.consumption;
 
-      return payTotalotal(valuesOfFetchMenu, arrConsumption);
+      return payTotal(valuesOfFetchMenu, arrConsumption);
     },
   };
-  return restaurant;  
+  return restaurant;
 };
 
 module.exports = createMenu;
