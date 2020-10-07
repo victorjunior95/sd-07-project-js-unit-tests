@@ -86,11 +86,11 @@ const payTotal = (valuesOfFetchMenu, arrConsumption) => {
   return total + (total * interest);
 };
 
-const restaurant = {};
+let restaurant = {};
 const orderFromMenu = string => restaurant.consumption.push(string);
 
 const createMenu = (object) => {
-  const restaurant = {
+  restaurant = {
     fetchMenu: object,
     consumption: [],
     order: orderFromMenu,
