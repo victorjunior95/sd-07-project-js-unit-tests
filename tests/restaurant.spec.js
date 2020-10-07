@@ -120,7 +120,7 @@ describe('#createMenu', () => {
     returnedObject.order('bolo');
     returnedObject.order('cafe');
 
-    assert.deepStrictEqual(returnedObject.consumption, ['coxinha', 'bolo', 'cdafe']);
+    assert.deepStrictEqual(returnedObject.consumption, ['coxinha', 'bolo', 'cafe']);
 
     // ```
     // Agora faça o TESTE 7 deste arquivo.
