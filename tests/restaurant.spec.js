@@ -100,7 +100,7 @@ describe('#createMenu', () => {
     // ```
 
     const object = {food: 'coxinha'}
-    assert.deepStrictEqual(createMenu(object)).order('coxinha'), ['coxinha']);
+    assert.deepStrictEqual(createMenu(object).order('coxinha'), ['coxinha']);
 
     // Agora faça o PASSO 3 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------------
