@@ -28,6 +28,4 @@ const circle = (radius) => {
   };
 };
 
-console.log(circle(3).area === 28.26);
-
 module.exports = circle;
