@@ -22,7 +22,7 @@
 const calculator = {
   add: (numberX, numberY) => (numberX + numberY),
   mult: (numberX, numberY) => (numberX * numberY),
-  div: (numberX, numberY) => Math.trunc(numberX / numberY),
+  div: (numberX, numberY) => Math.trunc(numberX / numberY), //  https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc (Gotei disso!)
   sub: (numberX, numberY) => (numberX - numberY),
 };
 
