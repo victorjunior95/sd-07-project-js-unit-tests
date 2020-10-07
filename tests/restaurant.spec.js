@@ -118,8 +118,9 @@ describe('#createMenu', () => {
     // objetoRetornado.order('coxinha');
     // objetoRetornado.order('agua');
     // objetoRetornado.order('coxinha');
+    const somaDosPreçosDosPedidos = (meuRestaurante.food.coxinha * 3) + (meuRestaurante.drink.agua * 2)
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
-    // ```
+    assert.strictEqual(objetoRetornado.pay(), somaDosPreçosDosPedidos * 1.1);
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
 });
