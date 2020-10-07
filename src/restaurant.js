@@ -15,6 +15,8 @@ const payFunction = (item) => {
   for (let i = 0; i < (Object.keys(total).length); i += 1) {
 // Object.keys retorna um array cujos elementos são strings que representam
 // os itens do menu. ex: ( ['coxinha', 'agua', 'coxinha'])
+// ( todo objeto e um conjunto de parametros que sao constituidos de chaves, e valores. nesse caso,
+// chave e o item, como coxinha e agua,  e valor e o valor de compra de cada um deles.)
 // o laço varrerá todo esse array.
     if (item === Object.keys(total)[i]) {
       sum += Object.values(total)[i];
