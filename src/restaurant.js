@@ -47,13 +47,14 @@
   IMPORTANTE: COMECE PELO TESTE 1 DO ARQUIVO `tests/restaurant.spec.js` E NÃO PELO PASSO 1 DESTE ARQUIVO!
 */
 
-// PASSO 1: Crie uma função `createMenu()` que, dado um objeto passado por parâmetro, retorna um objeto com o seguinte formato: { fetchMenu: objetoPassadoPorParametro }.
+// PASSO 1: Crie uma função `createMenu()` que, dado um objeto passado por parâmetro,
+// retorna um objeto com o seguinte formato: { fetchMenu: objetoPassadoPorParametro }.
 //
 // Agora faça o TESTE 2 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------
 
-// PASSO 2: Adicione ao objeto retornado por `createMenu` uma chave `consumption` que, como valor inicial, 
+// PASSO 2: Adicione ao objeto retornado por `createMenu` uma chave `consumption` que, como valor inicial,
 // tem um array vazio.
 //
 // Agora faça o TESTE 5 no arquivo `tests/restaurant.spec.js`.
@@ -71,7 +72,7 @@
 //
 // const createMenu = (myMenu) => // Lógica que edita o objeto `restaurant`
 //
-// const orderFromMenu = (request) => 
+// const orderFromMenu = (request) =>
 // Lógica que adiciona à chave `consumption` de `restaurant` a string recebida no parâmetro `request`.
 // Essa função deve ser associada à chave `order` de `restaurant`
 // ```
@@ -83,6 +84,41 @@
 // soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%.
 // DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-const createMenu = () => {};
+const restaurant = {
+  fetchMenu: {},
+  consumption: [],
+  order: (request) => {
+    restaurant.consumption.push(request);
+    return request;
+  },
+};
+
+const createMenu = (myMenu) => {
+  restaurant.fetchMenu = myMenu;
+  return restaurant;
+};
+
+const pay = () => {
+  let price = 0;
+  restaurant.consumption.forEach((order) => {
+    Object.values(restaurant.fetchMenu).forEach((items) => {
+      if (Object.keys(items).includes(order)) {
+        price += items[order];
+      }
+    });
+  });
+  return parseFloat(parseFloat(price * 1.1).toFixed(2));
+};
+restaurant.pay = pay;
+
+//   const objetoQualquer = {
+//     food: { coxinha: 3.9, sanduiche: 9.9 },
+//     drinks: { agua: 3.9, cerveja: 6.9 },
+//   };
+//   const objetoRetornado = createMenu(objetoQualquer);
+//   objetoRetornado.order("coxinha");
+//   objetoRetornado.order('agua');
+//   objetoRetornado.order('coxinha');
+//  console.log(objetoRetornado.pay())
 
 module.exports = createMenu;
