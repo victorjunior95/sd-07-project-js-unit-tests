@@ -41,7 +41,7 @@ describe('#productDetails', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     assert.notDeepStrictEqual(typeof produtos, 'Array');
     assert.strictEqual(produtos.length, 2);
-    assert.strictEqual(typeof produtos.keys, 'Object');
+    assert.strictEqual(typeof produtos[0], 'Object');
     assert.notStrictEqual(produtos[0], produtos[1]);
     assert.strictEqual(terminacao, true);
     // Teste que o retorno da função é um array.
