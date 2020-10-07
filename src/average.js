@@ -16,6 +16,7 @@ const isEmpty = (array) => {
   if (array.length === 0) {
     return undefined;
   }
+  return array;
 };
 
 const isNumber = (array) => {
@@ -24,11 +25,12 @@ const isNumber = (array) => {
       return undefined;
     }
   }
+  return array;
 };
 
 const average = (array) => {
   if (isEmpty(array) === undefined || isNumber(array) === undefined) {
-    return undefined;
+    return;
   } else {
     let acumulador = 0;
     for (let i = 0; i < array.length; i += 1) {
