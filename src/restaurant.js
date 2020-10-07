@@ -76,8 +76,7 @@ const createMenu = function createMenu(objetoQualquer) {
   return {
     fetchMenu: objetoQualquer,
     consumption: [],
-    order(item) {
-      this.consumption.push(item) },
+    order(item) { this.consumption.push(item); },
   };
 };
 
