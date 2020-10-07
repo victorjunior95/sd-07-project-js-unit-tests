@@ -49,10 +49,10 @@ const createMenu = require('../src/restaurant');
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 
-const objetoQualquer = {
+const objTest = {
   food: {'coxinha': 3.90, 'sanduiche': 9.90},
   drinks: {'agua': 3.90, 'cerveja': 6.90}
-};
+}
 
 describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
@@ -66,7 +66,7 @@ describe('#createMenu', () => {
     // --------------------------------------------------------------------------------------
     // TESTE 2: Verifique que, dado que a função createMenu foi chamada com o objeto: `{ food: {}, drink: {} }`, verifique que 'objetoRetornado.fetchMenu' retorna um objeto cujas chaves são somente `food` e `drink`.
    
-    assert.deepStrictEqual(createMenu(objetoQualquer), {fetchMenu: objetoQualquer}); // ```
+    assert.deepStrictEqual(createMenu(objetotest), {fetchMenu: objetoQualquer}); // ```
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.fetchMenu // Retorno: { food: {}, drink: {}}
     // ```
