@@ -25,13 +25,13 @@ const add = (val1, val2) => {
   rounddown(val1);
   rounddown(val2);
   return val1 + val2;
-}
+};
 
 const mult = (val1, val2) => {
   rounddown(val1);
   rounddown(val2);
   return val1 * val2;
-}
+};
 
 const div = (val1, val2) => {
   rounddown(val1);
@@ -39,13 +39,13 @@ const div = (val1, val2) => {
   let divresult = val1 / val2;
   divresult = Math.floor(divresult);
   return divresult;
-}
+};
 
 const sub = (val1, val2) => {
   rounddown(val1);
   rounddown(val2);
   return val1 - val2;
-}
+};
 
 const calculator = {
   add,
