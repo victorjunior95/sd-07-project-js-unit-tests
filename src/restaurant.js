@@ -72,30 +72,33 @@
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
 
+let sumItens = 0;
 const restaurant = {};
-
 const orderFromMenu = (request) => {
   restaurant.consumption.push(request);
 };
 
-// https://github.com/tryber/sd-06-project-js-unit-tests/pull/31
-function payFromMenu() {
-  let sumItens = 0;
-  let sumFood = 0;
-  let sumDrink = 0;
-  const billItens = restaurant.consumption;
 
-  for (let index = 0; index < billItens.length; index += 1) {
-    if (restaurant.fetchMenu.food[billItens[index]]) {
-      sumFood += restaurant.fetchMenu.food[billItens[index]];
-    } else if (restaurant.fetchMenu.drink[billItens[index]]) {
-      sumDrink += restaurant.fetchMenu.drink[billItens[index]];
+// Lógica desenvolvida por Adriano Forcellini (https://github.com/tryber/sd-07-project-js-unit-tests/pull/148/files)
+const payFunction = (item) => {
+  const sumFood = (restaurant.fetchMenu.food); // sumFood = objeto que é propriedade de myMenu (food: {})
+  const sumDrink = (restaurant.fetchMenu.drink); // sumDrink = objeto que é propriedade de myMenu (drinks: {})
+  const total = Object.assign({}, sumFood, sumDrink); // https://developer.cdn.mozilla.net/de/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+  for (let index = 0; index < Object.keys(total).length; index += 1) { // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+    if (item === Object.keys(total)[index]) {
+      sumItens += Object.values(total)[index];
     }
   }
-  sumItens = sumFood + sumDrink;
+  return sumItens;
+};
+
+function payFromMenu() {
+  const billItens = restaurant.consumption;
+  billItens.forEach(payFunction); // A função payFunction é chamada a cada item pedido
   return (sumItens * 1.1).toFixed(2);
 }
-// -------------------------------------------------------------
+//-------------------------------------------------------------------------------------------
+
 
 const createMenu = (myMenu) => {
   restaurant.fetchMenu = myMenu; // Adiciona a propriedade 'fetchMenu' ao objeto 'restaurant', e dá a ele o valor de 'myMenu' (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Trabalhando_com_Objetos)
