@@ -50,6 +50,8 @@ const createMenu = (obj) => {
 // além de  correções para verificar quaisquer
 // valores (Uso de toFixed() e Multiply by one)
 
+// referencia para objetos sao? :
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Trabalhando_com_Objetos
 // referencia para forEach:
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
 // referência para toFixed():
