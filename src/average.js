@@ -19,11 +19,11 @@ const average = (array) => {
   let sumArray = 0;
   for (let i = 0; i < array.length; i += 1) {
     if (typeof array[i] !== 'number') {
-      return (undefined);
+      return undefined;
     }
     sumArray += array[i];
   }
-  return (Math.trunc(sumArray / array.length));
+  return (Math.round(sumArray / array.length));
 };
 
 module.exports = average;
