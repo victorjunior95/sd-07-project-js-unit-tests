@@ -38,7 +38,10 @@ describe('#circle', () => {
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
     assert.deepStrictEqual(circle(3).area.toFixed(2), 28.26)
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
+    let objeto = circle(3);
+    objeto.area = objeto.area.toFixed(2);
+    objeto.circumference = objeto.circumference.toFixed(2);
     const expected = {radius: 3, area: 28.26, circumference: 18.84};
-    assert.deepEqual(circle(3).area.toFixed(2), expected);
+    assert.deepEqual(objeto, expected);
   });
 });
