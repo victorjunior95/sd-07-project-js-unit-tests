@@ -17,7 +17,7 @@
 */
 
 const vqv = (name, age) => {
-  const outputString = `Oi, meu nome é ${name} !\n` +
+  const outputString = `Oi, meu nome é ${name}!\n` +
   `Tenho ${age} anos,\n` +
   'trabalho na Trybe e mando muito em programação!\n' +
   '#VQV!\n';
