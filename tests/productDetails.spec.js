@@ -38,6 +38,7 @@ describe('#productDetails', () => {
     if (produtos[0].details.productId.endsWith('123') && produtos[1].details.productId.endsWith('123')) {
       terminacao = true;
     }
+    
     // ESCREVA SEUS TESTES ABAIXO:
     assert.notDeepStrictEqual(typeof produtos, 'Array');
     assert.strictEqual(produtos.length, 2);
