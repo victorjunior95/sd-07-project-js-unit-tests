@@ -23,7 +23,7 @@ const vqv = (nome, idade) => {
   }
   // criar um const para colocar uma frase
   const phrase = `Oi, meu nome é ${nome}!\nTenho ${idade} anos,\ntrabalho na Trybe e mando muito em programação!\n#VQV!`;
-  // retorna o variavel constante
+  // retorna o variavel constante com a frase
   return phrase;
 };
 
