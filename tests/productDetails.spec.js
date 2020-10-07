@@ -43,7 +43,7 @@ describe('#productDetails', () => {
     // Teste que os dois objetos são diferentes entre si.
     assert.notDeepStrictEqual(productDetails('gel', 'gas')[0], productDetails('gel', 'gas')[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
-    assert.strictEqual(productDetails('gel', 'gas')[0].details.productId.substr(-3, 3), 123); // com ajuda do projeto de Luciano Berchon
-    assert.strictEqual(productDetails('gel', 'gas')[1].details.productId.substr(-3, 3), 123); // com ajuda do projeto de Luciano Berchon
+    assert.strictEqual(productDetails('gel', 'gas')[0].details.productId.substr(-3, 3), '123'); // com ajuda do projeto de Luciano Berchon
+    assert.strictEqual(productDetails('gel', 'gas')[1].details.productId.substr(-3, 3), '123'); // com ajuda do projeto de Luciano Berchon
   });
 });
