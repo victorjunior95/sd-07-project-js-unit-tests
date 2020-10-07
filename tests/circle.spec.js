@@ -38,6 +38,6 @@ describe('#circle', () => {
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
     assert.strictEqual(circle(3).area.toFixed(2), 28.26)
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
-    assert.deepEqual(Object.entries(circle(3)), [3, 28.26, 18.84]);
+    assert.deepEqual(Object.values(circle(3)), [3, 28.26, 18.84]);
   });
 });
