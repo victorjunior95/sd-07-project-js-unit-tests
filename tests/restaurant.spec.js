@@ -99,6 +99,7 @@ describe('#createMenu', () => {
     // objetoRetornado.comsuption // Retorno: ["coxinha"]
     // ```
 
+    // Fonte: Moises Santana
     let functionMenu = createMenu({food: {}, drink: {}});
     functionMenu.order('coxinha');
     assert.deepStrictEqual(functionMenu.consumption, ['coxinha']);
