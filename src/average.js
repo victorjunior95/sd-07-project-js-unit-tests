@@ -15,23 +15,18 @@
 // add your implementation here
 
 const average = (arrayNumber) => {
-
   let sum = 0;
-
-  for (let index = 0; index < arrayNumber.length; index += 1){
-
-    if(typeof arrayNumber[index] !== "number" || typeof arrayNumber[index] !== "string" || typeof arrayNumber === 0){
+  for (let index = 0; index < arrayNumber.length; index += 1) {
+// adicionado uma condição para undefined
+    if (typeof arrayNumber[index] !== 'number' || typeof arrayNumber[index] === 'string' || arrayNumber[index] === 0) {
       return undefined;
     }
-
     sum += arrayNumber[index];
   }
 
   const averageArray = Math.round(sum / arrayNumber.length);
 
   return averageArray;
-
 };
-
 
 module.exports = average;
