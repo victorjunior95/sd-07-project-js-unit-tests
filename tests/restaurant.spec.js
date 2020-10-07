@@ -77,7 +77,7 @@ describe('#createMenu', () => {
     // objetoRetornado.fetchMenu // Retorno: objetoQualquer
     // ```
 
-    assert.deepStrictEqual(object, createMenu(object).fetchMenu);
+    assert.deepStrictEqual(Object.keys(createMenu({food: {}, drink: {}}).fetchMenu), ['food', 'drink']);
 
 
     // Agora faça o TESTE 4 deste arquivo.
