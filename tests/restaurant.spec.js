@@ -88,7 +88,7 @@ describe('#createMenu', () => {
     // objetoRetornado.consumption // Retorno: []
     // ```
 
-    assert.deepStrictEqual(createMenu(object).consumption, []);
+    assert.deepStrictEqual(createMenu({food: {}, drink: {}}).consumption, []);
 
     // Agora faça o PASSO 2 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------
