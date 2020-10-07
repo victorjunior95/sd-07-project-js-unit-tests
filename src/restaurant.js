@@ -96,8 +96,8 @@ const createMenu = (object) => {
     order: orderFromMenu,
     // referência da função pay(): Moises Santana
     pay: () => {
-      const valuesOfFetchMenu = Object.values(mainObject.fetchMenu);
-      const arrConsumption = mainObject.consumption;
+      const valuesOfFetchMenu = Object.values(restaurant.fetchMenu);
+      const arrConsumption = restaurant.consumption;
 
       return payTotal(valuesOfFetchMenu, arrConsumption);
     },
