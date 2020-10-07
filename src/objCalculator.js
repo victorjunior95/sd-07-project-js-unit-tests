@@ -19,7 +19,7 @@
   calculator.div(3, 2) // Retorno: 1;
 */
 
-const rounddown = (val) => Math.floor(val);
+const rounddown = val => Math.floor(val);
 
 const add = (val1, val2) => {
   rounddown(val1);
