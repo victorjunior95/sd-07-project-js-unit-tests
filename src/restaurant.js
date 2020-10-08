@@ -22,7 +22,7 @@ function payFromMenu() {
 }
 
 const createMenu = (myMenu) => {
-  restaurant.fetchMenu = myMenu; 
+  restaurant.fetchMenu = myMenu;
   restaurant.consumption = [];
   restaurant.order = orderFromMenu;
   restaurant.pay = payFromMenu;
