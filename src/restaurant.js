@@ -57,6 +57,7 @@
 
 // PASSO 3: Crie uma função, separada da função `createMenu()`, que, dada uma string recebida por parâmetro, adiciona essa string ao array de `objetoRetornado.consumption`. Adicione essa função à chave `order`.
 // DICA: para criar isso, você vai precisar definir a função `createMenu()`, definir o objeto que a `createMenu()` define separadamente dela e, depois, a função que será definida em `order`.
+
 let restaurant = {};
 
 function addOrder(orderHere) {
@@ -65,24 +66,24 @@ function addOrder(orderHere) {
 }
 
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/HasOwnProperty
-function payAll(rest) {
+function payAll() {
   let sum = 0;
-  const restaurantKeys = Object.keys(rest.fetchMenu);
-  for (let i = 0; i < rest.consumption.length; i += 1) {
-    for (let j = 0; j < restaurantKeys.length; j += 1) {
-      const justItem = Object.entries(rest.fetchMenu[restaurantKeys[j]]);
-      sum += values(justItem, rest.consumption);
+  for (let i = 0; i < restaurant.consumption.length; i += 1) {
+    if (Object.prototype.hasOwnProperty.call(restaurant.fetchMenu.food, restaurant.consumption[i])) {
+      sum += restaurant.fetchMenu.food[restaurant.consumption[i]];
+    } else if (Object.prototype.hasOwnProperty.call(restaurant.fetchMenu.drink, restaurant.consumption[i])) {
+      sum += restaurant.fetchMenu.drink[restaurant.consumption[i]];
     }
   }
-  return sum;
+  return sum + (sum * 0.1);
 }
-
+// payAll() resolvida com auxílio do plantão
 function createMenu(obj) {
   restaurant = {
     fetchMenu: obj,
     consumption: [],
     order: addOrder,
-    pay: payAll(restaurant),
+    pay: payAll,
   };
   return restaurant;
 }
