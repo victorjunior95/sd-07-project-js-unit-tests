@@ -77,7 +77,7 @@ function payAll() {
   }
   return sum + (sum * 0.1);
 }
-// payAll() resolvida com auxílio do plantão
+// payAll() resolvida com auxílio do plantão do Isaac Batista
 function createMenu(obj) {
   restaurant = {
     fetchMenu: obj,
