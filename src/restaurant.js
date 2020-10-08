@@ -65,17 +65,17 @@ function addOrder(orderHere) {
 }
 
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/HasOwnProperty
-// function payAll(restaurant) {
-//   let sum = 0;
-//   const restaurantKeys = Object.keys(restaurant.fetchMenu);
-//   for (let i = 0; i < restaurant.consumption.length; i += 1) {
-//     for (let j = 0; j < restaurantKeys.length; j += 1) {
-//       const justItem = Object.entries(restaurant.fetchMenu[restaurantKeys[j]]);
-//       sum += values(justItem, restaurant.consumption);
-//     }
-//   }
-//   return total;
-// }
+function payAll(restaurant) {
+  let sum = 0;
+  const restaurantKeys = Object.keys(restaurant.fetchMenu);
+  for (let i = 0; i < restaurant.consumption.length; i += 1) {
+    for (let j = 0; j < restaurantKeys.length; j += 1) {
+      const justItem = Object.entries(restaurant.fetchMenu[restaurantKeys[j]]);
+      sum += values(justItem, restaurant.consumption);
+    }
+  }
+  return total;
+}
 
 function createMenu(obj) {
   restaurant = {
