@@ -4,7 +4,7 @@ const average = (array) => {
   }
 
   let sumArray = 0;
-  for (let index = 0; index < array.length; index += 1) {
+  for (let index = 0; index < array.length; index += 1){
     if (typeof (array[index]) === 'string') { 
       return undefined;
     }
