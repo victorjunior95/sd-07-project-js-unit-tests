@@ -28,7 +28,7 @@ const average = (array) => {
   const mediaSum = sum / array.length;
   return Math.round(mediaSum);
 };
-
+console.log(average([]));
 // console.log(average([2, 2]));
 // console.log(average([1, 2]));
 // console.log(average([1, '2']));
