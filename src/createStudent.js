@@ -23,10 +23,6 @@ const createStudent = (nome) => {
   return estudante;
 };
 
-
-
 console.log(Object.values(createStudent('Veruska')));
-
-
 
 module.exports = createStudent;
