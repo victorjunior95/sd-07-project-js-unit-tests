@@ -82,9 +82,12 @@ const meuRestauranteOficial = createMenu({
   drink: { agua: 3.9 },
 });
 
-const consumption = (object, consumptionUser) =>
-  (object.consumption = consumptionUser);
+// console.log(meuRestauranteOficial);
+
+const consumption = (object, consumptionUser) => (object.consumption = consumptionUser);
 consumption(meuRestauranteOficial, []);
+
+// console.log(meuRestauranteOficial);
 
 const order = (orderUser) => {
   meuRestauranteOficial.consumption.push(orderUser);
@@ -96,6 +99,8 @@ meuRestauranteOficial.order('agua');
 meuRestauranteOficial.order('sopa');
 meuRestauranteOficial.order('sashimi');
 meuRestauranteOficial.order('coxinha');
+
+// console.log(meuRestauranteOficial);
 
 let sumPrice = 0;
 const compareArrayFoods = (index) => {
@@ -138,11 +143,12 @@ const pay = () => {
   }
   return compareArrayDrinks();
 };
-// console.log(pay());
 
+// console.log(pay());
 meuRestauranteOficial.pay = pay;
-console.log(meuRestauranteOficial.pay());
+
 // console.log(meuRestauranteOficial);
+// console.log(meuRestauranteOficial.pay());
 // console.log(meuRestauranteOficial.consumption);
 
 // PASSO 02
