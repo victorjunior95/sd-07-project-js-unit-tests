@@ -17,12 +17,12 @@
 
 const myCounter = () => {
   var myArray = [];
-  for (var index = 0; index <= 3; index += 1) {
+  for (let index = 0; index <= 3; index += 1) {
     myArray.push(index);
-    for (var i = 2; i <= 3; i += 1) {
+    for (let i = 2; i <= 3; i += 1) {
       myArray.push(i);
     }
-  }
+  }// um for intercalado com outro for , para cada primeiro index do for dado a implementação no array o segundo for e declarado ,
   return myArray;
 };
 

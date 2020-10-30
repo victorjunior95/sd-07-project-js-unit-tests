@@ -18,15 +18,12 @@
   calculator.add(1, 1) // Retorno: 2;
   calculator.div(3, 2) // Retorno: 1;
 */
-const addInter = (numberA, numberB) => Math.trunc(numberA + numberB);
-const subtract = (numberA, numberB) => Math.trunc(numberA - numberB);
-const division = (numberA, numberB) => Math.trunc(numberA / numberB);
-const multiplication = (numberA, numberB) => Math.trunc(numberA * numberB);
+
 const calculator = {
-  add: addInter,
-  sub: subtract,
-  div: division,
-  mult: multiplication,
+  add: (num1, num2) => num1 + num2,
+  sub: (num1, num2) => num1 - num2,
+  div: (num1, num2) => Math.trunc(num1 + num2),//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc
+  mult: (num1, num2) => num1 * num2,
 };
 
 module.exports = calculator;
