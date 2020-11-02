@@ -24,9 +24,9 @@ const average = (array) => {
     } else {
       return undefined;
     }
-    const averageSum = sum / array.length;
-    return Math.round(averageSum);
   }
+  const averageSum = sum / array.length;
+  return Math.round(averageSum);
 };
 
 module.exports = average;
