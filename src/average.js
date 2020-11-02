@@ -13,21 +13,20 @@
 */
 
 const average = (array) => {
- let sum = 0;
- if (array.length === 0) {
-   return undefined;
- }
-
- for (let i = 0; i < array.length; i += 1) {
-  if (typeof array[i] === 'number') {
-    sum += array[i];
-  } else {
+  let sum = 0;
+  if (array.length === 0) {
     return undefined;
   }
-  const averageSum = sum / array.length;
-  return Math.round(averageSum);
- };
 
- console.log(average([12, 2]));
- 
+  for (let i = 0; i < array.length; i += 1) {
+    if (typeof array[i] === 'number') {
+      sum += array[i];
+    } else {
+      return undefined;
+    }
+    const averageSum = sum / array.length;
+    return Math.round(averageSum);
+  }
+};
+
 module.exports = average;
