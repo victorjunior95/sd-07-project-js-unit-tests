@@ -15,11 +15,11 @@
 const average = (array) => {
   let averageResult;
   let sum = 0;
-  if (array.length === 0) {
-    return undefined;
-  }
+  //if (array.length === 0) {
+  //  return undefined;
+  // }
   for (let index = 0; index < array.length; index += 1) {
-    if (typeof (array.[index]) === 'string') {
+    if (typeof (array[index]) === 'string' || array.length === 0) {
       return undefined;
     }
     sum += array[index];
