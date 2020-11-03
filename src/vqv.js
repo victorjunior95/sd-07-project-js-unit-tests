@@ -17,7 +17,7 @@
 */
 
 const vqv = (nome, idade) => {
-  const paragrafo;
+  const paragrafo = '';
   if (nome === undefined || idade === undefined) {
     return undefined;
   }
