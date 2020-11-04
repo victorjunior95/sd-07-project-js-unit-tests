@@ -72,29 +72,29 @@
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
 const createMenu = (objectmenu) => {
-  menu  const =  { 
+  const menu = {};
   menu.fetchMenu = objectmenu;
-  menu.consumo = [];
-  menu.pedido = (variável) => {
-    menu.consumo.empurrar(variavel);
+  menu.consumption = [];
+  menu.order = (variavel) => {
+    menu.consumption.push(variavel);
   };
-  menu.pagar = () => {
-    deixe  soma = 0;
-    menu.consumo.forEach((elemento) => {
-      switch (elemento) {
-       estojo  'coxinha' :
-      soma + =  menu.fetchMenu.comida.coxinha; pausa;
-       case 'sanduiche' :
-soma + =  menu.fetchMenu.comida.sanduiche; pausa;
-       case 'agua' :
-soma + =  menu.fetchMenu.bebidas.agua; pausa;
-estojo  'cerveja' :
-soma + =  menu.fetchMenu.bebidas.cerveja; pausa;
-padrão: break;
-     }
-   } );
-retorno(soma * 1, 1).toFixed(2);
- };
-menu de retorno;
+  menu.pay = () => {
+    let sum = 0;
+    menu.consumption.forEach((element) => {
+      switch (element) {
+        case 'coxinha':
+          sum += menu.fetchMenu.food.coxinha; break;
+        case 'sanduiche':
+          sum += menu.fetchMenu.food.sanduiche; break;
+        case 'agua':
+          sum += menu.fetchMenu.drinks.agua; break;
+        case 'cerveja':
+          sum += menu.fetchMenu.drinks.cerveja; break;
+        default: break;
+      }
+    });
+    return (sum * 1.1).toFixed(2);
+  };
+  return menu;
 };
-módulo.exportações = createMenu;
+module.exports = createMenu;
