@@ -61,7 +61,7 @@ describe('#createMenu', () => {
       { food: {}, drink: {} },
     ]);
 
-    // Agora faça o PASSO 1 no arquivo `src/restaurant.js`.
+    // Agora faça o PASSO 1 no arquivo `src/retaurant.js`.
     // --------------------------------------------------------------------------------------
     // TESTE 2: Verifique que, dado que a função createMenu foi chamada com o objeto: `{ food: {}, drink: {} }`, verifique que 'objetoRetornado.fetchMenu' retorna um objeto cujas chaves são somente `food` e `drink`.
     // ```
