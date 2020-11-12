@@ -73,8 +73,6 @@
 
 // a função fetchMenu só faz buscar o menu 
 
-function totalConsumedValue 
-
 const createMenu = (menu) => {
   const object = {
     fetchMenu: () => {
