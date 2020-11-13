@@ -76,13 +76,18 @@ const pay = (dataMenu, dataConsumption) => {
   const foodProducts = Object.entries(dataMenu.food);
   const drinkProducts = Object.entries(dataMenu.drink);
   const productsSalled = foodProducts.concat(drinkProducts);
-  for (let i = 0; i < consumedItens.length; i += 1) {
-    for (let a = 0; a < productsSalled.length; a += 1) {
-      if (consumedItens[i] === productsSalled[a][0]) {
-        totalToPay += productsSalled[a][1];
-      }
-    }
-  }
+  // for (let i = 0; i < consumedItens.length; i += 1) {
+  //   for (let a = 0; a < productsSalled.length; a += 1) {
+  //     if (consumedItens[i] === productsSalled[a][0]) {
+  //       totalToPay += productsSalled[a][1];
+  //     }
+  //   }
+  // }
+  consumedItens.forEach((item) => {
+    productsSalled.forEach((product) => {
+      if (item === product[0]) totalToPay += product[1];
+    });
+  });
   return parseFloat((totalToPay * 1.1).toFixed(2));
 };
 const createMenu = (menu) => {
