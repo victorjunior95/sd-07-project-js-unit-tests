@@ -99,7 +99,8 @@ describe('#createMenu', () => {
 
   let returnedObject = createMenu(menu);
   const { fetchMenu } = returnedObject;
-  assert.deepStrictEqual(fetchMenu(), menu);
+  assert.deepStrictEqual(fetchMenu, menu);
+
 
   //comparando se o fetchMenu é igual o menu teste 1 - Mine
     // TESTE 2: Verifique que, dado que a função createMenu foi chamada com o objeto: `{ food: {}, drink: {} }`, verifique que 'objetoRetornado.fetchMenu' retorna um objeto cujas chaves são somente `food` e `drink`.
@@ -113,7 +114,7 @@ describe('#createMenu', () => {
   }
 
   returnedObject = createMenu(menu);
-  const keys = Object.keys(returnedObject.fetchMenu());
+  const keys = Object.keys(returnedObject.fetchMenu);
   assert.deepStrictEqual(keys, ["food", "drink"]);
 
     // Agora faça o TESTE 3 deste arquivo.
@@ -123,7 +124,7 @@ describe('#createMenu', () => {
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.fetchMenu // Retorno: objetoQualquer
     // `` verifique é sempre igual -> assert
-    assert.deepStrictEqual(createMenu(menu).fetchMenu(), menu);
+    assert.deepStrictEqual(createMenu(menu).fetchMenu, menu);
 
 
     // Agora faça o TESTE 4 deste arquivo.
@@ -165,6 +166,7 @@ describe('#createMenu', () => {
     // objetoRetornado.order("sashimi");
     // objetoRetornado.consumption // Retorno: ["coxinha", "agua", "sopa", "sashimi"]
     // ```
+    returnedObject = createMenu(menu);
     returnedObject.order("coxinha");
     returnedObject.order("agua");
     returnedObject.order("sopa");
@@ -179,6 +181,8 @@ describe('#createMenu', () => {
     // objetoRetornado.order('coxinha');
     // objetoRetornado.comsuption // Retorno: ['coxinha', 'agua', 'coxinha']
     // ```
+    returnedObject.order("coxinha");
+    assert.deepStrictEqual(returnedObject.consumption, ["coxinha", "agua", "sopa", "sashimi", 'coxinha'])
     // Agora faça o TESTE 8 deste arquivo.
     // --------------------------------------------------------------------------------------
     // TESTE 8: Verifique que, ao chamar `objetoRetornado.pay()`, retorna-se a soma dos preços de tudo que foi pedido, conforme registrado em `objetoRetornado.consumption`
@@ -188,6 +192,15 @@ describe('#createMenu', () => {
     // objetoRetornado.order('coxinha');
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
-    // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
+    let obj = {
+      food: {'coxinha': 3.9, 'sopa': 9.9},
+      drink: {'agua':3.9, 'cerveja':6.9}
+    }
+    let sumReturnedObject = createMenu(obj);
+    sumReturnedObject.order('coxinha');
+    sumReturnedObject.order('agua');
+    sumReturnedObject.order('coxinha');
+    assert.strictEqual(sumReturnedObject.pay(sumReturnedObject), 12.87);
+    // // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
 });
