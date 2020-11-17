@@ -87,8 +87,8 @@ const createMenu = (itemMenu) => {
         });
       });
       return total;
-    }
-  };
+    },
+  };;
   return restaurante;
 };
 
