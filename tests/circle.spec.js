@@ -30,6 +30,7 @@ describe('#circle', () => {
     // Teste se circle retorna um objeto.
     assert.strictEqual(typeof(circle(1)) , 'object');
     // Teste se o objeto retornado tem 3 entradas.
+    assert.deepStrictEqual(circle(2), {radius: 2, area: 12.56, circunference: 12.56});
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
