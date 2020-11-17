@@ -24,7 +24,4 @@ const average = (array) => {
   const endAverage = totalSum / array.length;
   return endAverage;
 };
-
-console.log(average([2, 2, 3]));
-
 module.exports = average;
