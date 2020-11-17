@@ -80,7 +80,6 @@ const createMenu = (itemMenu) => {
       let total = 0;
       const preco = Object.keys(restaurante.fetchMenu);
       restaurante.consumption.forEach((item) => {
-        
         preco.forEach((valor) => {
           if (valor[item] !== undefined) {
             total += valor[item];
