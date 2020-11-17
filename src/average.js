@@ -26,4 +26,5 @@ const average = (array) => {
   const endAverage = totalSum / array.length;
   return endAverage;
 };
+
 module.exports = average;
