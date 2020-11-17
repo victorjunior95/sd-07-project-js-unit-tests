@@ -78,11 +78,11 @@ const createMenu = (itemMenu) => {
     order: (item) => { restaurante.consumption.push(item); },
     pay: () => {
       let total = 0;
-      const preco = Object.keys(restaurante.fetchMenu);
-      restaurante.consumption.forEach((item) => {
+      const preco = Object.values(restaurante.fetchMenu);
+      restaurante.consumption.forEach((precoItem) => {
         preco.forEach((valor) => {
-          if (valor[item] !== undefined) {
-            total += valor[item];
+          if (valor[precoItem] !== undefined) {
+            total += valor[precoItem];
           }
         });
       });
