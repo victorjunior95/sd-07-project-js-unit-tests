@@ -74,10 +74,8 @@
 const createMenu = (object) => {
   const menuCarte = {
     fetchMenu: object,
-    consumption: [],
-    order: text => menuCarte.consumption.push(text),
-    pay: () => {},
   };
+  return menuCarte;
 };
 
 module.exports = createMenu;
