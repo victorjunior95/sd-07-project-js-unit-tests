@@ -74,16 +74,16 @@
 const createMenu = objeto => ({
   fetchMenu: objeto,
   consumption: [],
-  order(string) { this.consumption.push(string) ;},
+  order(string) { this.consumption.push(string); },
   pay() {
     const foodMenu = this.fetchMenu.food;
     const drinkMenu = this.fetchMenu.drink;
     let sumPay = 0;
     this.consumption.forEach((element) => {
-      if ( Object.keys(foodMenu).includes(element)) {
+      if (Object.keys(foodMenu).includes(element)) {
         sumPay += foodMenu[element];
       }
-      if ( Object.keys(drinkMenu).includes(element)) {
+      if (Object.keys(drinkMenu).includes(element)) {
         sumPay += drinkMenu[element];
       }
     });
