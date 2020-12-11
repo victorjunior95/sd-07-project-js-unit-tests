@@ -36,7 +36,7 @@ describe('#productDetails', () => {
     // ESCREVA SEUS TESTES ABAIXO: 
     // Para realizar alguns criterios deste exercicio, consultei o repositorio do colega Yogor Fonseca, quem foi minha dupla no projeto do bloco 6.
     // Teste que o retorno da função é um array.
-    assert.deepStrictEqual(typeof productDetails(), 'object');
+    assert.deepStrictEqual(typeof productDetails(), 'object'); // Why when we expect typeof === array it didn`t work?
     // Teste que o array retornado pela função contém dois itens dentro.
     assert.deepStrictEqual(productDetails('alcool em gel', 'mascara').length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
@@ -46,5 +46,6 @@ describe('#productDetails', () => {
     assert.notDeepStrictEqual(productDetails('alcool em gel', 'mascara')[0], productDetails('alcool em gel', 'mascara')[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
     assert.strictEqual(productDetails('alcool em gel', 'mascara')[0].details.productId.slice(-3), '123');
+    assert.strictEqual(productDetails('alcool em gel', 'mascara')[2].details.productId.slice(-3), '123');
   });
 });
